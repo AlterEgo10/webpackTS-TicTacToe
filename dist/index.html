@@ -1,19 +1,32 @@
-Html Webpack Plugin:
-<pre>
-  ReferenceError: HtmlWebpackPlugin is not defined
-  
-  - loader.js:4 eval
-    [template.html?.]/[html-webpack-plugin]/lib/loader.js:4:10
-  
-  - loader.js:7 module.exports
-    [template.html?.]/[html-webpack-plugin]/lib/loader.js:7:3
-  
-  - index.js:830 
-    [webpackTS-TicTacToe]/[html-webpack-plugin]/index.js:830:16
-  
-  - task_queues:95 process.processTicksAndRejections
-    node:internal/process/task_queues:95:5
-  
-  - async Promise.all
-  
-</pre>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	 <title>${HtmlWebpackPlugin.options.title}</title>
+<script src="./main.js" defer></script>
+<script defer src="main396a2b8cf9dc9adb431c.js"></script></head>
+<body>
+<h1>test</h1>
+<div>
+  <table id="field">
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+</div>
+</body>
+</html>
