@@ -1,18 +1,17 @@
 
-//import pluginJs from "@eslint/js";
+// import pluginJs from "@eslint/js";
 
 
 // export default [
 //   {languageOptions: { globals: globals.browser }},
 //   pluginJs.configs.recommended,
-//];
+// ];
 
 module.exports = {
   //export default {
   env: {
     browser: true,
     es6: true,
-    //es6: true,
     node: true,
   },
   extends: [
@@ -22,7 +21,7 @@ module.exports = {
     'prettier',
   ],
   globals: {
-    'Promise': 'off',
+    //'Promise': 'off',
   },
   overrides: [],
   // {
@@ -33,7 +32,7 @@ module.exports = {
   //   'rules': { 'semi': ["error", "always"], }
   // },
   //languageOptions: { globals: globals.browser },
-  //parser: '@typescript-eslint/parser',
+  parser: '@typescript-eslint/parser',
   'parser':'espree',
   parserOptions: {
     ecmaVersion: 'latest',
@@ -42,17 +41,21 @@ module.exports = {
       jsx: true,
     },
   },
-  // parser: "@babel/eslint-parse",
-  // parserOptions: {
-  //   requireConfigFile: false,
-  //   babelOptions: {
-  //     babelrc: false,
-  //     configFile: false,
-  //     // your babel options
-  //     presets: ['@babel/preset-env'],
-  //   },
-  // },
-  // plugins: ['unicorn', 'prettier', '@typescript-eslint'],
+  ignorePatterns: [
+    'eslintrc.js',
+    'prettier.config.js'
+  ],
+  parser: "@babel/eslint-parse",
+  parserOptions: {
+    requireConfigFile: false,
+    babelOptions: {
+      babelrc: false,
+      configFile: false,
+      // your babel options
+      presets: [ '@babel/preset-env' ],
+    },
+  },
+  plugins: [ 'unicorn','@typescript-eslint','prettier' ],//'prettier'
   rules: {
     '@typescript-eslint/no-inferrable-types': 'off',
     'prettier/prettier': 'error',
@@ -64,15 +67,15 @@ module.exports = {
     quotes: [ 'error', 'single' ],
     semi: [ 'error', 'always' ],
     'no-var': 'error',
-    'no-use-before-define': 'error',
+    // 'no-use-before-define': 'error',
     'arrow-parens': [ 'error', 'as-needed' ],
     'object-curly-spacing': [ 'error', 'always' ],
-    'array-bracket-spacing': [ 'error', 'always' ],
+    //'array-bracket-spacing': [ 'error', 'always' ],
     'no-trailing-spaces': 'error',
     'no-tabs': 'error',
     camelcase: 'error',
-    'unicorn/prefer-spread': 'warn',
-    'unicorn/no-null': 'off',
+    // 'unicorn/prefer-spread': 'warn',
+    // 'unicorn/no-null': 'off',
 
     //'no-undef': 'off',
     // 'no-console': 'warn',

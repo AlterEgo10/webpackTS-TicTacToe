@@ -8,11 +8,11 @@ module.exports = {
   bracketSpacing: true,
   arrowParens: 'always',
   endOfLine: 'lf',
-  //requirePragma: true,
-  //insertPragma: true,
-  // singleQuote: true,
+  requirePragma: true,
+  insertPragma: true,
+  singleQuote: true,
 
-  //HTML, Vue, JSX
+  HTML, Vue, JSX,
 
-  //bracketSameLine: false,
+  bracketSameLine: false,
 };

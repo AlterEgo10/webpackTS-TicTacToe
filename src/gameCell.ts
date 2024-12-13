@@ -1,5 +1,7 @@
 //ячейка игрового поля
 
-// enum Cell{
-
-// }
+enum Cell{
+  zero,
+  cross,
+  empty,
+}

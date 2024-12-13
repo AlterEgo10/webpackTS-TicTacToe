@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const ESLintPlugin = require('eslint-webpack-plugin');
 const isProduction = process.env.NODE_ENV === "production";
 const styleLoaderHandler = isProduction
   ? MiniCssExtractPlugin.loader
@@ -37,8 +37,8 @@ module.exports = {
     rules: [
       {
         test: /\.s?css$/i,
-        // use: [styleLoaderHandler, "css-loader", "sass-loader"],
-        // use: ["style-loader", "css-loader", "sass-loader"],
+        use: [styleLoaderHandler, "css-loader", "sass-loader"],
+        use: ["style-loader", "css-loader", "sass-loader"],
         use: [styleLoaderHandler, 'css-loader', 'sass-loader'],
       },
       {
@@ -75,6 +75,10 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name][contenthash].css',
+   }),
+    new ESLintPlugin({
+      extensions: ['js', 'ts'],
+      fix: true,
     }),
   ],
 };

@@ -2,10 +2,24 @@ body {
   background-color: rgb(212, 248, 7);
 }
 
-#field td {
+.wrap{
+  line-height: 0px;
+}
+
+.cell{
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  display: table-cell;
+  background-color: tan;
+  font: bold 60px comic sans ms;
+  text-align: center;
+  color: green;
+}
+/* #field td {
   width: 50px;
   height: 50px;
   border: 1px solid black;
   text-align: center;
   font-weight: bold;
-}/*# sourceMappingURL=main.css.map */
+} */
