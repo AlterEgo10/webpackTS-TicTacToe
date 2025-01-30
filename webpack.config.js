@@ -6,7 +6,7 @@ const isProduction = process.env.NODE_ENV === "production";
 const styleLoaderHandler = isProduction
   ? MiniCssExtractPlugin.loader
   : "style-loader";
-
+ 
 module.exports = {
   // entry: path.resolve(__dirname, 'src', 'index.js'),
   entry: path.resolve(__dirname, 'typescript', 'index.ts'),
@@ -31,15 +31,18 @@ module.exports = {
       directory: path.resolve(__dirname, 'dist'),
     },
     host: 'localhost',
+    port:3000,
     open: true,
+    hot:true,
+    historyApiFallback:true,
   },
   module: {
     rules: [
       {
         test: /\.s?css$/i,
-        use: [styleLoaderHandler, "css-loader", "sass-loader"],
-        use: ["style-loader", "css-loader", "sass-loader"],
-        use: [styleLoaderHandler, 'css-loader', 'sass-loader'],
+       use: [styleLoaderHandler, "css-loader", "sass-loader"],
+        //use: ["style-loader", "css-loader", "sass-loader"],
+       
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -71,11 +74,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'template.html'),
       filename: 'index.html',
-      title: 'Крестики-нолики',
+      title: 'TicTacToe',
     }),
-    new MiniCssExtractPlugin({
-      filename: 'css/[name][contenthash].css',
-   }),
+    new MiniCssExtractPlugin(),
     new ESLintPlugin({
       extensions: ['js', 'ts'],
       fix: true,

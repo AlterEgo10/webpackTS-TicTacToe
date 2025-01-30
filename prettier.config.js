@@ -1,5 +1,5 @@
 module.exports = {
-  trailingComma: 'es6',
+  trailingComma: 'es5',
   //tabWidth: 2,
   useTabs: false,
   semi: false,
@@ -10,9 +10,5 @@ module.exports = {
   endOfLine: 'lf',
   requirePragma: true,
   insertPragma: true,
-  singleQuote: true,
-
-  HTML, Vue, JSX,
-
   bracketSameLine: false,
 };

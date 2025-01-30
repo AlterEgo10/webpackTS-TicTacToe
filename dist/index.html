@@ -3,41 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	 <title>${HtmlWebpackPlugin.options.title}</title>
-<script src="./main.js" defer></script>
-<script defer src="mainbf89be2723fc3753d24d.js"></script></head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
+  <script src="./main.js" defer></script> 
+  <link rel="stylesheet" href="./style/main.css">
+  <title>${HtmlWebpackPlugin.options.title}</title>
+ <!-- <script>var exports ={'__esModule':true}</script> -->
+<script defer src="main829ef79b90965371df45.js"></script></head> 
 <body>
-<h1>test</h1>
-<div class="wrap">
-  <div class="cell" data-num="0"></div>
-  <div class="cell" data-num="1">o</div>
-  <div class="cell" data-num="2">x</div>
-  <br>
-  <div class="cell" data-num="3"></div>
-  <div class="cell" data-num="4"></div>
-  <div class="cell" data-num="5"></div>
-  <br>
-  <div class="cell" data-num="6"></div>
-  <div class="cell" data-num="7"></div>
-  <div class="cell" data-num="8"></div>
-  <!-- <table id="field">
-	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-	</tr>
-	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-	</tr>
-	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-	</tr>
-</table> -->
+<h1>TIC TAC TOE</h1>
+<div class="game-container"></div>
+<h1 class="winner"></h1>
+<div class="button-container">
+    <button class="button input round roundD">Play Again?</button>
 </div>
+<!-- <script src="./gameBoard.ts"></script>
+<script src="../.typescript/index.ts"></script> -->
 </body>
+
+<!-- <script>
+
+var counter = 0;
+var cells = document.querySelectorAll('#field td');
+var header = document.getElementById('header');
+
+
+function isVictory() {
+    var combos = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ];
+    for (var combo of combos) {
+        if (cells[combo[0]].innerHTML == cells[combo[1]].innerHTML && cells[combo[1]].innerHTML == cells[combo[2]].innerHTML && cells[combo[0]].innerHTML != '') {
+            return true;
+        }
+    }
+    return false;
+}
+
+
+function tap(event) {
+    if (counter % 2 == 0) {
+        event.target.innerHTML = 'x';
+    }
+    else {
+        event.target.innerHTML = 'o';
+    }
+
+    if (isVictory()) {
+        for (var cell of cells) {
+            cell.removeEventListener('click', tap);
+        }
+        if (counter % 2 == 0) {
+            header.innerText = 'X is winner!';
+        }
+        else {
+            header.innerText = 'O is winner!';
+        }
+    }
+    else if (counter == 8) {
+        header.innerText = 'Draw!';
+    }
+
+    counter++;
+    event.target.removeEventListener('click', tap);
+}
+
+
+function startGame() {
+    header.innerText = 'Tic Tac Toe';
+    counter = 0;
+    for (var cell of cells) {
+        cell.innerHTML = '';
+        cell.addEventListener('click', tap);
+    }
+}
+
+startGame()
+</script> -->
 </html>
