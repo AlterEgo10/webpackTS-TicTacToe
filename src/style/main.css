@@ -1,0 +1,94 @@
+body{
+  background-color: #0554f2;
+
+
+  font-family: "Playwrite AU SA", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+} 
+
+h1{
+  text-align: center;
+}
+
+.winner{
+  display: hidden;
+}
+.game-container{
+ display: grid;
+ grid-template-columns: 85px 85px 85px;
+ gap: 10px;
+ justify-content: center;
+}
+
+.box{
+  background-color:rgb(222, 236, 249); 
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 60px;
+  box-shadow: 5px 5px 5px black;
+  cursor: pointer;
+}
+/* button stylings */
+
+.button{
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+}
+
+ .input {
+  padding: 15px 20px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+.input:hover {
+  outline: none;
+}
+.round {
+  transition: 0.3s ease;
+  border: none;
+  border-radius: 30px;
+}
+.roundD {
+  background-color: rgb(253, 249, 0);
+  box-shadow: inset 0 0 30px gray;
+}
+.roundD:hover {
+  box-shadow: inset 0 0 10px rgb(128, 128, 128);
+  color: rgb(0, 0, 0);
+  background-color: rgb(249, 255, 196);
+} 
+
+
+
+/* ========================================================= */
+/* #field td{
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  text-align: center;
+}
+h1{
+  font-size: 50px;
+  color: black;
+}
+button{
+  background-color: #2B2B2B;
+  font-size: 18px;
+  color: white;
+  border: 2px solid #4F5151;
+  border-radius: 5%;
+  width: 200px;
+  height: 50px;
+} */
