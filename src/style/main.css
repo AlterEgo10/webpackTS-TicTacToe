@@ -5,3 +5,23 @@ body{
 .title{
   font-size: 48px;
 }
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-img{
+  width: 200px;
+}
+
+.main-btn{
+  background-color: chartreuse;
+}
+
+.movie{
+  width: 60px;
+  height: 20px;
+  background-color:aqua;
+}

@@ -31,7 +31,7 @@
     // "editor.formatOnSave": true, // optional
     "editor.codeActionsOnSave": ["source.fixAll.eslint"]
   },
-  "[typescript]": {
+  "[javascript][javascriptreact]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
     "editor.formatOnPaste": true, // optional
     // "editor.formatOnSave": true, // optional
