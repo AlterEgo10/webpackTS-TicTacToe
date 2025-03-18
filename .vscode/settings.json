@@ -1,0 +1,51 @@
+{
+  //Вариант 1
+  // "prettier.enable":true,
+  // "eslint.enable": true,
+  // "eslint.format,enable": true,
+  // "eslint,run":"onType",
+  // "[javascript]": {
+  //     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  //     "editor.formatOnPaste": false, // optional
+  //     "editor.formatOnType": false, // required
+  //     "editor.formatOnSave": true, // optional
+  //     "editor.formatOnSaveMode": "file", // required to format on save
+
+  //Вариант 2
+
+  "eslint.enable": true,
+  "eslint.format,enable": true,
+  "eslint,run": "onType",
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.rules.customizations": [
+    { "rule": "prettier/prettier", "severity": "info" }
+  ],
+  "[javascript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.formatOnPaste": true, // optional
+    // "editor.formatOnSave": true, // optional
+    "editor.codeActionsOnSave": ["source.fixAll.eslint"]
+  },
+  "[javascript][javascriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.formatOnPaste": true, // optional
+    // "editor.formatOnSave": true, // optional
+    "editor.codeActionsOnSave": ["source.fixAll.eslint"]
+  },
+
+ //React.js
+ "emmet.includeLanguages":{
+  "javascript":"javascriptreact"
+ },
+
+  "workbench.colorCustomizations": {
+    "editorError.foreground": "#f50000",
+    "editorInfo.foreground": "#05f92a",
+    "editorWarning.foreground": "#fca80b"
+  }
+}
