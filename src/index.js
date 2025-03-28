@@ -17,5 +17,5 @@ root.render(
   //   className="title">
   //   Hello
   // </h1>
-  <App/>
+  <App />
 );

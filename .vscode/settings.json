@@ -32,10 +32,18 @@
     "editor.codeActionsOnSave": ["source.fixAll.eslint"]
   },
   "[javascript][javascriptreact]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-    "editor.formatOnPaste": true, // optional
-    // "editor.formatOnSave": true, // optional
-    "editor.codeActionsOnSave": ["source.fixAll.eslint"]
+     //"editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    // "editor.formatOnPaste": true, 
+    
+    // "editor.codeActionsOnSave": ["source.fixAll.eslint"]
+    "editor.formatOnSave": false,
+    "eslint.useFlatConfig": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+    },
+    "[json][jsonc]": {
+      "editor.formatOnSave": true
   },
 
  //React.js

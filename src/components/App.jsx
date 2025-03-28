@@ -2,30 +2,19 @@ import React from 'react';
 import imageLogo from '../img/record.svg';
 import InfoItem from './infoItem';
 import Button from './Button';
-// import MovieData from '../helpers/MovieData';
-//import { randomMovie } from 'Helpers/movieData';
-import ranM from 'Helpers/movieData';
-//import apiGet from '../helpers/MovieData';
+import movies from '../helpers/movieData';
 
+import MovieContainer from './MovieContainer';
+import MovieItem from './MovieItem';
 
-
-// m.onClick =()=> ranM;
 export default function App(){
-  //   const getButton = () => {
-  //   return <button onClick={()=>ranM()}>movi</button>;
-  //   apiGet;
-  // };
+
   return (
 <div className="container">
-   {/* {ranM.map((number) =>  
-    <ul key={number.id} className="movi">
-       <li>{number.data}</li> 
-       <li>{number.title}</li> 
-   </ul>
-   )} */}
 
-{ranM}
+<MovieContainer items={movies}/>
 
+{/* <div>{moviComponents}</div> */}
   <img
   className="main-img"
   src={imageLogo}
@@ -49,11 +38,6 @@ export default function App(){
   movie
 
  </Button>
-  
- 
- 
-
-
 </div>
 
   );
