@@ -1,17 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function MovieItem(props) {
+function MovieItem({ item, tab, setTab }) {
 
   return (
-    <div>
-   
-   <p>{props.title}</p> 
-   <p>{props.data}</p> 
+    <div className='tab' onClick={()=>setTab(item.value)}>
+   {item.label}
+   {/* <p>{props.title}</p> 
+   <p>{props.data}</p>  */}
    </div>
   )
 }
 
-MovieItem.propTypes = {}
+//MovieItem.propTypes = {}
 
 export default MovieItem

@@ -27,11 +27,12 @@ module.exports = {
   ignorePatterns: ['eslintrc.js', 'prettier.config.js'],
   plugins: ['unicorn', 'react', 'prettier'], //'prettier'
   rules: {
+    'unicorn/catch-error-name':'off',
     'no-empty-pattern':'off',
-   // 'prettier/prettier': 'warn',
+    //'prettier/prettier': 'warn',
     'unicorn/no-array-callback-reference': 'off',
     'unicorn/no-array-method-this-argument': 'off',
-    'Missing semicolon.': 'off',
+    //'Missing semicolon.': 'off',
     'react/no-unknown-property': 'off',
     'arrow-parens': 'off',
     'unicorn/prevent-abbreviations': 'off',

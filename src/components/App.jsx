@@ -1,27 +1,28 @@
-import React from 'react';
+import react, { useState } from 'react';
 import imageLogo from '../img/record.svg';
-import InfoItem from './infoItem';
-import Button from './Button';
-import movies from '../helpers/movieData';
+//import InfoItem from './InfoItem';
+// import Button from './Button';
+// import movies from '../helpers/movieData';
+import Tabs from './Tabs'
 
-import MovieContainer from './MovieContainer';
-import MovieItem from './MovieItem';
+// import MovieContainer from './MovieContainer';
+// import MovieItem from './MovieItem';
 
-export default function App(){
+
+
+
+export default function App() {
 
   return (
-<div className="container">
+    <div className="container">
 
-<MovieContainer items={movies}/>
+      {/* <img
+        className="main-img"
+        src={imageLogo}
+        alt=""
+      /> */}
 
-{/* <div>{moviComponents}</div> */}
-  <img
-  className="main-img"
-  src={imageLogo}
-  alt=""
-   />
-
-<InfoItem
+      {/* <InfoItem
   title="Имя пользователя"
   classTitle="user-name"
 />
@@ -32,13 +33,9 @@ export default function App(){
 <InfoItem
   title="E-mail"
   classTitle="user-email"
-/>
-
- <Button >
-  movie
-
- </Button>
-</div>
-
+/> */}
+<Tabs/>
+      {/* <Button>movie</Button> */}
+    </div>
   );
 }

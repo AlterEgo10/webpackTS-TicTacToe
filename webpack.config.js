@@ -96,7 +96,7 @@ module.exports = {
     }),
 
     new ESLintPlugin({
-      extensions: ['js', 'ts-'],
+      extensions: ['js', 'ts'],
       fix:true,
     }),
   ]
