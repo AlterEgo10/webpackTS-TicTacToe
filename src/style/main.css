@@ -24,27 +24,9 @@ body{
   background-color:aqua;
 }
 
-/* start Tab */
-/* .tabs{
-  display: flex;
-  flex-direction: row;
 
-}
 
-.tabs_tab{
-  padding: 16px 24px;
-  cursor: pointer;
-  background: rgb(244, 187, 112);
-  border-radius: 8px 8px 0 0;
-  border:1px solid #ccc;
-  
-}
 
-.content{
-  background:#c1f3f7;
-  padding: 16px;
-}  */
-/* finish Tab */
 /* start TabsNew */
 
 .item-movie{
@@ -68,10 +50,6 @@ width: 500px;
    padding-left: 16px;
 }
 
-/* .tabs:not(last-child){
-  border-right:1px solid rgba(0,0,0,0.274) ;
-
-} */
 
 .active-tabs{
   background: rgb(17, 237, 32);
@@ -90,9 +68,7 @@ width: 500px;
   background:#114347;
 }
 
-/* button{
-  border: none;
-} */
+
 
 .content-tabs{
   flex-grow:1;
