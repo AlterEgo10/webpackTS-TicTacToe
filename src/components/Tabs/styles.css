@@ -1,12 +1,7 @@
-body{
-  background-color: rgb(249, 254, 254);
-}
-
-/* start TabsNew */
-
-/* .item-movie{
+.item-movie{
 border:1px solid #565754;
 padding: 16px;
+ background: #d7f2cc;
 }
 
 .bloc-tabs{
@@ -60,5 +55,4 @@ width: 500px;
 .active-content{
   display: block;
   background: rgb(17, 237, 32);
-} */
-/* finish TabsNew */
+}

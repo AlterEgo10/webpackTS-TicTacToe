@@ -3,7 +3,7 @@ import imageLogo from '../img/record.svg';
 //import InfoItem from './InfoItem';
 // import Button from './Button';
 // import movies from '../helpers/movieData';
-import Tabs from './Tabs'
+import Tabs from './Tabs/Tabs'
 
 // import MovieContainer from './MovieContainer';
 // import MovieItem from './MovieItem';

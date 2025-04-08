@@ -1,6 +1,9 @@
 import { useEffect,useState } from 'react'
-import { movies, series } from '../helpers/movieData';
+import { movies, series } from '../../helpers/movieData';
 //import axios from "axios"
+
+import './styles.css'
+
 export default function TabsNew() {
 
 const [toggleState, setToggleState]= useState(1)
