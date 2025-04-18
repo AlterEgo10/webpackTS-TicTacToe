@@ -1,7 +1,25 @@
+.container{
+   background-color: rgb(158, 163, 163);
+}
+
+.theme{
+cursor: pointer;
+}
+
+.theme-dark{
+  background-color: rgb(51, 52, 52);
+  color: #f8f9f6;
+} 
+
+.container{
+  background:#f9f9f7;
+padding:0;
+margin: 0;
+}
+
 .item-movie{
-border:1px solid #565754;
+border:1px solid #f8f9f6;
 padding: 16px;
- background: #d7f2cc;
 }
 
 .bloc-tabs{
@@ -18,6 +36,7 @@ width: 500px;
    cursor: pointer;
    border-radius: 8px 8px 0 0;
    padding-left: 16px;
+   color: #114347;
 }
 
 

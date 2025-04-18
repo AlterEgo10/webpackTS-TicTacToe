@@ -42,7 +42,7 @@ export const movies = [
 
 
 
-// export default axios.create({
+// export axios.create({
 //   baseURL: 'https:api.themoviedb.org/3',
 //   headers: {
 //     Accept:"application/json"

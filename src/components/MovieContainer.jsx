@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import MovieItem from './MovieItem' 
 //import movieData from '../helpers/movieData';
@@ -7,9 +7,11 @@ function MovieContainer({ items = [] }) {
   const [movies, setMovies] = useState([])
 
   // useEffect(() => {
+  //   console.log('useEffect');
   //   const fetchMovies = async() => {
   //     const { data } = await movieData.get("tv/popular")
   //     setMovies(data.results)
+      
   //   }
   //   fetchMovies
   // },[])
@@ -22,12 +24,6 @@ const array = items.map((item, index)=>(
    />
 ))
 
-// for(const item of items){
-//   console.log(item)
-//   array.push(<MovieItem
-//   title={item.title}
-//   />)
-// }
   return (
      <div>{array}</div> 
   )

@@ -1,33 +1,33 @@
-import { useEffect,useState } from 'react'
+import { useEffect, useState, useContext } from 'react';
 import { movies, series } from '../../helpers/movieData';
-//import axios from "axios"
+import axios from 'axios';
+import './styles.css';
+import { ThemeContext } from '../../helpers/ThemeContext';
+import { API_KEY } from '../../../.env';
 
-import './styles.css'
-
-export default function TabsNew() {
-
-const [toggleState, setToggleState]= useState(1)
-
+export default function Tabs({ items = [] }) {
+  const [theme, setTheme, changeTheme, changeThemeNext, language] =
+    useContext(ThemeContext);
+  const [toggleState, setToggleState] = useState(1);
+  const [appDataSeries, setAppDataSeries] = useState(series);
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.themoviedb.org/3/tv/popular?api_key=${API_KEY}&language=${language}&page=1`
+      )
+      .then((result) => {
+        movies[0].value = result.data.name;
+        movies[1].value = result.data.name;
+        movies[2].value = result.data.name;
+        setAppDataSeries(result.data.results);
+      });
+  }, []);
   const toggleTab = (index) => {
     setToggleState(index);
-  }
-  //  const moviesArray = movies.map((item) => {
-    
-  //      console.log(item.title);
-  //    return item.title;
-  //  });
-  //const [movies, setMovies] = useState([])
+  };
 
-  // useEffect(() => {
-  //   const fetchMovies = async() => {
-  //     const { data } = await movieData.get("tv/popular")
-  //     setMovies(data.results)
-  //   }
-  //   fetchMovies()
-  // },[])
-  //console.log(setMovies)
   return (
-    <div className="container">
+    <div className={theme === 'light' ? 'container' : 'theme-dark'}>
       <div className="bloc-tabs">
         <div
           className={toggleState === 1 ? 'tabs active-tabs' : 'tabs'}
@@ -45,24 +45,38 @@ const [toggleState, setToggleState]= useState(1)
       <div className="content-tabs">
         <div
           className={toggleState === 1 ? 'content active-content' : 'content'}
-       >
-          {movies.map((movie, index) => {
+        >
+          {items.map((movie, index) => {
             return (
-              <div className='item-movie'>
-                <p>{movie.title}</p>
-                <p>{movie.data}</p>
+              <div
+                className={
+                  theme === 'light'
+                    ? 'container item-movie'
+                    : 'theme-dark item-movie'
+                }
+              >
+                <p key={index + 1}>{movie.title}</p>
+                <p key={index + 2}>{movie.release_date}</p>
+                <p key={index + 3}>{movie.overview}</p>
               </div>
             );
-          })} 
+          })}
         </div>
         <div
           className={toggleState === 2 ? 'content active-content' : 'content'}
         >
-          {series.map((item, index) => {
+          {appDataSeries.map((item, index) => {
             return (
-              <div className="item-movie">
-                <p>{item.title}</p>
-                <p>{item.data}</p>
+              <div
+                className={
+                  theme === 'light'
+                    ? 'container item-movie'
+                    : 'theme-dark item-movie'
+                }
+              >
+                <p key={index + 1}>{item.original_name}</p>
+                <p key={index + 2}>{item.release_date}</p>
+                <p key={index + 3}>{item.overview}</p>
               </div>
             );
           })}
