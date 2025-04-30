@@ -4,7 +4,7 @@ import axios from 'axios';
 import './styles.css';
 import { ThemeContext } from '../../helpers/ThemeContext';
 
-const API_KEY = process.env.API_KEY;
+let API_KEY = process.env.API_KEY;
 
 export default function Tabs({ items = [] }) {
   const [theme, setTheme, changeTheme, changeThemeNext, language] =

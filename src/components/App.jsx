@@ -7,13 +7,14 @@ import Button from './button/Button';
 import Tabs from './Tabs/Tabs';
 //import MovieContainer from './MovieContainer';
 import axios from 'axios';
-import { API_KEY } from '../../.env';
+//import { API_KEY } from '../../.env';
 
 import OneBestMovie from './OneBestMovie'
 // import MovieItem from './MovieItem';
 
+
 // eslint-disable-next-line no-redeclare, no-import-assign
-API_KEY = process.env.API_KEY;
+let API_KEY = process.env.API_KEY;
 
 const movies = [
   {
