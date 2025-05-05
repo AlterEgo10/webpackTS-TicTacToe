@@ -1,7 +1,17 @@
 body{
-  background-color: rgb(241, 246, 246);
+  background-color: rgb(51, 52, 52);
 }
 
+.container{
+  background:#f9f9f7;
+padding:0;
+margin: 0;
+}
+
+.theme-dark{
+  background-color: rgb(51, 52, 52);
+  color: #f8f9f6;
+} 
 /* start TabsNew */
 
 /* .item-movie{

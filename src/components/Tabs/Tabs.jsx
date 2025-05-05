@@ -6,10 +6,12 @@ import { ThemeContext } from '../../helpers/ThemeContext';
 
 let API_KEY = process.env.API_KEY;
 
-export default function Tabs({ items = [] }) {
+export default function Tabs() {
+//export default function Tabs({ items = [] }) {
   const [theme, setTheme, changeTheme, changeThemeNext, language] =
     useContext(ThemeContext);
   const [toggleState, setToggleState] = useState(1);
+  const [appData, setAppDataMovies] = useState(movies);
   const [appDataSeries, setAppDataSeries] = useState(series);
   useEffect(() => {
     axios
@@ -26,6 +28,21 @@ export default function Tabs({ items = [] }) {
   const toggleTab = (index) => {
     setToggleState(index);
   };
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=${language}&page=1`
+      )
+      .then((result) => {
+        movies[0].value = result.data.name;
+        movies[1].value = result.data.name;
+        movies[2].value = result.data.name;
+        setAppDataMovies(movies);
+        // console.log(result.data.results);
+        setAppDataMovies(result.data.results);
+      });
+  }, [language]);
 
   return (
     <div className={theme === 'light' ? 'container' : 'theme-dark'}>
@@ -47,7 +64,7 @@ export default function Tabs({ items = [] }) {
         <div
           className={toggleState === 1 ? 'content active-content' : 'content'}
         >
-          {items.map((movie, index) => {
+          {appData.map((movie, index) => {
             return (
               <div
                 className={

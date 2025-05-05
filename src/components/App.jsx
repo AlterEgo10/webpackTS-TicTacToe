@@ -1,49 +1,48 @@
 import react, { useState, useEffect } from 'react';
-//import imageLogo from '../img/record.svg';
-import { ThemeContext } from '../helpers/ThemeContext';
-//import InfoItem from './InfoItem';
-import Button from './button/Button';
-// import movies from '../helpers/movieData';
-import Tabs from './Tabs/Tabs';
-//import MovieContainer from './MovieContainer';
 import axios from 'axios';
-//import { API_KEY } from '../../.env';
+//import imageLogo from '../img/record.svg';
+import { BrowserRouter, createHashRouter, RouterProvider,HashRouter,Routes,Route, createBrowserRouter } from 'react-router-dom';
+import { ThemeContext } from '../helpers/ThemeContext';
+import Button from './button/Button';
+import MovieContainer from './MovieContainer';
+import Series, { seriesLoader } from './Series';
+import Error404 from './pages/Error404';
 
-import OneBestMovie from './OneBestMovie'
-// import MovieItem from './MovieItem';
-
+import ErrorBoundary from './ErrorBoundary';
+import MainLayout from './layouts/MainLayout';
 
 // eslint-disable-next-line no-redeclare, no-import-assign
 let API_KEY = process.env.API_KEY;
-
-const movies = [
-  {
-    id: 1,
-    title: 'Iron Man',
-    data: 2008,
-    value: '',
-  },
-  {
-    id: 2,
-    title: 'Shrek Forever After',
-    data: '2010',
-    value: '',
-  },
-  {
-    id: 3,
-    title: 'The Lord of the Rings',
-    data: 2010,
-    value: '',
-  },
-];
 
 const appThemes = ['light', 'dark'];
 
 // eslint-disable-next-line unicorn/prefer-set-has
 const appLanguage = ['ru', 'en-US'];
 
+const router = createHashRouter([
+  //const router = BrowserRouter([
+  {
+    path: '/',
+    element: <MainLayout />,
+  },
+  {
+    path: '/films',
+    element: <MovieContainer />,
+    errorElement: <ErrorBoundary />,
+  },
+  {
+    path: '/series',
+    element: <Series />,
+    errorElement: <Error404 />,
+  },
+    {
+      path: '*',
+      element: <Error404 />,
+    },
+]);
+
 export default function App() {
-  const [appData, setAppDataMovies] = useState(movies);
+
   const [theme, setTheme] = useState(appThemes[0]);
   const [language, setLanguage] = useState('ru');
 
@@ -69,21 +68,6 @@ export default function App() {
     setTheme(index === 0 ? appThemes[1] : appThemes[0]);
   }
 
-  useEffect(() => {
-    axios
-      .get(
-        `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=${language}&page=1`
-      )
-      .then((result) => {
-        movies[0].value = result.data.name;
-        movies[1].value = result.data.name;
-        movies[2].value = result.data.name;
-        setAppDataMovies(movies);
-       // console.log(result.data.results);
-        setAppDataMovies(result.data.results);
-      });
-  }, [language]);
-
   return (
     <ThemeContext.Provider
       value={[
@@ -97,24 +81,10 @@ export default function App() {
         changeLanguageNext,
       ]}
     >
-      <div className="container">
+      <div className={theme === 'light' ? 'container' : ('theme-dark' ,'body')}>
         <Button />
-        <OneBestMovie 
-        />
-        {/* <InfoItem
-  title="Имя пользователя"
-  classTitle="user-name"
-/>
-<InfoItem
-  title="Сумма"
-  classTitle="user-amount"
-/>
-<InfoItem
-  title="E-mail"
-  classTitle="user-email"
-/> */}
-        {/* <MovieContainer /> */}
-        <Tabs items={appData} />
+        {/* <BrowserRouter router={router} /> */}
+        <RouterProvider router={router} />
       </div>
     </ThemeContext.Provider>
   );

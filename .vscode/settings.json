@@ -50,6 +50,7 @@
  "emmet.includeLanguages":{
   "javascript":"javascriptreact"
  },
+"emmet.triggerExpansionOnTab": true,
 
   "workbench.colorCustomizations": {
     "editorError.foreground": "#f50000",

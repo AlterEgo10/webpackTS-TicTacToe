@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './components/App.jsx';
 import './style/main.css';
 import ErrorBoundary from './components/ErrorBoundary.jsx';
+//import { BrowserRouter } from 'react-router-dom';
 // Clear the existing HTML content
 //document.body.innerHTML = '<div id="app"></div>';
 
@@ -13,7 +14,9 @@ import ErrorBoundary from './components/ErrorBoundary.jsx';
 const root = createRoot(document.querySelector('#app'));
 //root.render(<h1>Hello, world</h1>);
 root.render(
- <ErrorBoundary fallback={<p>Ошибка 500</p>} >
-    <App />
- </ErrorBoundary>
+   <ErrorBoundary fallback={<p>Ошибка 500</p>} >
+  
+      <App />
+    
+  </ErrorBoundary>
 );

@@ -1,42 +1,88 @@
-import React,{ useState, useEffect } from 'react'
+import React,{ useState, useEffect,useContext } from 'react'
 import PropTypes from 'prop-types'
-import MovieItem from './MovieItem' 
-//import movieData from '../helpers/movieData';
-function MovieContainer({ items = [] }) {
+//import MovieItem from './MovieItem' 
+import axios from 'axios';
+import Menu from './Menu';
+//import { ThemeContext } from '../helpers/ThemeContext';
+//import { useLoaderData }
+//import styled from 'styled-components';
 
-  const [movies, setMovies] = useState([])
+// const DIV = styled.div`
+//   padding: 0;
+//   margin: 0;
+// `
 
-  // useEffect(() => {
-  //   console.log('useEffect');
-  //   const fetchMovies = async() => {
-  //     const { data } = await movieData.get("tv/popular")
-  //     setMovies(data.results)
-      
-  //   }
-  //   fetchMovies
-  // },[])
+let API_KEY = process.env.API_KEY;
 
-const array = items.map((item, index)=>(
-  <MovieItem
-   title={item.title}
-   data={item.data}
-   key={index}
-   />
-))
+export const movies = [
+  {
+    id: 1,
+    title: 'Iron Man',
+    data: 2008,
+    value: '',
+  },
+  {
+    id: 2,
+    title: 'Shrek Forever After',
+    data: '2010',
+    value: '',
+  },
+  {
+    id: 3,
+    title: 'The Lord of the Rings',
+    data: 2010,
+    value: '',
+  },
+];
+function MovieContainer() {
+//function MovieContainer({ items = [] }) {
+//   const [theme, setTheme, changeTheme, changeThemeNext, language] =
+//     useContext(ThemeContext);
+const [appDataMovies, setAppDataMovies] = useState(movies);
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=ru&page=1`
+       // `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&Language=${language}&page=1`
+      )
+      .then((result) => {
+        movies[0].value = result.data.name;
+        movies[1].value = result.data.name;
+        movies[2].value = result.data.name;
+        setAppDataMovies(movies);
+        // console.log(result.data.results);
+        setAppDataMovies(result.data.results);
+      });
+   // }, [language]);
+  }, []);
 
   return (
-     <div>{array}</div> 
-  )
-}
-
-MovieContainer.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      id:PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      data:PropTypes.number.isRequired,
-    })
-  ),
+    <>
+      <Menu/>
+      <div>
+        <h2>Фильмы</h2>
+      </div>
+      <div>
+        {appDataMovies.map((movie, index) => {
+          return (
+            <div
+              // className={
+              //   theme === 'light'
+              //     ? 'container item-movie'
+              //     : 'theme-dark item-movie'
+              // }
+              key={movie.id}
+            >
+              <p>{movie.title}</p>
+              <p>{movie.release_date}</p>
+              <p>{movie.overview}</p>
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
 }
 
 export default MovieContainer
