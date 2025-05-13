@@ -1,12 +1,12 @@
 import react, { useState, useEffect } from 'react';
-import axios from 'axios';
 //import imageLogo from '../img/record.svg';
 import { BrowserRouter, createHashRouter, RouterProvider,HashRouter,Routes,Route, createBrowserRouter } from 'react-router-dom';
 import { ThemeContext } from '../helpers/ThemeContext';
-import Button from './button/Button';
+import ThemeLanguageSwitcher from './button/ThemeLanguageSwitcher';
 import MovieContainer from './MovieContainer';
 import Series, { seriesLoader } from './Series';
 import Error404 from './pages/Error404';
+import EvaluatForm from './EvaluatForm';
 
 import ErrorBoundary from './ErrorBoundary';
 import MainLayout from './layouts/MainLayout';
@@ -20,7 +20,6 @@ const appThemes = ['light', 'dark'];
 const appLanguage = ['ru', 'en-US'];
 
 const router = createHashRouter([
-  //const router = BrowserRouter([
   {
     path: '/',
     element: <MainLayout />,
@@ -35,10 +34,15 @@ const router = createHashRouter([
     element: <Series />,
     errorElement: <Error404 />,
   },
-    {
-      path: '*',
-      element: <Error404 />,
-    },
+  {
+    path: '/form',
+    element: <EvaluatForm />,
+    errorElement: <Error404 />,
+  },
+  {
+    path: '*',
+    element: <Error404 />,
+  },
 ]);
 
 export default function App() {
@@ -70,7 +74,7 @@ export default function App() {
 
   return (
     <ThemeContext.Provider
-      value={[
+      value={{
         theme,
         setTheme,
         changeTheme,
@@ -79,11 +83,11 @@ export default function App() {
         setLanguage,
         changeLanguage,
         changeLanguageNext,
-      ]}
+      }}
     >
-      <div className={theme === 'light' ? 'container' : ('theme-dark' ,'body')}>
-        <Button />
-        {/* <BrowserRouter router={router} /> */}
+      <div className={theme === 'light' ? 'container' : ('theme-dark', 'body')}>
+        {/* <Button /> */}
+        <ThemeLanguageSwitcher/>
         <RouterProvider router={router} />
       </div>
     </ThemeContext.Provider>

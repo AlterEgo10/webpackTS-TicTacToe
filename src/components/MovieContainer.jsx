@@ -1,88 +1,55 @@
-import React,{ useState, useEffect,useContext } from 'react'
-import PropTypes from 'prop-types'
-//import MovieItem from './MovieItem' 
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import Menu from './Menu';
-//import { ThemeContext } from '../helpers/ThemeContext';
-//import { useLoaderData }
-//import styled from 'styled-components';
+import { ThemeContext } from '../helpers/ThemeContext';
 
-// const DIV = styled.div`
-//   padding: 0;
-//   margin: 0;
-// `
+const API_KEY = process.env.API_KEY;
 
-let API_KEY = process.env.API_KEY;
-
-export const movies = [
-  {
-    id: 1,
-    title: 'Iron Man',
-    data: 2008,
-    value: '',
-  },
-  {
-    id: 2,
-    title: 'Shrek Forever After',
-    data: '2010',
-    value: '',
-  },
-  {
-    id: 3,
-    title: 'The Lord of the Rings',
-    data: 2010,
-    value: '',
-  },
-];
-function MovieContainer() {
-//function MovieContainer({ items = [] }) {
-//   const [theme, setTheme, changeTheme, changeThemeNext, language] =
-//     useContext(ThemeContext);
-const [appDataMovies, setAppDataMovies] = useState(movies);
+export default function MovieContainer() {
+  const { language } = useContext(ThemeContext);
+  const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(
-        `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=ru&page=1`
-       // `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&Language=${language}&page=1`
-      )
-      .then((result) => {
-        movies[0].value = result.data.name;
-        movies[1].value = result.data.name;
-        movies[2].value = result.data.name;
-        setAppDataMovies(movies);
-        // console.log(result.data.results);
-        setAppDataMovies(result.data.results);
-      });
-   // }, [language]);
-  }, []);
+    const fetchMovies = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get(
+          `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=${language}&page=1`
+        );
+        setMovies(response.data.results);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMovies();
+  }, [language]);
+
+  if (loading) return <div>Loading movies...</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <>
-      <Menu/>
+      <Menu />
       <div>
-        <h2>Фильмы</h2>
+        <h2>{language === 'en-US' ? 'Movies' : 'Фильмы'}</h2>
       </div>
-      <div>
-        {appDataMovies.map((movie, index) => {
-          return (
-            <div
-              // className={
-              //   theme === 'light'
-              //     ? 'container item-movie'
-              //     : 'theme-dark item-movie'
-              // }
-              key={movie.id}
-            >
-              <p>{movie.title}</p>
-              <p>{movie.release_date}</p>
-              <p>{movie.overview}</p>
-            </div>
-          );
-        })}
+      <div className="movies-list">
+        {movies.map((movie) => (
+          <div
+            key={movie.id}
+            className="movie-card"
+          >
+            <h3>{movie.title}</h3>
+            <p>{new Date(movie.release_date).getFullYear()}</p>
+            <p>{movie.overview}</p>
+          </div>
+        ))}
       </div>
     </>
   );
 }
-
-export default MovieContainer

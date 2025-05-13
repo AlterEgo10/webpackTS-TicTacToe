@@ -8,8 +8,10 @@ let API_KEY = process.env.API_KEY;
 
 export default function Tabs() {
 //export default function Tabs({ items = [] }) {
-  const [theme, setTheme, changeTheme, changeThemeNext, language] =
-    useContext(ThemeContext);
+ // const [theme, setTheme, changeTheme, changeThemeNext, language] =
+   // useContext(ThemeContext);
+   const { theme, language } = useContext(ThemeContext);
+
   const [toggleState, setToggleState] = useState(1);
   const [appData, setAppDataMovies] = useState(movies);
   const [appDataSeries, setAppDataSeries] = useState(series);

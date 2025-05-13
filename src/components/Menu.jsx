@@ -1,4 +1,5 @@
-import React from 'react'
+// import React from 'react'
+import { useEffect, useState, useContext } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 const Ul=styled.ul`
@@ -7,11 +8,14 @@ const Ul=styled.ul`
   justify-content: space-around;
   font-size: 28px;
 `
+
+
 const A = styled(Link)`
   color:brown;
 `
 
 export default function Menu() {
+
   return (
     <Ul>
       <li>
@@ -23,18 +27,10 @@ export default function Menu() {
       <li>
         <A to="/series">Сериалы</A>
       </li>
+      <li>
+        <A to="/form">Оценить</A>
+      </li>
     </Ul>
-    // <ul>
-    //   <li>
-    //     <a href="#/">Главная</a>
-    //   </li>
-    //   <li>
-    //     <a href="#/films">Фильмы</a>
-    //   </li>
-    //   <li>
-    //     <a href="#/series">Сериалы</a>
-    //   </li>
-    // </ul>
   );
 }
 
