@@ -1,4 +1,4 @@
-import React,{ useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { ThemeContext } from '../helpers/ThemeContext';
 import axios, { AxiosError } from 'axios';
 import Menu from './Menu';
@@ -6,14 +6,12 @@ import Menu from './Menu';
 //import './styles.css';
 let API_KEY = process.env.API_KEY;
 
-
 export default function Series() {
-
- const { language,theme } = useContext(ThemeContext);
+  const { language, theme } = useContext(ThemeContext);
   const [appDataSeries, setAppDataSeries] = useState([]);
-    const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null); 
-  
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
     const fetchSeries = async () => {
       try {
@@ -23,29 +21,27 @@ export default function Series() {
         );
         setAppDataSeries(response.data.results);
       } catch (err) {
-        setError(err.message)
+        setError(err.message);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
-    fetchSeries()
+    };
+    fetchSeries();
   }, [language]);
 
-if(loading) return <div>Loading movies....</div>
-if (error) return <div>Error: {error}</div>;
+  if (loading) return <div>Loading movies....</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <>
-    <Menu/>
+      <Menu />
       <div>
         <h2>{language === 'en-US' ? 'Series' : 'Сериалы'}</h2>
       </div>
       <div>
-          {appDataSeries.map((item) => {
+        {appDataSeries.map((item) => {
           return (
-            <div
-              key={item.id}
-            >
+            <div key={item.id}>
               <p>{item.original_name}</p>
               <p>{item.release_date}</p>
               <p>{item.overview}</p>

@@ -1,108 +1,155 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Menu from './Menu';
 import styled from 'styled-components';
+import useInput from '../hooks/useInput';
 
-const FORM = styled.form`
-width: 450px;
-`
-const DIV = styled.div`
+const FormWrapper = styled.form`
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+`;
+
+const FieldWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-margin-top: 15px;
-`
-const Button = styled.button`
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100PX;
-`
+  margin-bottom: 20px;
+`;
 
-const LABEL = styled.label`
-  font-size: 30px;
+const Label = styled.label`
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+`;
+
+const Input = styled.input`
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 `;
 
 const Textarea = styled.textarea`
-  width: 100%;
-`
-const P = styled.p`
-  font-size: 40px;
-`
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+`;
 
-const SELECT = styled.select`
-  width: 70px;
+const Select = styled.select`
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+`;
+
+const Button = styled.button`
   margin-top: 10px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  width: 100%;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background-color: #005ecb;
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+`;
+
+const Output = styled.p`
+  font-size: 1.25rem;
+  margin: 10px 0;
 `;
 
 export default function EvaluatForm() {
-  const [title, setTitle] = useState('')
+  // const [title, setTitle] = useState('');
+  const title = useInput('','',true)
   const [description, setDescription] = useState('');
   const [grade, setGrade] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`Имя: ${title.value}\nОписание: ${description}\nОценка: ${grade}`);
+    //setTitle('');
+    // title.name
+    setDescription('');
+    setGrade('');
+  }; 
+
   return (
     <div>
       <Menu />
-      <DIV>
-      <FORM
-        onSubmit={(event) => {
-          event.preventDefault();
-          alert(title);
-          alert(description);
-         alert(grade);
-         setTitle('');
-          setDescription('');
-          setGrade('')
-        }}
-      >
-        <DIV>
-          <LABEL htmlFor="title">Ваше имя </LABEL>
-          <input
+      <FormWrapper onSubmit={handleSubmit}>
+        <FieldWrapper>
+          <Label htmlFor="title">Ваше имя</Label>
+          <Input {...title} />
+          {title.error && <span style={{ color: 'red' }}>{title.error}</span>}
+          {/* <Input
             type="text"
             id="title"
             name="title"
             value={title}
-            onChange={(event) => {
-              setTitle(event.target.value);
-              }}
-              placeholder='Введите имя...'
-          />
-        </DIV>
-        <DIV>
-          <LABEL htmlFor="description">Описание</LABEL>
+            onChange={(e) => setTitle(e.target.value)}
+            placeholder="Введите имя..."
+            required
+          /> */}
+        </FieldWrapper>
+
+        <FieldWrapper>
+          <Label htmlFor="description">Описание</Label>
           <Textarea
             id="description"
             name="description"
             value={description}
-            disabled={title.length === 0}
+            onChange={(e) => setDescription(e.target.value)}
             rows={5}
-            onChange={(event) => {
-              setDescription(event.target.value);
-            }}
+           disabled={!title.value}
+            placeholder="Опишите впечатления..."
           />
-        </DIV>
-        <DIV>
-          <LABEL htmlFor="grade">Оценка</LABEL>
-          <SELECT
+        </FieldWrapper>
+
+        <FieldWrapper>
+          <Label htmlFor="grade">Оценка</Label>
+          <Select
             id="grade"
             name="grade"
             value={grade}
-            onChange={(event) => {
-              setGrade(event.target.value);
-            }}
+            onChange={(e) => setGrade(e.target.value)}
+            required
           >
+            <option value="">Выберите...</option>
             <option value="5">5</option>
             <option value="4">4</option>
             <option value="3">3</option>
             <option value="2">2</option>
             <option value="1">1</option>
-          </SELECT>
-        </DIV>
-        <Button type="submit">Оценить</Button>
-        </FORM>
-        </DIV>
-      <P>Ваше имя: {title}</P>
-      <P>Описание: {description}</P>
-      <P>Оценка: {grade}</P>
+          </Select>
+        </FieldWrapper>
+
+        <Button
+          type="submit"
+           disabled={!title.value || !grade}
+        >
+          Оценить
+        </Button>
+      </FormWrapper>
+
+     {title.value && <Output>Ваше имя: {title.value}</Output>}
+      {description && <Output>Описание: {description}</Output>}
+      {grade && <Output>Оценка: {grade}</Output>}
     </div>
   );
 }

@@ -23,7 +23,8 @@ module.exports = {
     // Add support for TypeScripts fully qualified ESM imports.
     alias:{
       Components:path.resolve(__dirname, 'src/components/'),
-      Helpers:path.resolve(__dirname,'src/helpers/'),
+      Helpers: path.resolve(__dirname, 'src/helpers/'),
+      Hooks:path.resolve(__dirname,'src/hooks/'),
     },
     extensionAlias: {
      ".js": [".js", ".ts"],
