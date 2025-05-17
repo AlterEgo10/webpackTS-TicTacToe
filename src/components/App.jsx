@@ -7,7 +7,6 @@ import MovieContainer from './MovieContainer';
 import Series, { seriesLoader } from './Series';
 import Error404 from './pages/Error404';
 import EvaluatForm from './EvaluatForm';
-
 import ErrorBoundary from './ErrorBoundary';
 import MainLayout from './layouts/MainLayout';
 
@@ -22,7 +21,11 @@ const appLanguage = ['ru', 'en-US'];
 const router = createHashRouter([
   {
     path: '/',
-    element: <MainLayout />,
+    element: (
+      <ErrorBoundary>
+        <MainLayout />
+      </ErrorBoundary>
+    ),
   },
   {
     path: '/films',
