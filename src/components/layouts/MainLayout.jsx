@@ -12,6 +12,7 @@ export default function MainLayout() {
       <Menu />
       <OneBestMovie/>
       <Tabs/>
+      {/* <MoviesSeries/> */}
     <Outlet/>
     </div>
   )

@@ -24,7 +24,8 @@ module.exports = {
     alias:{
       Components:path.resolve(__dirname, 'src/components/'),
       Helpers: path.resolve(__dirname, 'src/helpers/'),
-      Hooks:path.resolve(__dirname,'src/hooks/'),
+      Hooks: path.resolve(__dirname, 'src/hooks/'),
+      Reducers:path.resolve(__dirname,'src/reducers/'),
     },
     extensionAlias: {
      ".js": [".js", ".ts"],
@@ -89,7 +90,7 @@ module.exports = {
   },
   plugins: [
     new Dotenv({
-      path:'./.env.example',
+      path:'./.env',
       safe: true,
     }),
     new HtmlWebpackPlugin({

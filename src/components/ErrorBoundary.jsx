@@ -20,7 +20,7 @@ export default class ErrorBoundary extends Component {
     ]),
   };
 
-  url = `${REACT_APP_BASE_URL}/logs`;
+  url = `${REACT_APP_BASE_URL}/logs`
 
   constructor(properties) {
     super(properties);

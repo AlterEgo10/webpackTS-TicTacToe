@@ -1,5 +1,296 @@
 {
-  "logs":[
-  
+  "logs": [
+    {
+      "id": "d610",
+      "message": "could not find react-redux context value; please ensure the component is wrapped in a <Provider>",
+      "stack": {
+        "componentStack": "\n    at MoviesSeries (http://localhost:3000/main328d30753a7b5b54de16.js:853:74)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/main328d30753a7b5b54de16.js:470:5)\n    at RenderedRoute (http://localhost:3000/main328d30753a7b5b54de16.js:49972:26)\n    at RenderErrorBoundary (http://localhost:3000/main328d30753a7b5b54de16.js:49931:5)\n    at DataRoutes (http://localhost:3000/main328d30753a7b5b54de16.js:50523:3)\n    at Router (http://localhost:3000/main328d30753a7b5b54de16.js:50608:13)\n    at RouterProvider (http://localhost:3000/main328d30753a7b5b54de16.js:50353:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main328d30753a7b5b54de16.js:383:66)\n    at ErrorBoundary (http://localhost:3000/main328d30753a7b5b54de16.js:470:5)"
+      },
+      "date": "2025-05-22T11:43:04.738Z"
+    }
+  ],
+  "movies": [
+    {
+      "id": "2f40"
+    },
+    {
+      "id": "d947"
+    },
+    {
+      "id": "37c7"
+    },
+    {
+      "id": "a87d",
+      "type": "moviesSeries/fetchDataSuccess"
+    },
+    {
+      "id": "4cdd",
+      "type": "moviesSeries/fetchDataSuccess"
+    },
+    {
+      "id": "0d9b",
+      "type": "moviesSeries/fetchDataSuccess"
+    },
+    {
+      "id": "b754",
+      "type": "moviesSeries/fetchDataSuccess"
+    },
+    {
+      "id": "405d"
+    },
+    {
+      "id": "02f9"
+    },
+    {
+      "id": "afd8"
+    },
+    {
+      "id": "1825"
+    },
+    {
+      "id": "4ce1"
+    },
+    {
+      "id": "774c"
+    },
+    {
+      "id": "c2f1"
+    },
+    {
+      "id": "529b"
+    },
+    {
+      "id": "0c52"
+    },
+    {
+      "id": "896d"
+    },
+    {
+      "id": "7079"
+    },
+    {
+      "id": "f3d2"
+    },
+    {
+      "id": "b74a"
+    },
+    {
+      "id": "8ef5"
+    },
+    {
+      "id": "e48d"
+    },
+    {
+      "id": "e5bd"
+    },
+    {
+      "id": "2a1c"
+    },
+    {
+      "id": "bc5a"
+    },
+    {
+      "id": "26de"
+    },
+    {
+      "id": "fce3"
+    },
+    {
+      "id": "e7ba"
+    },
+    {
+      "id": "c159"
+    },
+    {
+      "id": "87da"
+    },
+    {
+      "id": "41cb"
+    },
+    {
+      "id": "7d27"
+    },
+    {
+      "id": "7d5f",
+      "type": []
+    },
+    {
+      "id": "c7d4",
+      "type": []
+    },
+    {
+      "id": "6fd1",
+      "type": []
+    },
+    {
+      "id": "53b4"
+    },
+    {
+      "id": "cd2b"
+    },
+    {
+      "id": "8903"
+    },
+    {
+      "id": "f53f"
+    },
+    {
+      "id": "abb0"
+    },
+    {
+      "id": "16c4"
+    },
+    {
+      "id": "a30d",
+      "type": []
+    },
+    {
+      "id": "c5bb",
+      "type": []
+    },
+    {
+      "id": "1db9",
+      "type": []
+    },
+    {
+      "id": "bba2",
+      "type": [
+        []
+      ]
+    },
+    {
+      "id": "f763",
+      "type": [
+        []
+      ]
+    },
+    {
+      "id": "8692",
+      "type": []
+    },
+    {
+      "id": "8623",
+      "type": []
+    },
+    {
+      "id": "0dc8",
+      "type": []
+    },
+    {
+      "id": "d0ed",
+      "title": []
+    },
+    {
+      "id": "af00",
+      "title": []
+    },
+    {
+      "id": "4cbc"
+    },
+    {
+      "id": "4a87"
+    },
+    {
+      "id": "e7b5"
+    },
+    {
+      "id": "691b"
+    },
+    {
+      "id": "4f16"
+    },
+    {
+      "id": "1f13"
+    },
+    {
+      "id": "8b49"
+    },
+    {
+      "id": "4b05"
+    },
+    {
+      "id": "7312"
+    },
+    {
+      "id": "37ef"
+    },
+    {
+      "id": "2ef6"
+    },
+    {
+      "id": "a03e"
+    },
+    {
+      "id": "1c53"
+    },
+    {
+      "id": "7593"
+    },
+    {
+      "id": "35df"
+    },
+    {
+      "id": "4fb6"
+    },
+    {
+      "id": "ed58"
+    },
+    {
+      "id": "3f26"
+    },
+    {
+      "id": "9b38"
+    },
+    {
+      "id": "71f3"
+    },
+    {
+      "id": "9806"
+    },
+    {
+      "id": "26d7"
+    },
+    {
+      "id": "317d"
+    },
+    {
+      "id": "6df8"
+    },
+    {
+      "id": "ad96"
+    },
+    {
+      "id": "485d"
+    },
+    {
+      "id": "a6dd"
+    },
+    {
+      "id": "2ca4"
+    },
+    {
+      "id": "c54d"
+    },
+    {
+      "id": "6605"
+    },
+    {
+      "id": "dd6f"
+    },
+    {
+      "id": "cc10"
+    },
+    {
+      "id": "6663"
+    },
+    {
+      "id": "16d0"
+    },
+    {
+      "id": "a234"
+    },
+    {
+      "id": "0bb6"
+    }
   ]
 }

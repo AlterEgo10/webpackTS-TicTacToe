@@ -9,7 +9,7 @@ import Error404 from './pages/Error404';
 import EvaluatForm from './EvaluatForm';
 import ErrorBoundary from './ErrorBoundary';
 import MainLayout from './layouts/MainLayout';
-
+import { useDispatch, useSelector } from 'react-redux';
 // eslint-disable-next-line no-redeclare, no-import-assign
 let API_KEY = process.env.API_KEY;
 
@@ -29,7 +29,8 @@ const router = createHashRouter([
   },
   {
     path: '/films',
-    element: <MovieContainer />,
+     element: <MovieContainer />,
+    //element: <MoviesSeries />,
     errorElement: <ErrorBoundary />,
   },
   {

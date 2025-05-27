@@ -1,36 +1,31 @@
 import React, { useState, useEffect, useContext } from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 import Menu from './Menu';
 import { ThemeContext } from '../helpers/ThemeContext';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchMovies } from '../reducers/movieSeriesSlice';
 
-const API_KEY = process.env.API_KEY;
+//const API_KEY = process.env.API_KEY;
 
 export default function MovieContainer() {
   const { language } = useContext(ThemeContext);
-  const [movies, setMovies] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
+    const dispatch = useDispatch();
+    const { data, loading, error } = useSelector((state) => state.moviesSeries);
+    
   useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        setLoading(true);
-        const response = await axios.get(
-          `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=${language}&page=1`
-        );
-        setMovies(response.data.results);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchMovies();
-  }, [language]);
-
-  if (loading) return <div>Loading movies...</div>;
-  if (error) return <div>Error: {error}</div>;
+      
+      dispatch(fetchMovies());
+    }, [dispatch])
+    
+  
+    if (loading) {
+      return <div>Идёт загрузка данных...</div>;
+    }
+  
+    if (error) {
+      return <div>Ошибка получения данных: {error}</div>;
+    }
 
   return (
     <>
@@ -39,7 +34,7 @@ export default function MovieContainer() {
         <h2>{language === 'en-US' ? 'Movies' : 'Фильмы'}</h2>
       </div>
       <div className="movies-list">
-        {movies.map((movie) => (
+        {data.map((movie) => (
           <div
             key={movie.id}
             className="movie-card"

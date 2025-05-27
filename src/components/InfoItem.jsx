@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 //import movieData from 'Helpers/movieData';
 
 //const res = movies.map(item => <li>{item.title}</li>);
