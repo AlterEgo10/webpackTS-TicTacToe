@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 import { ThemeContext } from '../../helpers/ThemeContext'; 
 import { Link } from 'react-router-dom';
 import './styles.css';
+import BootstrapButton from 'react-bootstrap/Button'
+import styled from 'styled-components'
+
+const Button = styled(BootstrapButton)`
+margin: 10px;
+`
 
 
 const ThemeLanguageSwitcher = ({ title }) => {
@@ -22,13 +28,14 @@ const ThemeLanguageSwitcher = ({ title }) => {
           Язык: {language}
         </button>
 
-        <button
+        <Button
           className={`switcher-button theme-button ${theme}`}
           onClick={changeThemeNext}
+          variant="success"
           aria-label={`Сменить тему: ${theme === 'dark' ? 'светлая' : 'темная'}`}
         >
           Тема: {theme === 'dark' ? 'Темная' : 'Светлая'}
-        </button>
+        </Button>
       </div>
     </div>
   );

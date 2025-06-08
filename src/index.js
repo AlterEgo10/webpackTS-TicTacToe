@@ -6,16 +6,16 @@ import ErrorBoundary from './components/ErrorBoundary.jsx';
 //import { BrowserRouter } from 'react-router-dom';
 import store from './store'
 import { Provider } from 'react-redux'
-//JSX;
-//const element = React.createElement('h1',{},'test!!!');
-
+import Sidebar from './components/Sidebar.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css'
 // Render your React component instead
 const root = createRoot(document.querySelector('#app'));
-//root.render(<h1>Hello, world</h1>);
+
 root.render(
    <ErrorBoundary fallback={<p>Ошибка 500</p>} >
   <Provider store={store}>
       <App />
-      </Provider>
+    </Provider>
+    {/* <Sidebar/> */}
   </ErrorBoundary>
 );

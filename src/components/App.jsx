@@ -3,10 +3,10 @@ import react, { useState, useEffect } from 'react';
 import { BrowserRouter, createHashRouter, RouterProvider,HashRouter,Routes,Route, createBrowserRouter } from 'react-router-dom';
 import { ThemeContext } from '../helpers/ThemeContext';
 import ThemeLanguageSwitcher from './button/ThemeLanguageSwitcher';
-import MovieContainer from './MovieContainer';
-import Series, { seriesLoader } from './Series';
+import MovieContainer from './pages/MovieContainer';
+import Series, { seriesLoader } from './pages/Series';
 import Error404 from './pages/Error404';
-import EvaluatForm from './EvaluatForm';
+import EvaluatForm from './pages/MovieContainer';
 import ErrorBoundary from './ErrorBoundary';
 import MainLayout from './layouts/MainLayout';
 import { useDispatch, useSelector } from 'react-redux';
@@ -20,7 +20,8 @@ const appLanguage = ['ru', 'en-US'];
 
 const router = createHashRouter([
   {
-    path: '/',
+    // path: '/',
+    index:true,
     element: (
       <ErrorBoundary>
         <MainLayout />
@@ -28,7 +29,7 @@ const router = createHashRouter([
     ),
   },
   {
-    path: '/films',
+    path: 'films',
      element: <MovieContainer />,
     //element: <MoviesSeries />,
     errorElement: <ErrorBoundary />,
