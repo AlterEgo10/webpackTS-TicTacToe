@@ -11,8 +11,8 @@
     "build": "webpack --mode production --node-env=production",
     "dev": "webpack  --mode development --node-env=development",
     "watch": "webpack --watch --mode development --node-env=development",
-    "serve": "webpack serve --mode development --node-env=development",
-    "serve:json": "json-server --watch db.json --port 3001",
+    "serve": "webpack serve --mode development --node-env=development --delay 1000",
+    "serve:json": "json-server --watch db.json --port 3001 --delay 1000",
     "start": "concurrently \"npm:serve\" \"npm:serve:json\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchSeries } from '../../reducers/movieSeriesSlice';
 import Sidebar from '../Sidebar';
 import { Container, Row, Col } from 'react-bootstrap';
+import Spinner from 'react-bootstrap/Spinner';
 //import { useLoaderData } from 'react-router-dom';
 //import './styles.css';
 let API_KEY = process.env.API_KEY;
@@ -22,7 +23,12 @@ export default function Series() {
   }, [dispatch]);
 
   if (loading) {
-    return <div>Идёт загрузка данных...</div>;
+    return(
+    <Spinner animation="border"
+    role="status">
+      <div>Идёт загрузка данных...</div>;
+    </Spinner>
+    )
   }
 
   if (error) {

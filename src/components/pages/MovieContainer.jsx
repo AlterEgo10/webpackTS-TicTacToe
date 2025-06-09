@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchMovies } from '../../reducers/movieSeriesSlice';
 import { Container, Row, Col } from 'react-bootstrap';
 import Sidebar from '../Sidebar';
+import Spinner from 'react-bootstrap/Spinner';
 //const API_KEY = process.env.API_KEY;
 
 export default function MovieContainer() {
@@ -21,7 +22,17 @@ export default function MovieContainer() {
     
   
     if (loading) {
-      return <div>Идёт загрузка данных...</div>;
+      return (
+        <div className='d-flex justify-content-center align-items-center'>
+          <Spinner
+            animation="border"
+            role="status"
+            variant="primary"
+          >
+            <div>Идёт загрузка данных...</div>;
+          </Spinner>
+        </div>
+      );
     }
   
     if (error) {

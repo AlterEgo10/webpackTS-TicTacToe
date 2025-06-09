@@ -6,7 +6,7 @@ import ThemeLanguageSwitcher from './button/ThemeLanguageSwitcher';
 import MovieContainer from './pages/MovieContainer';
 import Series, { seriesLoader } from './pages/Series';
 import Error404 from './pages/Error404';
-import EvaluatForm from './pages/MovieContainer';
+import EvaluatForm from './pages/EvaluatForm';
 import ErrorBoundary from './ErrorBoundary';
 import MainLayout from './layouts/MainLayout';
 import { useDispatch, useSelector } from 'react-redux';
@@ -31,7 +31,6 @@ const router = createHashRouter([
   {
     path: 'films',
      element: <MovieContainer />,
-    //element: <MoviesSeries />,
     errorElement: <ErrorBoundary />,
   },
   {
