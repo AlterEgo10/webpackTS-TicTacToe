@@ -8,7 +8,7 @@ import { MdOutlineLocalMovies } from 'react-icons/md';
 import { IoHomeOutline } from 'react-icons/io5';
 import { FcRating } from 'react-icons/fc';
 import { SiAuthy } from 'react-icons/si';
-import {Link} from 'react-router-dom'
+import {NavLink, Link} from 'react-router-dom'
 import { CgProfile } from 'react-icons/cg';
 import { useMediaQuery } from 'react-responsive';
 
@@ -18,7 +18,7 @@ const Divider = styled.hr`
 `
 
 export default function Sidebar() {
-  const isMobile = useMediaQuery({ query: 'max-width: 768px', })
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)', })
   return (
     <Navbar
       bg="dark"
@@ -47,10 +47,13 @@ export default function Sidebar() {
       >
         <Nav.Item>
           <Nav.Link
-            as={Link}
+            as={NavLink}
             to="/"
-            eventKey="/"
-            className="text-light"
+            end
+            //  eventKey="/"
+            className={({ isActive }) =>
+              'text-light' + (isActive ? 'active' : '')
+            }
           >
             <IoHomeOutline
               size="16"
@@ -61,10 +64,12 @@ export default function Sidebar() {
         </Nav.Item>
         <Nav.Item>
           <Nav.Link
-            as={Link}
+            as={NavLink}
             to="/films"
-            eventKey="/films"
-            className="text-light"
+            // eventKey="/films"
+            className={({ isActive }) =>
+              'text-light' + (isActive ? 'active' : '')
+            }
           >
             <MdOutlineLocalMovies
               size="16"
@@ -75,10 +80,12 @@ export default function Sidebar() {
         </Nav.Item>
         <Nav.Item>
           <Nav.Link
-            as={Link}
+            as={NavLink}
             to="/series"
-            eventKey="/series"
-            className="text-light"
+            //eventKey="/series"
+            className={({ isActive }) =>
+              'text-light' + (isActive ? 'active' : '')
+            }
           >
             <MdOutlineLocalMovies
               size="16"
@@ -89,10 +96,12 @@ export default function Sidebar() {
         </Nav.Item>
         <Nav.Item>
           <Nav.Link
-            as={Link}
+            as={NavLink}
             to="/form"
-            eventKey="/form"
-            className="text-light"
+            //eventKey="/form"
+            className={({ isActive }) =>
+              'text-light' + (isActive ? 'active' : '')
+            }
           >
             <FcRating
               size="16"
@@ -103,10 +112,12 @@ export default function Sidebar() {
         </Nav.Item>
         <Nav.Item>
           <Nav.Link
-            as={Link}
+            as={NavLink}
             to="/auth"
-            eventKey="/auth"
-            className="text-light"
+            //  eventKey="/auth"
+            className={({ isActive }) =>
+              'text-light' + (isActive ? 'active' : '')
+            }
           >
             <SiAuthy
               size="16"

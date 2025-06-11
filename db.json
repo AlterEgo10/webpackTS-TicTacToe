@@ -215,6 +215,22 @@
         "componentStack": "\n    at Sidebar (http://localhost:3000/main8b1e509831d00cfeae6c.js:7369:12)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main8b1e509831d00cfeae6c.js:23341:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main8b1e509831d00cfeae6c.js:25219:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main8b1e509831d00cfeae6c.js:23497:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/main8b1e509831d00cfeae6c.js:6829:5)\n    at RenderedRoute (http://localhost:3000/main8b1e509831d00cfeae6c.js:114933:26)\n    at RenderErrorBoundary (http://localhost:3000/main8b1e509831d00cfeae6c.js:114892:5)\n    at DataRoutes (http://localhost:3000/main8b1e509831d00cfeae6c.js:115484:3)\n    at Router (http://localhost:3000/main8b1e509831d00cfeae6c.js:115569:13)\n    at RouterProvider (http://localhost:3000/main8b1e509831d00cfeae6c.js:115314:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main8b1e509831d00cfeae6c.js:6742:66)\n    at Provider (http://localhost:3000/main8b1e509831d00cfeae6c.js:109537:11)\n    at ErrorBoundary (http://localhost:3000/main8b1e509831d00cfeae6c.js:6829:5)"
       },
       "date": "2025-06-07T20:06:36.146Z"
+    },
+    {
+      "id": "3a30",
+      "message": "NavLink is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/mainf0a2026384bda5d5dc48.js:6979:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/mainf0a2026384bda5d5dc48.js:23371:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/mainf0a2026384bda5d5dc48.js:25249:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/mainf0a2026384bda5d5dc48.js:23527:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/mainf0a2026384bda5d5dc48.js:6828:5)\n    at RenderedRoute (http://localhost:3000/mainf0a2026384bda5d5dc48.js:115009:26)\n    at RenderErrorBoundary (http://localhost:3000/mainf0a2026384bda5d5dc48.js:114968:5)\n    at DataRoutes (http://localhost:3000/mainf0a2026384bda5d5dc48.js:115560:3)\n    at Router (http://localhost:3000/mainf0a2026384bda5d5dc48.js:115645:13)\n    at RouterProvider (http://localhost:3000/mainf0a2026384bda5d5dc48.js:115390:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/mainf0a2026384bda5d5dc48.js:6741:66)\n    at Provider (http://localhost:3000/mainf0a2026384bda5d5dc48.js:109613:11)\n    at ErrorBoundary (http://localhost:3000/mainf0a2026384bda5d5dc48.js:6828:5)"
+      },
+      "date": "2025-06-09T11:15:37.016Z"
+    },
+    {
+      "id": "1142",
+      "message": "Link is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main72db6de05e47dd6ef944.js:6979:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main72db6de05e47dd6ef944.js:23371:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main72db6de05e47dd6ef944.js:25249:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main72db6de05e47dd6ef944.js:23527:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/main72db6de05e47dd6ef944.js:6828:5)\n    at RenderedRoute (http://localhost:3000/main72db6de05e47dd6ef944.js:115009:26)\n    at RenderErrorBoundary (http://localhost:3000/main72db6de05e47dd6ef944.js:114968:5)\n    at DataRoutes (http://localhost:3000/main72db6de05e47dd6ef944.js:115560:3)\n    at Router (http://localhost:3000/main72db6de05e47dd6ef944.js:115645:13)\n    at RouterProvider (http://localhost:3000/main72db6de05e47dd6ef944.js:115390:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main72db6de05e47dd6ef944.js:6741:66)\n    at Provider (http://localhost:3000/main72db6de05e47dd6ef944.js:109613:11)\n    at ErrorBoundary (http://localhost:3000/main72db6de05e47dd6ef944.js:6828:5)"
+      },
+      "date": "2025-06-09T11:17:33.430Z"
     }
   ],
   "movies": [

@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { ThemeContext } from '../../helpers/ThemeContext';
 import axios, { AxiosError } from 'axios';
-import Menu from '../Menu';
+import {Card,CardGroup,ListGroup} from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSeries } from '../../reducers/movieSeriesSlice';
 import Sidebar from '../Sidebar';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import Spinner from 'react-bootstrap/Spinner';
 //import { useLoaderData } from 'react-router-dom';
 //import './styles.css';
@@ -35,7 +35,6 @@ export default function Series() {
     return <div>Ошибка получения данных: {error}</div>;
   }
 
-
   return (
     <>
       <div>
@@ -64,10 +63,19 @@ export default function Series() {
             >
               {data.map((item) => {
                 return (
-                  <div key={item.id}>
-                    <p>{item.original_name}</p>
-                    <p>{item.release_date}</p>
-                    <p>{item.overview}</p>
+                  <div
+                    key={item.id}
+                    className="p-3"
+                  >
+                    <Card>
+                      <Card.Body>
+                        <Card.Title>{item.original_name}</Card.Title>
+                        <ListGroup>
+                          <ListGroup.Item>{item.overview}</ListGroup.Item>
+                          <ListGroup.Item>{item.first_air_date}</ListGroup.Item>
+                        </ListGroup>
+                      </Card.Body>
+                    </Card>
                   </div>
                 );
               })}
