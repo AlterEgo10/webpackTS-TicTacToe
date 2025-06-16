@@ -8,6 +8,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Sidebar from '../Sidebar';
 import Spinner from 'react-bootstrap/Spinner';
 import { Card, CardGroup, ListGroup } from 'react-bootstrap';
+import MovieCard from '../MovieCard'
 //const API_KEY = process.env.API_KEY;
 
 export default function MovieContainer() {
@@ -67,23 +68,10 @@ export default function MovieContainer() {
               xxl="10"
             >
               {data.map((movie) => (
-                <div
+                <MovieCard
                   key={movie.id}
-                  className="movie-card"
-                >
-                  <Card>
-                    <Card.Body>
-                      <Card.Title>{movie.title}</Card.Title>
-                      <ListGroup>
-                        <ListGroup.Item>{movie.overview}</ListGroup.Item>
-                        <ListGroup.Item>{movie.release_date}</ListGroup.Item>
-                      </ListGroup>
-                    </Card.Body>
-                  </Card>
-                  {/* <h3>{movie.title}</h3>
-                  <p>{new Date(movie.release_date).getFullYear()}</p>
-                  <p>{movie.overview}</p> */}
-                </div>
+                  movie={movie}
+                />
               ))}
             </Col>
           </Row>
