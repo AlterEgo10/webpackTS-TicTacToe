@@ -54,6 +54,8 @@ module.exports = {
     //'prettier/prettier': 'error',
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
+    'unicorn/prefer-query-selector': 'off',
+    'unicorn/prefer-string-slice':'off',
     //indent: ['error', 2],
     //'linebreak-style': ['error', 'unix'],
     // quotes: ['error', 'single'],

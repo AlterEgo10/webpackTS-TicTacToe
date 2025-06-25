@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import useInput from '../../hooks/useInput';
 import { Container, Row, Col } from 'react-bootstrap';
 import Sidebar from '../Sidebar';
+import Form from 'react-bootstrap/Form'
+import {Form as RouterForm} from 'react-router-dom'
+import { Alert } from 'react-bootstrap';
+import MovieSearch from '../MovieSearch'
 
 const FormWrapper = styled.form`
   width: 100%;
@@ -14,39 +18,39 @@ const FormWrapper = styled.form`
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 `;
 
-const FieldWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-`;
+// const FieldWrapper = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   margin-bottom: 20px;
+// `;
 
-const Label = styled.label`
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-`;
+// const Label = styled.label`
+//   font-size: 1.1rem;
+//   font-weight: 600;
+//   margin-bottom: 8px;
+// `;
 
-const Input = styled.input`
-  padding: 8px 12px;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-`;
+// const Input = styled.input`
+//   padding: 8px 12px;
+//   font-size: 1rem;
+//   border-radius: 6px;
+//   border: 1px solid #ccc;
+// `;
 
-const Textarea = styled.textarea`
-  padding: 8px 12px;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  resize: vertical;
-`;
+// const Textarea = styled.textarea`
+//   padding: 8px 12px;
+//   font-size: 1rem;
+//   border-radius: 6px;
+//   border: 1px solid #ccc;
+//   resize: vertical;
+// `;
 
-const Select = styled.select`
-  padding: 8px 12px;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-`;
+// const Select = styled.select`
+//   padding: 8px 12px;
+//   font-size: 1rem;
+//   border-radius: 6px;
+//   border: 1px solid #ccc;
+// `;
 
 const Button = styled.button`
   margin-top: 10px;
@@ -77,7 +81,8 @@ const Output = styled.p`
 
 export default function EvaluatForm() {
   // const [title, setTitle] = useState('');
-  const title = useInput('','',true)
+  const title = useInput('', '', true)
+  //const search = useInput('', '', true);
   const [description, setDescription] = useState('');
   const [grade, setGrade] = useState('');
 
@@ -90,6 +95,14 @@ export default function EvaluatForm() {
     setGrade('');
   }; 
 
+ 
+    // const [query, setQuery] = useState('');
+    // const [movies, setMovies] = useState([]);
+    // const [loading, setLoading] = useState(false);
+    // const [error, setError] = useState(null);
+    
+    // API ключ лучше хранить в переменных окружения
+    
   return (
     <div>
       <main>
@@ -114,19 +127,21 @@ export default function EvaluatForm() {
               xl="10"
               style={{ padding: 0 }}
             >
-              <FormWrapper onSubmit={handleSubmit}>
-                <FieldWrapper>
-                  <h2>Оценочная форма</h2>
-                  <Label htmlFor="title">Ваше имя</Label>
-                  <Input {...title} />
-                  {title.error && (
-                    <span style={{ color: 'red' }}>{title.error}</span>
-                  )}
-                </FieldWrapper>
+              <h1 className="text-center mb-3">Оценочная форма</h1>
+              <FormWrapper
+                as={RouterForm}
+                onSubmit={handleSubmit}
+              >
+                <Form.Group className="mb-3">
+                  <Form.Label>Ваше имя</Form.Label>
+                  <Form.Control {...title} />
+                  {title.error && <Alert variant="danger">{title.error}</Alert>}
+                </Form.Group>
 
-                <FieldWrapper>
-                  <Label htmlFor="description">Описание</Label>
-                  <Textarea
+                <Form.Group className="mb-3">
+                  <Form.Label>Описание</Form.Label>
+                  <Form.Control
+                    as="textarea"
                     id="description"
                     name="description"
                     value={description}
@@ -135,16 +150,18 @@ export default function EvaluatForm() {
                     disabled={!title.value}
                     placeholder="Опишите впечатления..."
                   />
-                </FieldWrapper>
+                  {/* <Form.Text className='text-muted'>Описание станет доступно для заполнения после ввода названия</Form.Text> */}
+                </Form.Group>
 
-                <FieldWrapper>
-                  <Label htmlFor="grade">Оценка</Label>
-                  <Select
+                <Form.Group>
+                  <Form.Label>Оценка</Form.Label>
+                  <Form.Select
                     id="grade"
                     name="grade"
                     value={grade}
                     onChange={(e) => setGrade(e.target.value)}
                     required
+                    disabled={!title.value}
                   >
                     <option value="">Выберите...</option>
                     <option value="5">5</option>
@@ -152,22 +169,24 @@ export default function EvaluatForm() {
                     <option value="3">3</option>
                     <option value="2">2</option>
                     <option value="1">1</option>
-                  </Select>
-                </FieldWrapper>
+                  </Form.Select>
+                </Form.Group>
 
                 <Button
                   type="submit"
                   disabled={!title.value || !grade}
+                  variant="primary"
                 >
                   Оценить
                 </Button>
               </FormWrapper>
-
+              <MovieSearch />
               {title.value && <Output>Ваше имя: {title.value}</Output>}
               {description && <Output>Описание: {description}</Output>}
               {grade && <Output>Оценка: {grade}</Output>}
             </Col>
           </Row>
+          {/* <MovieSearch /> */}
         </Container>
       </main>
     </div>

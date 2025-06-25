@@ -1,45 +1,71 @@
 import React, { useState, useEffect, useContext } from 'react';
-//import axios from 'axios';
-import Menu from '../Menu';
 import { ThemeContext } from '../../helpers/ThemeContext';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMovies } from '../../reducers/movieSeriesSlice';
-import { Container, Row, Col } from 'react-bootstrap';
 import Sidebar from '../Sidebar';
 import Spinner from 'react-bootstrap/Spinner';
-import { Card, CardGroup, ListGroup } from 'react-bootstrap';
 import MovieCard from '../MovieCard'
-//const API_KEY = process.env.API_KEY;
+import {Container,Row,Col,Form,Card,InputGroup,Button,} from 'react-bootstrap';
 
 export default function MovieContainer() {
   const { language } = useContext(ThemeContext);
 
-    const dispatch = useDispatch();
-    const { data, loading, error } = useSelector((state) => state.moviesSeries);
-    
+  const dispatch = useDispatch();
+  const { data, loading, error } = useSelector((state) => state.moviesSeries);
+  const [filteredMovies, setFilteredMovies] = useState(data);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  // Состояние для загрузки
+  const [isSearching, setIsSearching] = useState(false);
+
+  // Обработчик изменения поискового запроса
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+    setIsSearching(true);
+  };
   useEffect(() => {
-      
-      dispatch(fetchMovies());
-    }, [dispatch])
-    
-  
-    if (loading) {
-      return (
-        <div className='d-flex justify-content-center align-items-center'>
-          <Spinner
-            animation="border"
-            role="status"
-            variant="primary"
-          >
-            <div>Идёт загрузка данных...</div>;
-          </Spinner>
-        </div>
-      );
+    dispatch(fetchMovies());
+  }, [dispatch]);
+
+  // Локальная фильтрация
+  const filterMoviesLocally = (data, query) => {
+    if (!query.trim()) {
+      return data;
     }
-  
-    if (error) {
-      return <div>Ошибка получения данных: {error}</div>;
+
+    return data.filter((movie) =>
+      movie.title.toLowerCase().includes(query.toLowerCase())
+    );
+  };
+
+ 
+
+  useEffect(() => {
+    if (searchTerm) {
+      const locallyFiltered = filterMoviesLocally(data, searchTerm);
+      setFilteredMovies(locallyFiltered);
+    } else {
+      setFilteredMovies('');
     }
+  }, [searchTerm, data]);
+
+  if (loading) {
+    return (
+      <div className="d-flex justify-content-center align-items-center">
+        <Spinner
+          animation="border"
+          role="status"
+          variant="primary"
+        >
+          <div>Идёт загрузка данных...</div>;
+        </Spinner>
+      </div>
+    );
+  }
+
+  if (error) {
+    return <div>Ошибка получения данных: {error}</div>;
+  }
 
   return (
     <>
@@ -67,6 +93,49 @@ export default function MovieContainer() {
               lg="9"
               xxl="10"
             >
+              <h1 className="text-center mb-4">Поиск загруженных фильмов</h1>
+
+              <Row className="justify-content-center mb-4">
+                <Col md={8}>
+                  <InputGroup>
+                    <Form.Control
+                      type="text"
+                      placeholder="Введите название фильма..."
+                      value={searchTerm}
+                      onChange={handleSearchChange}
+                      aria-label="Поиск фильмов"
+                      size="lg"
+                    />
+                    <Button variant="primary">Поиск</Button>
+                  </InputGroup>
+                </Col>
+              </Row>
+
+              <Row>
+                {filteredMovies.length > 0 ?  (
+                  filteredMovies.map((movie) => (
+                    <Col
+                      md={4}
+                      key={movie.id}
+                      className="mb-3"
+                    >
+                      <Card>
+                        <Card.Body>
+                          <Card.Title>{movie.title}</Card.Title>
+                          <Card.Text>
+                            <strong>Год:</strong> {movie.release_date}
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  ))
+                ) : (
+                  <Col className="text-center">
+                    <p>Фильмы не найдены</p>
+                  </Col>
+                )}
+              </Row>
+
               {data.map((movie) => (
                 <MovieCard
                   key={movie.id}

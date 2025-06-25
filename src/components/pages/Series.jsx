@@ -1,15 +1,21 @@
+/* eslint-disable no-redeclare */
 import React, { useEffect, useState, useContext } from 'react';
 import { ThemeContext } from '../../helpers/ThemeContext';
-import axios, { AxiosError } from 'axios';
-import {Card,CardGroup,ListGroup} from 'react-bootstrap'
+//import axios, { AxiosError } from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSeries } from '../../reducers/movieSeriesSlice';
 import Sidebar from '../Sidebar';
-import { Container, Row, Col, Carousel } from 'react-bootstrap';
+import {
+  Container,
+  Card,
+  Row,
+  Col,
+  Form,
+  InputGroup,
+  Button,
+} from 'react-bootstrap';
 import Spinner from 'react-bootstrap/Spinner';
-//import { useLoaderData } from 'react-router-dom';
-//import './styles.css';
-let API_KEY = process.env.API_KEY;
+
 
 export default function Series() {
   const { language, theme } = useContext(ThemeContext);
@@ -17,18 +23,48 @@ export default function Series() {
 
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector((state) => state.moviesSeries);
+//search
+  const [filteredSeries, setFilteredSeries] = useState([]); // Отфильтрованные сериалы
+  const [searchTerm, setSearchTerm] = useState(''); // Текущий поисковый запрос
+  const [debouncedSearchTerm, setDebouncedSearchTerm] = useState(''); // Дебаунсированный запрос
 
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedSearchTerm(searchTerm);
+    }, 2000); // 2 секунды задержки
+    // Очистка таймера при изменении searchTerm
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [searchTerm]);
+
+  useEffect(() => {
+    if (debouncedSearchTerm) {
+      const filtered = data.filter((series) =>
+        series.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase())
+      );
+      setFilteredSeries(filtered);
+    } else {
+      setFilteredSeries(data);
+    }
+  }, [debouncedSearchTerm, data]);
+  
+
+  //end search
+  
   useEffect(() => {
     dispatch(fetchSeries());
   }, [dispatch]);
 
   if (loading) {
-    return(
-    <Spinner animation="border"
-    role="status">
-      <div>Идёт загрузка данных...</div>;
-    </Spinner>
-    )
+    return (
+      <Spinner
+        animation="border"
+        role="status"
+      >
+        <div>Идёт загрузка данных...</div>;
+      </Spinner>
+    );
   }
 
   if (error) {
@@ -61,7 +97,54 @@ export default function Series() {
               lg="9"
               xxl="10"
             >
-              {data.map((item) => {
+              {/* search */}
+              <Card className="mb-3">
+                <Card.Body>
+                  <InputGroup className="mb-3">
+                    <Form.Control
+                      onSubmit={filteredSeries}
+                      type="text"
+                      placeholder="Поиск сериалов..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      aria-label="Поиск сериалов"
+                    />
+                    <Button
+                      type="submit"
+                      variant="primary"
+                    >
+                      Поиск
+                    </Button>
+                  </InputGroup>
+                </Card.Body>
+              </Card>
+
+              <Row>
+                {filteredSeries.length > 0 ? (
+                  filteredSeries.map((series) => (
+                    <Col
+                      md={4}
+                      key={series.id}
+                      className="mb-3"
+                    >
+                      <Card>
+                        <Card.Body>
+                          <Card.Title>{series.original_name}</Card.Title>
+                          <Card.Text>
+                            <strong>Год:</strong> {series.first_air_date}
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  ))
+                ) : (
+                  <Col className="text-center">
+                    <p>Сериалы не найдены</p>
+                  </Col>
+                )}
+              </Row>
+              {/* end search */}
+              {/* {data.map((item) => {
                 return (
                   <div
                     key={item.id}
@@ -78,7 +161,7 @@ export default function Series() {
                     </Card>
                   </div>
                 );
-              })}
+              })} */}
             </Col>
           </Row>
         </Container>
