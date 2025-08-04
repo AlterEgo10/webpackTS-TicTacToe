@@ -159,7 +159,7 @@ export default function Sidebar() {
         <NavDropdown.Divider />
         <NavDropdown.Item
           as={Link}
-          to="/logout"
+          to="/auth/logout"
         >
           Выход
         </NavDropdown.Item>

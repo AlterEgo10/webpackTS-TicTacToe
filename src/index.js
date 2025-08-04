@@ -11,6 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 // Render your React component instead
 const root = createRoot(document.querySelector('#app'));
 
+
+
 root.render(
    <ErrorBoundary fallback={<p>Ошибка 500</p>} >
   <Provider store={store}>

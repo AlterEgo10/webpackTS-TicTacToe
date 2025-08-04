@@ -10,7 +10,7 @@ import {
 } from 'react-bootstrap';
 
 let API_KEY = process.env.API_KEY;
-
+ console.log(API_KEY)
 
  const MovieSearch = () => {
   const [query, setQuery] = useState('');
@@ -29,7 +29,7 @@ let API_KEY = process.env.API_KEY;
     try {
       // Запрос к API TMDB
     
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=ru-RU&query=${encodeURIComponent(query)}&page=1&include_adult=false`;
+      const url = `https://api.themoviedb.org/3/search/movie?api_key=bc7224a73dc886d22ae4f7c60de75a13&language=ru-RU&query=${encodeURIComponent(query)}&page=1&include_adult=false`;
 
       const response = await fetch(url);
 

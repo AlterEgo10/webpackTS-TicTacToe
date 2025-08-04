@@ -1,6 +1,6 @@
 //import { number } from 'prop-types';
-import React from 'react';
-import axios from "axios";
+// import React from 'react';
+// import axios from "axios";
 
 
 export const movies = [
@@ -38,7 +38,7 @@ export const movies = [
     data: '2007–2019',
   },
 ];
-// export default movies;
+//  export default movies;
 
 
 

@@ -7,6 +7,18 @@ import Spinner from 'react-bootstrap/Spinner';
 import MovieCard from '../MovieCard'
 import {Container,Row,Col,Form,Card,InputGroup,Button,} from 'react-bootstrap';
 
+// Исправление опечаток в названиях функций
+
+function changeLanguageNext() {
+  const index = appLanguage.indexOf(language) || 0;
+  setLanguage(index === 0 ? 'ru' : appLanguage[1]);
+}
+
+function changeThemeNext() {
+  const index = appThemes.indexOf(theme) || 0;
+  setTheme(index === 0 ? 'dark' : appThemes[1]);
+}
+
 export default function MovieContainer() {
   const { language } = useContext(ThemeContext);
 
@@ -37,8 +49,6 @@ export default function MovieContainer() {
       movie.title.toLowerCase().includes(query.toLowerCase())
     );
   };
-
- 
 
   useEffect(() => {
     if (searchTerm) {
@@ -149,3 +159,4 @@ export default function MovieContainer() {
     </>
   );
 }
+

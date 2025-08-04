@@ -10,8 +10,12 @@ import EvaluatForm from './pages/EvaluatForm';
 import ErrorBoundary from './ErrorBoundary';
 import MainLayout from './layouts/MainLayout';
 import { useDispatch, useSelector } from 'react-redux';
+import AuthLayout from './layouts/AuthLayout';
+import Logout from './pages/Logout';
+import PrivateRoute from './PrivateRoute';
+import LoginForm from './pages/LoginForm';
 // eslint-disable-next-line no-redeclare, no-import-assign
-let API_KEY = process.env.API_KEY;
+//let API_KEY = process.env.API_KEY;
 
 const appThemes = ['light', 'dark'];
 
@@ -20,17 +24,21 @@ const appLanguage = ['ru', 'en-US'];
 
 const router = createHashRouter([
   {
-    // path: '/',
-    index:true,
+    path: '/',
+    index: true,
     element: (
       <ErrorBoundary>
-        <MainLayout />
+        {/* <ThemeLanguageSwitcher /> */}
+
+        <PrivateRoute>
+          <MainLayout />
+        </PrivateRoute>
       </ErrorBoundary>
     ),
   },
   {
     path: 'films',
-     element: <MovieContainer />,
+    element: <MovieContainer />,
     errorElement: <ErrorBoundary />,
   },
   {
@@ -41,11 +49,28 @@ const router = createHashRouter([
   {
     path: '/form',
     element: <EvaluatForm />,
-    errorElement: <Error404 />,
   },
   {
-    path: '*',
-    element: <Error404 />,
+    path: '/auth',
+    element: <AuthLayout />,
+    children: [
+      {
+        index: true,
+        element: (
+          <ErrorBoundary>
+          <LoginForm />
+          </ErrorBoundary>
+        ),
+      },
+      {
+        path: 'logout',
+        element: <Logout />,
+      },
+      {
+        path: '*',
+        element: <Error404 />,
+      },
+    ],
   },
 ]);
 
@@ -91,7 +116,7 @@ export default function App() {
     >
       <div className={theme === 'light' ? 'container' : ('theme-dark', 'body')}>
         {/* <Button /> */}
-        <ThemeLanguageSwitcher/>
+        {/* <ThemeLanguageSwitcher/> */}
         <RouterProvider router={router} />
       </div>
     </ThemeContext.Provider>

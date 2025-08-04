@@ -1,9 +1,11 @@
+const webpack = require('webpack');//test
 const path = require('node:path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const  NodePolyfillPlugin  =  require ( 'node-polyfill-webpack-plugin' ) ;
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
-
+//const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 const isProduction = process.env.NODE_ENV === 'production';
 const styleLoaderHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
 
@@ -31,7 +33,15 @@ module.exports = {
      ".js": [".js", ".ts"],
      ".cjs": [".cjs", ".cts"],
      ".mjs": [".mjs", ".mts"]
-    }
+      },
+      //test error
+      fallback: {
+        buffer: require.resolve('buffer/'),
+        // process: require.resolve('process/browser'), // если потребуется
+      }
+    //test
+    
+    
   },
   devtool :(isProduction) ? 'source-map' : 'inline-source-map',
   devServer:{
@@ -89,9 +99,13 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      Buffer: ['buffer', 'Buffer'],
+      // process: 'process/browser', // если потребуется
+    }),
     new Dotenv({
-      path:'./.env',
-      safe: true,
+      path:'./.env.example',
+       safe: true,
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname,'src', 'template.html'),
@@ -102,9 +116,12 @@ module.exports = {
       filename: 'css/[name][contenthash].css'
     }),
 
-    new ESLintPlugin({
-      extensions: ['js', 'ts'],
-      fix:true,
-    }),
+    new ESLintPlugin(
+     // {
+      // extensions: ['js', 'ts'],
+      // fix:true,
+    //  }
+    ),
+     new NodePolyfillPlugin(),
   ]
 };

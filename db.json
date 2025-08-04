@@ -1,4 +1,13 @@
 {
+  "users": [
+    {
+      "name": "John Doe",
+      "email": "john@domain.local",
+      "password": "$2b$10$FKl2QL1.0iJ3PPQzAaCI/.buTWsft66V7dkQTuBzTs/mlAlxx2GNO",
+      "token": "navtnajosodklffflkg",
+      "id": "0388"
+    }
+  ],
   "logs": [
     {
       "id": "d610",
@@ -231,6 +240,30 @@
         "componentStack": "\n    at Sidebar (http://localhost:3000/main72db6de05e47dd6ef944.js:6979:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main72db6de05e47dd6ef944.js:23371:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main72db6de05e47dd6ef944.js:25249:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main72db6de05e47dd6ef944.js:23527:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/main72db6de05e47dd6ef944.js:6828:5)\n    at RenderedRoute (http://localhost:3000/main72db6de05e47dd6ef944.js:115009:26)\n    at RenderErrorBoundary (http://localhost:3000/main72db6de05e47dd6ef944.js:114968:5)\n    at DataRoutes (http://localhost:3000/main72db6de05e47dd6ef944.js:115560:3)\n    at Router (http://localhost:3000/main72db6de05e47dd6ef944.js:115645:13)\n    at RouterProvider (http://localhost:3000/main72db6de05e47dd6ef944.js:115390:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main72db6de05e47dd6ef944.js:6741:66)\n    at Provider (http://localhost:3000/main72db6de05e47dd6ef944.js:109613:11)\n    at ErrorBoundary (http://localhost:3000/main72db6de05e47dd6ef944.js:6828:5)"
       },
       "date": "2025-06-09T11:17:33.430Z"
+    },
+    {
+      "id": "0620",
+      "message": "Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.",
+      "stack": {
+        "componentStack": "\n    at PrivateRoute (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/main15191b6256d334306dfb.js:127578:5)\n    at RenderedRoute (http://localhost:3000/main15191b6256d334306dfb.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main15191b6256d334306dfb.js:111389:5)\n    at DataRoutes (http://localhost:3000/main15191b6256d334306dfb.js:111978:3)\n    at Router (http://localhost:3000/main15191b6256d334306dfb.js:112063:13)\n    at RouterProvider (http://localhost:3000/main15191b6256d334306dfb.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main15191b6256d334306dfb.js:127491:66)\n    at Provider (http://localhost:3000/main15191b6256d334306dfb.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main15191b6256d334306dfb.js:127578:5)"
+      },
+      "date": "2025-08-01T11:51:23.540Z"
+    },
+    {
+      "id": "ca6d",
+      "message": "Objects are not valid as a React child (found: object with keys {children}). If you meant to render a collection of children, use an array instead.",
+      "stack": {
+        "componentStack": "\n    at PrivateRoute (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/main087c16102e92b8776d74.js:127580:5)\n    at RenderedRoute (http://localhost:3000/main087c16102e92b8776d74.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main087c16102e92b8776d74.js:111389:5)\n    at DataRoutes (http://localhost:3000/main087c16102e92b8776d74.js:111978:3)\n    at Router (http://localhost:3000/main087c16102e92b8776d74.js:112063:13)\n    at RouterProvider (http://localhost:3000/main087c16102e92b8776d74.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main087c16102e92b8776d74.js:127493:66)\n    at Provider (http://localhost:3000/main087c16102e92b8776d74.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main087c16102e92b8776d74.js:127580:5)"
+      },
+      "date": "2025-08-01T11:51:48.902Z"
+    },
+    {
+      "id": "58e8",
+      "message": "children is not defined",
+      "stack": {
+        "componentStack": "\n    at PrivateRoute (http://localhost:3000/main40f626944907ae186862.js:127937:5)\n    at ErrorBoundary (http://localhost:3000/main40f626944907ae186862.js:127588:5)\n    at RenderedRoute (http://localhost:3000/main40f626944907ae186862.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main40f626944907ae186862.js:111389:5)\n    at DataRoutes (http://localhost:3000/main40f626944907ae186862.js:111978:3)\n    at Router (http://localhost:3000/main40f626944907ae186862.js:112063:13)\n    at RouterProvider (http://localhost:3000/main40f626944907ae186862.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main40f626944907ae186862.js:127501:66)\n    at Provider (http://localhost:3000/main40f626944907ae186862.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main40f626944907ae186862.js:127588:5)"
+      },
+      "date": "2025-08-01T13:42:25.011Z"
     }
   ],
   "movies": [
