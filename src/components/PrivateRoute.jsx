@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Navigate } from 'react-router-dom';
 
 function PrivateRoute({ children, authUrl = '/auth' }) {
-  const isAuthenticated = Boolean(localStorage.getItem('isAuthenticated'))
+  const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
   if (isAuthenticated) {
     return children;
   }

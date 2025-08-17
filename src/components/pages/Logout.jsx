@@ -5,10 +5,9 @@ export default function Logout() {
   const navigate = useNavigate()
   useEffect(() => {
     localStorage.removeItem('isAuthenticated');
-    localStorage.removeItem('token')
-    
-    navigate('/auth')
-},[])
+    localStorage.removeItem('token');
+    navigate('/auth');
+  }, [navigate]);
 
   return null
 }

@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import {
   Container,
@@ -9,54 +10,59 @@ import {
   Card,
   Spinner,
 } from 'react-bootstrap';
-import record from '../../img/record.svg'
+import record from '../../img/record.svg';
 import bcrypt from 'bcryptjs';
- import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function LoginForm() {
-  const navigate = useNavigate()
-const [email, setEmail] = useState('')
-const [password, setPassword] = useState('');
-const [error, setError] = useState('');
-  
-  const handleSubmit = (event) => {
-    event.preventDefault()
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
-    // const salt = bcrypt.genSaltSync(10);
-    // const hash = bcrypt.hashSync('1234', salt);
-    // console.log(hash)
-      axios
-        .get(`${process.env.REACT_APP_BASE_URL}/users?email=${email}`)
-        .then((result) => {
-          const users = result.data;
+   const API_BASE_URL =
+     process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
 
-          if (users.length === 0) {
-            setError('Неверный e-mail и/или пароль');
-            setPassword('');
-            return;
-          }
-          if (
-            users.length > 0 &&
-            bcrypt.compareSync(password, users[0].password)
-          ) {
-            localStorage.setItem('isAuthenticated', true);
-            localStorage.setItem('token', users[0].token);
-            return navigate('/');
-          } else {
-            setError('Неверный e-mail или пароль');
-            setPassword('');
-          }
-        });
-    }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    setError('');
 
-    useEffect(() => {
-      const isAuthenticated = localStorage.getItem('isAuthenticated')
-      if (isAuthenticated) {
-        return navigate('/')
+    try {
+      const result = await axios.get(`${API_BASE_URL}/users?email=${email}`);
+      const users = result.data;
+     //console.log(users[0].name);
+      if (users.length === 0) {
+        setError('Неверный e-mail и/или пароль');
+        setPassword('');
+        setLoading(false);
+        return;
       }
-    }, []);
-  //}
+
+      if (users.length > 0 && bcrypt.compareSync(password, users[0].password)) {
+        localStorage.setItem('isAuthenticated', 'true');
+        localStorage.setItem('token', users[0].token);
+        navigate('/');
+      } else {
+        setError('Неверный e-mail или пароль');
+        setPassword('');
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+      setError('Ошибка подключения к серверу');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+    if (isAuthenticated) {
+      navigate('/');
+    }
+  }, [navigate]);
 
   return (
     <Form
@@ -71,22 +77,59 @@ const [error, setError] = useState('');
           height="64"
           className="mb-4"
         />
-        <h1 className='h3 mb-4 fw-normal'>Форма авторизации</h1>
+        <h1 className="h3 mb-4 fw-normal">Форма авторизации</h1>
       </div>
-      <Form.Group className='mb-2'>
-        <Form.Control type='email' size='lg' placeholder='Email' required value={email} onChange={(event) => setEmail(event.target.value)}/>
+      <Form.Group className="mb-2">
+        <Form.Control
+          type="email"
+          size="lg"
+          placeholder="Email"
+          required
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+          disabled={loading}
+        />
       </Form.Group>
 
-      <Form.Group className='mb-2'>
-        <Form.Control type='password' size='lg' placeholder='Пароль' required value={password} onChange={(event) => setPassword(event.target.value)}/>
+      <Form.Group className="mb-2">
+        <Form.Control
+          type="password"
+          size="lg"
+          placeholder="Пароль"
+          required
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
+          disabled={loading}
+        />
       </Form.Group>
 
-    { error && <Alert variant='danger'>{error}</Alert> }
+      {error && <Alert variant="danger">{error}</Alert>}
 
-      <Button variant='primary' size='lg' type='submit' className='w-100'>Войти</Button>
+      <Button
+        variant="primary"
+        size="lg"
+        type="submit"
+        className="w-100 mb-3"
+        disabled={loading}
+      >
+        {loading ? (
+          <Spinner
+            animation="border"
+            size="sm"
+          />
+        ) : (
+          'Войти'
+        )}
+      </Button>
+
+      <div className="text-center">
+        <Link
+          to="/auth/register"
+          className="text-decoration-none"
+        >
+          Нет аккаунта? Зарегистрироваться
+        </Link>
+      </div>
     </Form>
   );
 }
-
-//------------------------------------------------------
-

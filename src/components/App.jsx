@@ -14,6 +14,7 @@ import AuthLayout from './layouts/AuthLayout';
 import Logout from './pages/Logout';
 import PrivateRoute from './PrivateRoute';
 import LoginForm from './pages/LoginForm';
+import RegisterForm from './pages/RegisterForm'
 // eslint-disable-next-line no-redeclare, no-import-assign
 //let API_KEY = process.env.API_KEY;
 
@@ -28,8 +29,6 @@ const router = createHashRouter([
     index: true,
     element: (
       <ErrorBoundary>
-        {/* <ThemeLanguageSwitcher /> */}
-
         <PrivateRoute>
           <MainLayout />
         </PrivateRoute>
@@ -58,13 +57,21 @@ const router = createHashRouter([
         index: true,
         element: (
           <ErrorBoundary>
-          <LoginForm />
+            <LoginForm />
           </ErrorBoundary>
         ),
       },
       {
         path: 'logout',
         element: <Logout />,
+      },
+      {
+        path: 'register',
+        element: (
+          <ErrorBoundary>
+            <RegisterForm />
+          </ErrorBoundary>
+        ),
       },
       {
         path: '*',

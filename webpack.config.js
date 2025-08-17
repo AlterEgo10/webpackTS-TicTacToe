@@ -104,7 +104,7 @@ module.exports = {
       // process: 'process/browser', // если потребуется
     }),
     new Dotenv({
-      path:'./.env.example',
+      path:'./.env',
        safe: true,
     }),
     new HtmlWebpackPlugin({

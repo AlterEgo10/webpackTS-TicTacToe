@@ -1,4 +1,5 @@
-import React from 'react'
+//import React from 'react'
+import React, { useEffect, useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -11,6 +12,15 @@ import { SiAuthy } from 'react-icons/si';
 import {NavLink, Link} from 'react-router-dom'
 import { CgProfile } from 'react-icons/cg';
 import { useMediaQuery } from 'react-responsive';
+import axios from 'axios';
+
+
+ const API_BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
+
+  // const API_BASE_URL =
+  //   process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
+
+
 
 const Divider = styled.hr`
   color: white;
@@ -18,7 +28,28 @@ const Divider = styled.hr`
 `
 
 export default function Sidebar() {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)', })
+  const [login, setLogin] = useState('');
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
+  useEffect(() => {
+    const nameReq = async () => {
+      try {
+        const result = await axios.get(`${API_BASE_URL}/users`);
+        const users = result.data;
+        if (users.length > 0) {
+          const num = users.length - 1;
+          setLogin(users[num].name);
+        } else {
+          console.log('No users found');
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    nameReq();
+  }, []);
+
   return (
     <Navbar
       bg="dark"
@@ -136,7 +167,8 @@ export default function Sidebar() {
               size="32"
               className="me-2"
             />
-            <strong>Гость</strong>
+            {/* <strong>Гость</strong> */}
+            <strong>{login}</strong>
           </>
         }
         className="text-light"
