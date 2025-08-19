@@ -1,0 +1,20 @@
+{
+  "app": {
+    "title": "Menu",
+    "logo": "Logo",
+    "menu": {
+      "main": "Home",
+      "movies": "Movies",
+      "series": "Series",
+      "rate": "Rate",
+      "authorization": "Authorization",
+      "profile": "My profile",
+      "settings": "Settings",
+      "logout": "Logout"
+    },
+    "footer": "MyApp"
+  },
+  "settings": {
+    "title": "Settings"
+  }
+}

@@ -7,6 +7,7 @@ import Form from 'react-bootstrap/Form'
 import {Form as RouterForm} from 'react-router-dom'
 import { Alert } from 'react-bootstrap';
 import MovieSearch from '../MovieSearch'
+import Settings from '../Settings';
 
 const FormWrapper = styled.form`
   width: 100%;
@@ -17,40 +18,6 @@ const FormWrapper = styled.form`
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 `;
-
-// const FieldWrapper = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   margin-bottom: 20px;
-// `;
-
-// const Label = styled.label`
-//   font-size: 1.1rem;
-//   font-weight: 600;
-//   margin-bottom: 8px;
-// `;
-
-// const Input = styled.input`
-//   padding: 8px 12px;
-//   font-size: 1rem;
-//   border-radius: 6px;
-//   border: 1px solid #ccc;
-// `;
-
-// const Textarea = styled.textarea`
-//   padding: 8px 12px;
-//   font-size: 1rem;
-//   border-radius: 6px;
-//   border: 1px solid #ccc;
-//   resize: vertical;
-// `;
-
-// const Select = styled.select`
-//   padding: 8px 12px;
-//   font-size: 1rem;
-//   border-radius: 6px;
-//   border: 1px solid #ccc;
-// `;
 
 const Button = styled.button`
   margin-top: 10px;
@@ -95,13 +62,6 @@ export default function EvaluatForm() {
     setGrade('');
   }; 
 
- 
-    // const [query, setQuery] = useState('');
-    // const [movies, setMovies] = useState([]);
-    // const [loading, setLoading] = useState(false);
-    // const [error, setError] = useState(null);
-    
-    // API ключ лучше хранить в переменных окружения
     
   return (
     <div>
@@ -186,7 +146,6 @@ export default function EvaluatForm() {
               {grade && <Output>Оценка: {grade}</Output>}
             </Col>
           </Row>
-          {/* <MovieSearch /> */}
         </Container>
       </main>
     </div>

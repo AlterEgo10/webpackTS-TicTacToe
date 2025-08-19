@@ -13,7 +13,8 @@ import {NavLink, Link} from 'react-router-dom'
 import { CgProfile } from 'react-icons/cg';
 import { useMediaQuery } from 'react-responsive';
 import axios from 'axios';
-
+import { useTranslation } from 'react-i18next'; 
+import Settings from './Settings';
 
  const API_BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
 
@@ -26,8 +27,13 @@ const Divider = styled.hr`
   color: white;
   width: 100%;
 `
+// const Settings = styled.Settings`
+//   margin-top: 50px;
+// `
 
 export default function Sidebar() {
+const { t } = useTranslation();
+
   const [login, setLogin] = useState('');
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
@@ -66,8 +72,9 @@ export default function Sidebar() {
           src={record}
           width="40px"
           className="me-2"
+          alt={t('app.logo')}
         />
-        <span className="fs-4">Меню</span>
+        <span className="fs-4">{t('app.title')}</span>
       </Navbar.Brand>
       <Divider />
       <Nav
@@ -90,7 +97,7 @@ export default function Sidebar() {
               size="16"
               className="me-2"
             />
-            Главная
+            {t('app.menu.main')}
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
@@ -106,7 +113,7 @@ export default function Sidebar() {
               size="16"
               className="me-2"
             />
-            Фильмы
+            {t('app.menu.movies')}
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
@@ -122,7 +129,7 @@ export default function Sidebar() {
               size="16"
               className="me-2"
             />
-            Сериалы
+            {t('app.menu.series')}
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
@@ -138,27 +145,10 @@ export default function Sidebar() {
               size="16"
               className="me-2"
             />
-            Оценить
-          </Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link
-            as={NavLink}
-            to="/auth"
-            //  eventKey="/auth"
-            className={({ isActive }) =>
-              'text-light' + (isActive ? 'active' : '')
-            }
-          >
-            <SiAuthy
-              size="16"
-              className="me-2"
-            />
-            Авторизация
+            {t('app.menu.rate')}
           </Nav.Link>
         </Nav.Item>
       </Nav>
-
       <Divider />
       <NavDropdown
         title={
@@ -180,20 +170,20 @@ export default function Sidebar() {
           as={Link}
           to="/profile"
         >
-          Мой профиль
+          {t('app.menu.profile')}
         </NavDropdown.Item>
         <NavDropdown.Item
           as={Link}
           to="/setting"
         >
-          Настройки
+          {t('app.menu.settings')}
         </NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item
           as={Link}
           to="/auth/logout"
         >
-          Выход
+          {t('app.menu.logout')}
         </NavDropdown.Item>
       </NavDropdown>
     </Navbar>

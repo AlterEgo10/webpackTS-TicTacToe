@@ -15,6 +15,7 @@ import Logout from './pages/Logout';
 import PrivateRoute from './PrivateRoute';
 import LoginForm from './pages/LoginForm';
 import RegisterForm from './pages/RegisterForm'
+import Settings from './Settings'
 // eslint-disable-next-line no-redeclare, no-import-assign
 //let API_KEY = process.env.API_KEY;
 
@@ -48,6 +49,10 @@ const router = createHashRouter([
   {
     path: '/form',
     element: <EvaluatForm />,
+  },
+  {
+    path: 'setting',
+    element: <Settings />,
   },
   {
     path: '/auth',

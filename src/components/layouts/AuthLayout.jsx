@@ -1,7 +1,8 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
 export default function AuthLayout() {
+  const { t } = useTranslation();
   return (
     <main
       className="d-flex justify-content-center align-items-center w-100 vh-100 m-auto"
@@ -9,7 +10,9 @@ export default function AuthLayout() {
     >
       <div>
         <Outlet />
-        <p>@ {new Date().getFullYear()}</p>
+        <p>
+          @ {new Date().getFullYear()} &copy2025;{t('app.footer')}
+        </p>
       </div>
     </main>
   );
