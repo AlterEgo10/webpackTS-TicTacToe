@@ -11,9 +11,11 @@
     "build": "webpack --mode production --node-env=production",
     "dev": "webpack  --mode development --node-env=development",
     "watch": "webpack --watch --mode development --node-env=development",
-    "serve": "webpack serve --mode development --node-env=development",
+    "serve: webpack": "webpack serve --mode development --node-env=development",
+    "serve: production": "serve -s dist",
     "serve:json": "json-server --watch db.json --port 3001",
     "start": "concurrently \"npm:serve\" \"npm:serve:json\"",
+    "start:production": "concurrently \"npm:serve:production\" \"npm:serve:json\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -72,6 +74,7 @@
     "react-responsive": "^10.0.1",
     "react-router-dom": "^7.5.3",
     "redux": "^5.0.1",
+    "serve": "^14.2.4",
     "styled-components": "^6.1.17"
   }
 }

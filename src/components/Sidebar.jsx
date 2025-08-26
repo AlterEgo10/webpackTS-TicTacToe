@@ -166,12 +166,12 @@ const { t } = useTranslation();
         menuVariant="dark"
         style={{ width: '100%' }}
       >
-        <NavDropdown.Item
+        {/* <NavDropdown.Item
           as={Link}
           to="/profile"
         >
           {t('app.menu.profile')}
-        </NavDropdown.Item>
+        </NavDropdown.Item>*/}
         <NavDropdown.Item
           as={Link}
           to="/setting"

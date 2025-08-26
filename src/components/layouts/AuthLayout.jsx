@@ -11,7 +11,8 @@ export default function AuthLayout() {
       <div>
         <Outlet />
         <p>
-          @ {new Date().getFullYear()} &copy2025;{t('app.footer')}
+          {/* @ {new Date().getFullYear()} &copy2025;{t('app.footer')} */}
+          &copy; {new Date().getFullYear()  } {t('app.footer')}
         </p>
       </div>
     </main>

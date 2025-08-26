@@ -65,9 +65,31 @@ module.exports = {
   },
   module: {
     rules: [
-      {
+      // {
+      //   test: /\.s?css$/i,
+      //   use: [ styleLoaderHandler, 'css-loader','sass-loader' ],
+      // },
+            {
         test: /\.s?css$/i,
-        use: [ styleLoaderHandler, 'css-loader','sass-loader' ],
+        use: [
+          styleLoaderHandler,
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: !isProduction,
+              sassOptions: {
+                quietDeps: true,
+                silenceDeprecations: [
+                  'import',
+                  'global-builtin',
+                  'function-units',
+                  'color-functions',
+                ],
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,

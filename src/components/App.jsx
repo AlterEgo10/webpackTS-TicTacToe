@@ -1,6 +1,14 @@
-import react, { useState, useEffect } from 'react';
-//import imageLogo from '../img/record.svg';
-import { BrowserRouter, createHashRouter, RouterProvider,HashRouter,Routes,Route, createBrowserRouter } from 'react-router-dom';
+import React, { useState, Profiler } from 'react';
+import {
+  BrowserRouter,
+  createHashRouter,
+  RouterProvider,
+  HashRouter,
+  Routes,
+  Route,
+  createBrowserRouter,
+} from 'react-router-dom';
+import { profilerOnRenderCallback } from '../helpers/profiler'
 import { ThemeContext } from '../helpers/ThemeContext';
 import ThemeLanguageSwitcher from './button/ThemeLanguageSwitcher';
 import MovieContainer from './pages/MovieContainer';
@@ -14,8 +22,8 @@ import AuthLayout from './layouts/AuthLayout';
 import Logout from './pages/Logout';
 import PrivateRoute from './PrivateRoute';
 import LoginForm from './pages/LoginForm';
-import RegisterForm from './pages/RegisterForm'
-import Settings from './Settings'
+import RegisterForm from './pages/RegisterForm';
+import Settings from './Settings';
 // eslint-disable-next-line no-redeclare, no-import-assign
 //let API_KEY = process.env.API_KEY;
 
@@ -87,7 +95,6 @@ const router = createHashRouter([
 ]);
 
 export default function App() {
-
   const [theme, setTheme] = useState(appThemes[0]);
   const [language, setLanguage] = useState('ru');
 
@@ -127,9 +134,12 @@ export default function App() {
       }}
     >
       <div className={theme === 'light' ? 'container' : ('theme-dark', 'body')}>
-        {/* <Button /> */}
-        {/* <ThemeLanguageSwitcher/> */}
-        <RouterProvider router={router} />
+        <Profiler
+          id="Routing"
+          onRender={profilerOnRenderCallback}
+        >
+          <RouterProvider router={router} />
+        </Profiler>
       </div>
     </ThemeContext.Provider>
   );

@@ -447,6 +447,14 @@
         "componentStack": "\n    at Sidebar (http://localhost:3000/main3dd56e6a3d10a0764871.js:131314:86)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main3dd56e6a3d10a0764871.js:37387:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main3dd56e6a3d10a0764871.js:40358:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main3dd56e6a3d10a0764871.js:37543:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (http://localhost:3000/main3dd56e6a3d10a0764871.js:131974:86)\n    at PrivateRoute (http://localhost:3000/main3dd56e6a3d10a0764871.js:131231:23)\n    at ErrorBoundary (http://localhost:3000/main3dd56e6a3d10a0764871.js:130884:5)\n    at RenderedRoute (http://localhost:3000/main3dd56e6a3d10a0764871.js:114690:26)\n    at RenderErrorBoundary (http://localhost:3000/main3dd56e6a3d10a0764871.js:114649:5)\n    at DataRoutes (http://localhost:3000/main3dd56e6a3d10a0764871.js:115238:3)\n    at Router (http://localhost:3000/main3dd56e6a3d10a0764871.js:115323:13)\n    at RouterProvider (http://localhost:3000/main3dd56e6a3d10a0764871.js:115068:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main3dd56e6a3d10a0764871.js:130797:66)\n    at Provider (http://localhost:3000/main3dd56e6a3d10a0764871.js:109037:11)\n    at ErrorBoundary (http://localhost:3000/main3dd56e6a3d10a0764871.js:130884:5)"
       },
       "date": "2025-08-19T07:13:49.678Z"
+    },
+    {
+      "id": "acf0",
+      "message": "profilerOnRenderCallback is not defined",
+      "stack": {
+        "componentStack": "\n    at App (http://localhost:3000/main5542af1b29189804c717.js:118154:66)\n    at Provider (http://localhost:3000/main5542af1b29189804c717.js:96390:11)\n    at ErrorBoundary (http://localhost:3000/main5542af1b29189804c717.js:118245:5)"
+      },
+      "date": "2025-08-24T15:37:41.460Z"
     }
   ],
   "movies": [
