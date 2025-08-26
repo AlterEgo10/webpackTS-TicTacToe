@@ -3,13 +3,12 @@ import { movies, series } from '../../helpers/movieData';
 import axios from 'axios';
 import './styles.css';
 import { ThemeContext } from '../../helpers/ThemeContext';
+import { useTranslation } from 'react-i18next'; 
 
 let API_KEY = process.env.API_KEY;
 
 export default function Tabs() {
-  //export default function Tabs({ items = [] }) {
-  // const [theme, setTheme, changeTheme, changeThemeNext, language] =
-  // useContext(ThemeContext);
+  const { t } = useTranslation();
   const { theme, language } = useContext(ThemeContext);
 
   const [toggleState, setToggleState] = useState(1);
@@ -41,7 +40,6 @@ export default function Tabs() {
         movies[1].value = result.data.name;
         movies[2].value = result.data.name;
         setAppDataMovies(movies);
-        // console.log(result.data.results);
         setAppDataMovies(result.data.results);
       });
   }, [language]);
@@ -53,13 +51,13 @@ export default function Tabs() {
           className={toggleState === 1 ? 'tabs active-tabs' : 'tabs'}
           onClick={() => toggleTab(1)}
         >
-          <h2>Фильмы</h2>
+          <h2>{t('tabs.movies')}</h2>
         </div>
         <div
           className={toggleState === 2 ? 'tabs active-tabs' : 'tabs'}
           onClick={() => toggleTab(2)}
         >
-          <h2>Сериалы</h2>
+          <h2>{t('tabs.series')}</h2>
         </div>
       </div>
       <div className="content-tabs">

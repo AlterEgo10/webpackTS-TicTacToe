@@ -120,7 +120,6 @@ const { t } = useTranslation();
           <Nav.Link
             as={NavLink}
             to="/series"
-            //eventKey="/series"
             className={({ isActive }) =>
               'text-light' + (isActive ? 'active' : '')
             }

@@ -16,5 +16,34 @@
   },
   "settings": {
     "title": "Settings"
+  },
+  "form": {
+    "title": "Evaluation form",
+    "name": "Your name",
+    "description": "Description",
+    "placeholder": "Describe your impressions...",
+    "text": "The description will become available for filling after entering your name",
+    "grade": "Grade",
+    "select": "Select",
+    "rate": "rate",
+    "search": "Search for a movie",
+    "movie": "Enter the movie title...",
+    "searchSpinner": "Search",
+    "searchMovies": "Find"
+  },
+  "tabs": {
+    "movies": "Movies",
+    "series": "Series"
+  },
+  "movies": {
+    "spinner": "Loading data...",
+    "search": "Search for downloaded movies",
+    "placeholder": "Enter movie title...",
+    "moviesNotFound": "Movies not found",
+    "searchButton": "Search"
+  },
+  "series": {
+    "searchSeries": "search for TV series...",
+    "search": "Search"
   }
 }

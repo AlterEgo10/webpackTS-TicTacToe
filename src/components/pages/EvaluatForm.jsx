@@ -8,6 +8,7 @@ import {Form as RouterForm} from 'react-router-dom'
 import { Alert } from 'react-bootstrap';
 import MovieSearch from '../MovieSearch'
 import Settings from '../Settings';
+import { useTranslation } from 'react-i18next'; 
 
 const FormWrapper = styled.form`
   width: 100%;
@@ -47,7 +48,8 @@ const Output = styled.p`
 `;
 
 export default function EvaluatForm() {
-  // const [title, setTitle] = useState('');
+  const { t } = useTranslation();
+  
   const title = useInput('', '', true)
   //const search = useInput('', '', true);
   const [description, setDescription] = useState('');
@@ -87,19 +89,20 @@ export default function EvaluatForm() {
               xl="10"
               style={{ padding: 0 }}
             >
-              <h1 className="text-center mb-3">Оценочная форма</h1>
+              {/* <h1 className="text-center mb-3">Оценочная форма</h1> */}{' '}
+              <h1 className="text-center mb-3"> {t('form.title')}</h1>{' '}
               <FormWrapper
                 as={RouterForm}
                 onSubmit={handleSubmit}
               >
                 <Form.Group className="mb-3">
-                  <Form.Label>Ваше имя</Form.Label>
+                  <Form.Label> {t('form.name')}</Form.Label>
                   <Form.Control {...title} />
                   {title.error && <Alert variant="danger">{title.error}</Alert>}
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                  <Form.Label>Описание</Form.Label>
+                  <Form.Label>{t('form.description')}</Form.Label>
                   <Form.Control
                     as="textarea"
                     id="description"
@@ -108,13 +111,13 @@ export default function EvaluatForm() {
                     onChange={(e) => setDescription(e.target.value)}
                     rows={5}
                     disabled={!title.value}
-                    placeholder="Опишите впечатления..."
+                    placeholder={t('form.placeholder')}
                   />
-                  {/* <Form.Text className='text-muted'>Описание станет доступно для заполнения после ввода названия</Form.Text> */}
+                  <Form.Text className="text-muted">{t('form.text')}</Form.Text>
                 </Form.Group>
 
                 <Form.Group>
-                  <Form.Label>Оценка</Form.Label>
+                  <Form.Label>{t('form.grade')}</Form.Label>
                   <Form.Select
                     id="grade"
                     name="grade"
@@ -123,7 +126,7 @@ export default function EvaluatForm() {
                     required
                     disabled={!title.value}
                   >
-                    <option value="">Выберите...</option>
+                    <option value="">{t('form.select')}...</option>
                     <option value="5">5</option>
                     <option value="4">4</option>
                     <option value="3">3</option>
@@ -137,7 +140,7 @@ export default function EvaluatForm() {
                   disabled={!title.value || !grade}
                   variant="primary"
                 >
-                  Оценить
+                  {t('form.rate')}
                 </Button>
               </FormWrapper>
               <MovieSearch />

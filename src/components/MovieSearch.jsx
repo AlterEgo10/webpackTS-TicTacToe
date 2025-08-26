@@ -8,11 +8,13 @@ import {
   Card,
   Spinner,
 } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next'; 
 
 let API_KEY = process.env.API_KEY;
  console.log(API_KEY)
 
- const MovieSearch = () => {
+const MovieSearch = () => {
+   const { t } = useTranslation();
   const [query, setQuery] = useState('');
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -51,12 +53,12 @@ let API_KEY = process.env.API_KEY;
     <Container className="mt-4">
       <Row className="justify-content-center mb-4">
         <Col md={8}>
-          <h2 className="text-center mb-3">Поиск фильма</h2>
+          <h2 className="text-center mb-3">{t('form.search')}</h2>
           <Form onSubmit={searchMovies}>
             <Form.Group className="d-flex">
               <Form.Control
                 type="text"
-                placeholder="Введите название фильма..."
+                placeholder={t('form.search')}
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 className="me-2"
@@ -77,10 +79,10 @@ let API_KEY = process.env.API_KEY;
                       aria-hidden="true"
                       className="me-2"
                     />
-                    Поиск...
+                    {t('form.searchSpinner')}
                   </>
                 ) : (
-                  'Найти'
+                  `${t('form.searchMovies')}`
                 )}
               </Button>
             </Form.Group>
@@ -151,8 +153,8 @@ let API_KEY = process.env.API_KEY;
                 <Card.Text className="movie-overview">
                   {movie.overview
                     ? movie.overview.length > 150
-                      // eslint-disable-next-line unicorn/prefer-string-slice
-                      ? `${movie.overview.substring(0, 150)}...`
+                      ? // eslint-disable-next-line unicorn/prefer-string-slice
+                        `${movie.overview.substring(0, 150)}...`
                       : movie.overview
                     : 'Описание отсутствует'}
                 </Card.Text>

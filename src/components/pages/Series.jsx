@@ -15,12 +15,11 @@ import {
   Button,
 } from 'react-bootstrap';
 import Spinner from 'react-bootstrap/Spinner';
-
+import { useTranslation } from 'react-i18next'; 
 
 export default function Series() {
+   const { t } = useTranslation();
   const { language, theme } = useContext(ThemeContext);
-  //const [appDataSeries, setAppDataSeries] = useState([]);
-
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector((state) => state.moviesSeries);
 //search
@@ -104,7 +103,7 @@ export default function Series() {
                     <Form.Control
                       onSubmit={filteredSeries}
                       type="text"
-                      placeholder="Поиск сериалов..."
+                      placeholder={t('series.searchSeries')}
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
                       aria-label="Поиск сериалов"
@@ -113,7 +112,7 @@ export default function Series() {
                       type="submit"
                       variant="primary"
                     >
-                      Поиск
+                      {t('series.search')}
                     </Button>
                   </InputGroup>
                 </Card.Body>

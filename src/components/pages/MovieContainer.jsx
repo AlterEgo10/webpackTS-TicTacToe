@@ -5,7 +5,8 @@ import { fetchMovies } from '../../reducers/movieSeriesSlice';
 import Sidebar from '../Sidebar';
 import Spinner from 'react-bootstrap/Spinner';
 import MovieCard from '../MovieCard'
-import {Container,Row,Col,Form,Card,InputGroup,Button,} from 'react-bootstrap';
+import { Container, Row, Col, Form, Card, InputGroup, Button, } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next'; 
 
 // Исправление опечаток в названиях функций
 
@@ -20,8 +21,8 @@ function changeThemeNext() {
 }
 
 export default function MovieContainer() {
+  const { t } = useTranslation();
   const { language } = useContext(ThemeContext);
-
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector((state) => state.moviesSeries);
   const [filteredMovies, setFilteredMovies] = useState(data);
@@ -67,7 +68,7 @@ export default function MovieContainer() {
           role="status"
           variant="primary"
         >
-          <div>Идёт загрузка данных...</div>;
+          <div>{t("movies.spinner")}</div>;
         </Spinner>
       </div>
     );
@@ -79,9 +80,9 @@ export default function MovieContainer() {
 
   return (
     <>
-      <div>
+      {/* <div>
         <h2>{language === 'en-US' ? 'Movies' : 'Фильмы'}</h2>
-      </div>
+      </div> */}
       <main>
         <Container
           fluid
@@ -103,26 +104,28 @@ export default function MovieContainer() {
               lg="9"
               xxl="10"
             >
-              <h1 className="text-center mb-4">Поиск загруженных фильмов</h1>
+              <h1 className="text-center mb-4">{t('movies.search')}</h1>
 
               <Row className="justify-content-center mb-4">
                 <Col md={8}>
                   <InputGroup>
                     <Form.Control
                       type="text"
-                      placeholder="Введите название фильма..."
+                      placeholder={t('movies.placeholder')}
                       value={searchTerm}
                       onChange={handleSearchChange}
                       aria-label="Поиск фильмов"
                       size="lg"
                     />
-                    <Button variant="primary">Поиск</Button>
+                    <Button variant="primary">
+                      {t('movies.searchButton')}
+                    </Button>
                   </InputGroup>
                 </Col>
               </Row>
 
               <Row>
-                {filteredMovies.length > 0 ?  (
+                {filteredMovies.length > 0 ? (
                   filteredMovies.map((movie) => (
                     <Col
                       md={4}
@@ -141,7 +144,7 @@ export default function MovieContainer() {
                   ))
                 ) : (
                   <Col className="text-center">
-                    <p>Фильмы не найдены</p>
+                    <p>{t('movies.moviesNotFound')}</p>
                   </Col>
                 )}
               </Row>

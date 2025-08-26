@@ -134,12 +134,12 @@ export default function App() {
       }}
     >
       <div className={theme === 'light' ? 'container' : ('theme-dark', 'body')}>
-        <Profiler
+        {/* <Profiler
           id="Routing"
           onRender={profilerOnRenderCallback}
-        >
+        > */}
           <RouterProvider router={router} />
-        </Profiler>
+        {/* </Profiler> */}
       </div>
     </ThemeContext.Provider>
   );
