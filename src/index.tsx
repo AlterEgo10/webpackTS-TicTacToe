@@ -1,9 +1,9 @@
-import React from 'react';
+
 import { createRoot } from 'react-dom/client';
-import App from './components/App.jsx';
+import App from './components/App';
 //import './style/main.css';
 import './style/main.scss'
-import ErrorBoundary from './components/ErrorBoundary.jsx';
+import ErrorBoundary from './components/ErrorBoundary';
 //import { BrowserRouter } from 'react-router-dom';
 import store from './store'
 import { Provider } from 'react-redux'
@@ -17,7 +17,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import translationEN from './locales/en/translation.json'
 import translationRU from './locales/ru/translation.json'
 
-const root = createRoot(document.querySelector('#app'));
+const root = createRoot(document.querySelector('#app') as HTMLElement);
 
 const resources = {
   en: {

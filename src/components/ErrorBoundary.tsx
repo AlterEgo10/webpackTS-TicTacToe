@@ -1,41 +1,38 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+
 import axios from 'axios'
 
 const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
 
-export default class ErrorBoundary extends Component {
+interface ErrorBoundaryProperties{
+  children: React.ReactElement
+  fallback?:React.ReactElement
+}
+
+interface ErrorBoundaryState{
+  hasError:boolean
+}
+
+export default class ErrorBoundary extends Component<ErrorBoundaryProperties,ErrorBoundaryState> {
   static defaultProps = {
     fallback: <div>Ошибка 500. Обновите страницу</div>,
   };
 
-  static propTypes = {
-    children: PropTypes.oneOfType([
-      PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node,
-    ]).isRequired,
-    fallback: PropTypes.oneOfType([
-      PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node,
-    ]),
-  };
 
   url = `${REACT_APP_BASE_URL}/logs`
 
-  constructor(properties) {
+  constructor(properties: ErrorBoundaryProperties) {
     super(properties);
     this.state = {
       hasError: false,
     };
   }
 
-  static getDerivedStateFromError(error) {
-    console.info(error);
+  static getDerivedStateFromError() {
     return { hasError: true };
   }
 
-  componentDidCatch(error, info) {
-    console.info(error, info);
+  componentDidCatch(error: Error, info:React.ErrorInfo) {
     //fetch or axios, Post
     axios.get(`${this.url}?message=${error.message}`).then((result) => {
       if (result.data && result.data.length === 0)
@@ -54,3 +51,4 @@ export default class ErrorBoundary extends Component {
     return this.props.children;
   }
 }
+

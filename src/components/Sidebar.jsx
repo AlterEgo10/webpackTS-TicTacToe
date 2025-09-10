@@ -1,5 +1,5 @@
 //import React from 'react'
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -72,7 +72,7 @@ const { t } = useTranslation();
           src={record}
           width="40px"
           className="me-2"
-          alt={t('app.logo')}
+          alt={t('app.logo') || ''}
         />
         <span className="fs-4">{t('app.title')}</span>
       </Navbar.Brand>

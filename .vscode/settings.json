@@ -25,7 +25,7 @@
   "eslint.rules.customizations": [
     { "rule": "prettier/prettier", "severity": "info" }
   ],
-  "[javascript]": {
+  "[javascript][javascriptreact][typescript][typescriptreact]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
     "editor.formatOnPaste": true, // optional
     // "editor.formatOnSave": true, // optional
@@ -48,7 +48,8 @@
 
  //React.js
  "emmet.includeLanguages":{
-  "javascript":"javascriptreact"
+  "javascript":"javascriptreact",
+  "typescript":"typescriptreact"
  },
 "emmet.triggerExpansionOnTab": true,
 

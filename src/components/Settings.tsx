@@ -1,12 +1,17 @@
-import React from 'react'
+
 import { useTranslation } from 'react-i18next'; 
 import { Button } from 'react-bootstrap';
 import { Container, Row, Col } from 'react-bootstrap';
 import Sidebar from './Sidebar';
 
+enum Language {
+  English = 'en',
+  Russian = 'ru'
+}
+
 export default function Settings() {
 const { t, i18n} = useTranslation();
-  const handleClick = (lang) => {
+  const handleClick = (lang: Language) => {
     i18n.changeLanguage(lang)
    }
   return (
@@ -35,13 +40,13 @@ const { t, i18n} = useTranslation();
             <div>
               <h1 className="mb-5">{t('settings.title')}</h1>
               <Button
-                onClick={() => handleClick('en')}
+                onClick={() => handleClick(Language.English)}
                 variant="outline-primary"
               >
                 English
               </Button>{' '}
               <Button
-                onClick={() => handleClick('ru')}
+                onClick={() => handleClick(Language.Russian)}
                 variant="outline-primary"
               >
                 Русский

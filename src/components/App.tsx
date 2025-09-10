@@ -1,4 +1,4 @@
-import React, { useState, Profiler } from 'react';
+import { useState, Profiler } from 'react';
 import {
   BrowserRouter,
   createHashRouter,
@@ -8,11 +8,13 @@ import {
   Route,
   createBrowserRouter,
 } from 'react-router-dom';
-import { profilerOnRenderCallback } from '../helpers/profiler'
-import { ThemeContext } from '../helpers/ThemeContext';
-import ThemeLanguageSwitcher from './button/ThemeLanguageSwitcher';
+//import { profilerOnRenderCallback } from '../helpers/profiler'
+// import { ThemeContext,ThemeContextValue,AppThemes } from '../helpers/ThemeContext';
+import { ThemeContext,AppThemes } from '../helpers/ThemeContext';
+//import ThemeLanguageSwitcher from './button/ThemeLanguageSwitcher';
 import MovieContainer from './pages/MovieContainer';
-import Series, { seriesLoader } from './pages/Series';
+//import Series, { seriesLoader } from './pages/Series';
+import Series from './pages/Series';
 import Error404 from './pages/Error404';
 import EvaluatForm from './pages/EvaluatForm';
 import ErrorBoundary from './ErrorBoundary';
@@ -25,12 +27,11 @@ import LoginForm from './pages/LoginForm';
 import RegisterForm from './pages/RegisterForm';
 import Settings from './Settings';
 // eslint-disable-next-line no-redeclare, no-import-assign
-//let API_KEY = process.env.API_KEY;
 
-const appThemes = ['light', 'dark'];
+const appThemes = [AppThemes.Light, AppThemes.Dark];
 
 // eslint-disable-next-line unicorn/prefer-set-has
-const appLanguage = ['ru', 'en-US'];
+// const appLanguage = ['ru', 'en-US'];
 
 const router = createHashRouter([
   {
@@ -47,7 +48,7 @@ const router = createHashRouter([
   {
     path: 'films',
     element: <MovieContainer />,
-    errorElement: <ErrorBoundary />,
+    //errorElement: <ErrorBoundary />,
   },
   {
     path: '/series',
@@ -94,53 +95,48 @@ const router = createHashRouter([
   },
 ]);
 
+
+
+
 export default function App() {
   const [theme, setTheme] = useState(appThemes[0]);
-  const [language, setLanguage] = useState('ru');
+  //const [language, setLanguage] = useState('ru');
 
-  function changeLanguage(language) {
-    if (appLanguage.includes(language)) {
-      setLanguage(language);
-    }
-  }
-
-  function changeLanguageNext() {
-    const index = appLanguage.indexOf(language) || 0;
-    setLanguage(index === 0 ? appLanguage[1] : appLanguage[0]);
-  }
-
-  function changeTheme(theme) {
+  function changeTheme(theme:AppThemes) {
     if (appThemes.includes(theme)) {
       setTheme(theme);
     }
   }
 
   function changeThemeNext() {
-    const index = appThemes.indexOf(theme) || 0;
-    setTheme(index === 0 ? appThemes[1] : appThemes[0]);
+    const index = appThemes.indexOf(theme) || 0
+    setTheme(index === 0 ? appThemes[1] : appThemes[0])
   }
+
+const ThemeContextValue: ThemeContextValue =  [theme,
+        setTheme,
+        changeTheme,
+        changeThemeNext]
+        // language,
+        // setLanguage,
+        // changeLanguage,
+        // changeLanguageNext,
 
   return (
     <ThemeContext.Provider
-      value={{
-        theme,
-        setTheme,
-        changeTheme,
-        changeThemeNext,
-        language,
-        setLanguage,
-        changeLanguage,
-        changeLanguageNext,
-      }}
+      value={
+       ThemeContextValue
+      }
     >
-      <div className={theme === 'light' ? 'container' : ('theme-dark', 'body')}>
+    
         {/* <Profiler
           id="Routing"
           onRender={profilerOnRenderCallback}
         > */}
           <RouterProvider router={router} />
         {/* </Profiler> */}
-      </div>
+    
     </ThemeContext.Provider>
   );
 }
+

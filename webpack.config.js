@@ -5,57 +5,51 @@ const  NodePolyfillPlugin  =  require ( 'node-polyfill-webpack-plugin' ) ;
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 //const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 const isProduction = process.env.NODE_ENV === 'production';
 const styleLoaderHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
 
 module.exports = {
-  entry:path.resolve(__dirname,'src','index.js'),
-  output:{
+  entry: path.resolve(__dirname, 'src', 'index.tsx'),
+  output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name][contenthash].js',
-    clean:true,
+    clean: true,
     assetModuleFilename: 'assets/[name][hash][ext]',
   },
-    resolve: {
+  resolve: {
+    plugins: [
+      new TsconfigPathsPlugin({ extensions: ['.ts', '.tsx', '.js', '.jsx'] }),
+    ],
     // Add `.ts` and `.tsx` as a resolvable extension.
-    extensions: [".ts", ".tsx", ".js",".jsx"],
-     
-  //},
-    // Add support for TypeScripts fully qualified ESM imports.
-    alias:{
-      Components:path.resolve(__dirname, 'src/components/'),
-      Helpers: path.resolve(__dirname, 'src/helpers/'),
-      Hooks: path.resolve(__dirname, 'src/hooks/'),
-      Reducers:path.resolve(__dirname,'src/reducers/'),
-    },
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  
     extensionAlias: {
-     ".js": [".js", ".ts"],
-     ".cjs": [".cjs", ".cts"],
-     ".mjs": [".mjs", ".mts"]
-      },
-      //test error
-      fallback: {
-        buffer: require.resolve('buffer/'),
-        // process: require.resolve('process/browser'), // если потребуется
-      }
+      '.js': ['.js', '.ts'],
+      '.cjs': ['.cjs', '.cts'],
+      '.mjs': ['.mjs', '.mts'],
+    },
+    //test error
+    fallback: {
+      buffer: require.resolve('buffer/'),
+      // process: require.resolve('process/browser'), // если потребуется
+    },
     //test
-    
-    
   },
-  devtool :(isProduction) ? 'source-map' : 'inline-source-map',
-  devServer:{
-    static:{
+  devtool: isProduction ? 'source-map' : 'inline-source-map',
+  devServer: {
+    static: {
       directory: path.resolve(__dirname, 'dist'),
     },
-    host:'localhost',
+    host: 'localhost',
     port: 3000,
-    open:true,
-    hot:true,
-    compress:true,
-    historyApiFallback:true,
-    onListening:function(devServer){
-      if(isProduction){
+    open: true,
+    hot: true,
+    compress: true,
+    historyApiFallback: true,
+    onListening: function (devServer) {
+      if (isProduction) {
         throw new Error('webpack-dev-server is not allowed');
       }
 
@@ -65,11 +59,7 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.s?css$/i,
-      //   use: [ styleLoaderHandler, 'css-loader','sass-loader' ],
-      // },
-            {
+      {
         test: /\.s?css$/i,
         use: [
           styleLoaderHandler,
@@ -100,10 +90,14 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[hash][ext]',
-        }
+        },
       },
-            // all files with a `.ts`, `.cts`, `.mts` or `.tsx` extension will be handled by `ts-loader`
-      { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader" },
+      // all files with a `.ts`, `.cts`, `.mts` or `.tsx` extension will be handled by `ts-loader`
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
       {
         test: /\.m?jsx?$/,
         exclude: /node_modules/,
@@ -111,13 +105,13 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             cacheDirectory: true,
-            presets: [ '@babel/preset-env', [
-              '@babel/preset-react',
-              {runtime:'automatic'},
-            ],]
-          }
-        }
-      }
+            presets: [
+              '@babel/preset-env',
+              ['@babel/preset-react', { runtime: 'automatic' }],
+            ],
+          },
+        },
+      },
     ],
   },
   plugins: [
@@ -126,24 +120,20 @@ module.exports = {
       // process: 'process/browser', // если потребуется
     }),
     new Dotenv({
-      path:'./.env',
-       safe: true,
+      path: './.env',
+      safe: true,
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname,'src', 'template.html'),
+      template: path.resolve(__dirname, 'src', 'template.html'),
       filename: 'index.html',
       title: 'React',
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name][contenthash].css'
+      filename: 'css/[name][contenthash].css',
     }),
 
-    new ESLintPlugin(
-     // {
-      // extensions: ['js', 'ts'],
-      // fix:true,
-    //  }
-    ),
-     new NodePolyfillPlugin(),
-  ]
+    new ESLintPlugin(),
+
+    new NodePolyfillPlugin(),
+  ],
 };
