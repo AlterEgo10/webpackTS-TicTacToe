@@ -13,13 +13,5 @@ function PrivateRoute({ children, authUrl = '/auth' }:PrivateRouteProperties) {
   }
   return <Navigate to={authUrl} />
 }
-
-// PrivateRoute.propTypes = {
-//   children: PropTypes.oneOfType([
-//     PropTypes.arrayOf(PropTypes.node),
-//     PropTypes.node,
-//   ]).isRequired,
-//   authUrl: PropTypes.string,
-// };
   
 export default PrivateRoute 

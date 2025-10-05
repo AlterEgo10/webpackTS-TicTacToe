@@ -25,7 +25,7 @@ export default function LoginForm() {
    const API_BASE_URL =
      process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event:React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setLoading(true);
     setError('');

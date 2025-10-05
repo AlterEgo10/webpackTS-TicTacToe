@@ -1,18 +1,20 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { ThemeContext } from '../../helpers/ThemeContext'; 
+//import { ThemeContext } from '../../helpers/ThemeContext'; 
 import { Link } from 'react-router-dom';
 import './styles.css';
 import BootstrapButton from 'react-bootstrap/Button'
 import styled from 'styled-components'
+import { ThemeContext,ThemeContextValue,AppThemes } from '../../helpers/ThemeContext';
 
 const Button = styled(BootstrapButton)`
 margin: 10px;
 `
+const appThemes = [AppThemes.Light, AppThemes.Dark];
 
 
 const ThemeLanguageSwitcher = ({ title }) => {
-  const { theme, changeThemeNext, language, changeLanguageNext } =
+  const { theme, changeThemeNext,} =
     useContext(ThemeContext);
 
   return (
@@ -20,13 +22,13 @@ const ThemeLanguageSwitcher = ({ title }) => {
       <h1>{title}</h1>
 
       <div className="switcher-controls">
-        <button
+        {/* <button
           className={`switcher-button language-button ${language === 'en-US' ? 'active' : ''}`}
           onClick={() => changeLanguageNext('en-US')}
           aria-label="Сменить язык на английский"
         >
           Язык: {language}
-        </button>
+        </button> */}
 
         <Button
           className={`switcher-button theme-button ${theme}`}
@@ -36,13 +38,21 @@ const ThemeLanguageSwitcher = ({ title }) => {
         >
           Тема: {theme === 'dark' ? 'Темная' : 'Светлая'}
         </Button>
+              <Button
+          className={`switcher-button theme-button ${theme}`}
+          onClick={changeThemeNext}
+          variant="success"
+          aria-label={`Сменить тему: ${theme === 'light' ? 'темная' : 'светлая'}`}
+        >
+          Тема: {theme === 'light' ? 'Темная' : 'Светлая'}
+        </Button>
       </div>
     </div>
   );
 };
 
-ThemeLanguageSwitcher.propTypes = {
-  title: PropTypes.string.isRequired,
-};
+// ThemeLanguageSwitcher.propTypes = {
+//   title: PropTypes.string.isRequired,
+// };
 
 export default ThemeLanguageSwitcher;

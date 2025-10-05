@@ -121,6 +121,6 @@
     //Дополнительные правила
     // "noFallthroughCasesInSwithc":true,//Выдает ошибку,когда в операторе switch нет break или return.                              /* Skip type checking all .d.ts files. */
   },
-  "include":["./types/*.d.ts", "./src/**/*.ts", "./src/**/*.tsx", "src/index.tsx"]
+  "include":["./types/*.d.ts", "./src/**/*.ts", "./src/**/*.tsx", "src/index.tsx", "src/components/pages/MovieContainer.tsx", "src/components/pages/Series.tsx", "src/components/MovieItem.jsx", "src/components/button/ThemeLanguageSwitcher.jsx"]
 
 }

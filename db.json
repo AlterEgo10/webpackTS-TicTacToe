@@ -455,6 +455,14 @@
         "componentStack": "\n    at App (http://localhost:3000/main5542af1b29189804c717.js:118154:66)\n    at Provider (http://localhost:3000/main5542af1b29189804c717.js:96390:11)\n    at ErrorBoundary (http://localhost:3000/main5542af1b29189804c717.js:118245:5)"
       },
       "date": "2025-08-24T15:37:41.460Z"
+    },
+    {
+      "id": "276d",
+      "message": "isActive is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main4848d88c27d938f893f8.js:118535:74)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main4848d88c27d938f893f8.js:37827:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main4848d88c27d938f893f8.js:40798:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main4848d88c27d938f893f8.js:37983:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (http://localhost:3000/main4848d88c27d938f893f8.js:118817:74)\n    at PrivateRoute (http://localhost:3000/main4848d88c27d938f893f8.js:118388:23)\n    at ErrorBoundary (http://localhost:3000/main4848d88c27d938f893f8.js:118183:28)\n    at RenderedRoute (http://localhost:3000/main4848d88c27d938f893f8.js:102013:26)\n    at RenderErrorBoundary (http://localhost:3000/main4848d88c27d938f893f8.js:101972:5)\n    at DataRoutes (http://localhost:3000/main4848d88c27d938f893f8.js:102561:3)\n    at Router (http://localhost:3000/main4848d88c27d938f893f8.js:102646:13)\n    at RouterProvider (http://localhost:3000/main4848d88c27d938f893f8.js:102391:3)\n    at RouterProvider2 (<anonymous>)\n    at App (http://localhost:3000/main4848d88c27d938f893f8.js:118121:61)\n    at Provider (http://localhost:3000/main4848d88c27d938f893f8.js:96360:11)\n    at ErrorBoundary (http://localhost:3000/main4848d88c27d938f893f8.js:118183:28)"
+      },
+      "date": "2025-10-02T17:15:01.265Z"
     }
   ],
   "movies": [

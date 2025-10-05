@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from 'react-bootstrap';
 import { Container, Row, Col } from 'react-bootstrap';
 import Sidebar from './Sidebar';
+import ThemeLanguageSwitcher from './button/ThemeLanguageSwitcher';
 
 enum Language {
   English = 'en',
@@ -28,7 +29,7 @@ const { t, i18n} = useTranslation();
             xl="2"
             style={{ padding: 0 }}
           >
-            <Sidebar />
+            <Sidebar isActive={false} />
           </Col>
           <Col
             sm="12"
@@ -51,6 +52,7 @@ const { t, i18n} = useTranslation();
               >
                 Русский
               </Button>
+                 <ThemeLanguageSwitcher title={undefined}/>
             </div>
           </Col>
         </Row>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-redeclare */
 import React, { useEffect, useState, useContext } from 'react';
 import { ThemeContext } from '../../helpers/ThemeContext';
@@ -16,12 +17,21 @@ import {
 } from 'react-bootstrap';
 import Spinner from 'react-bootstrap/Spinner';
 import { useTranslation } from 'react-i18next'; 
+import { AppDispatch } from 'src/store';
+import { RootState } from '../../store'
+
+interface Series {
+  id: number;
+  original_name: string
+  first_air_date:string
+}
 
 export default function Series() {
    const { t } = useTranslation();
-  const { language, theme } = useContext(ThemeContext);
-  const dispatch = useDispatch();
-  const { data, loading, error } = useSelector((state) => state.moviesSeries);
+  //const { language, theme } = useContext(ThemeContext);
+  //const dispatch = useDispatch();
+   const dispatch = useDispatch<AppDispatch>();
+  const { data, loading, error } = useSelector((state: RootState) => state.moviesSeries);
 //search
   const [filteredSeries, setFilteredSeries] = useState([]); // Отфильтрованные сериалы
   const [searchTerm, setSearchTerm] = useState(''); // Текущий поисковый запрос
@@ -39,7 +49,7 @@ export default function Series() {
 
   useEffect(() => {
     if (debouncedSearchTerm) {
-      const filtered = data.filter((series) =>
+      const filtered = data.filter((series:FixMeLater) =>
         series.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase())
       );
       setFilteredSeries(filtered);
@@ -72,9 +82,9 @@ export default function Series() {
 
   return (
     <>
-      <div>
+      {/* <div>
         <h2>{language === 'en-US' ? 'Series' : 'Сериалы'}</h2>
-      </div>
+      </div> */}
       <main>
         <Container
           fluid
@@ -88,7 +98,7 @@ export default function Series() {
               xxl="2"
               style={{ padding: 0 }}
             >
-              <Sidebar />
+              <Sidebar isActive={false} />
             </Col>
             <Col
               sm="12"
@@ -101,7 +111,7 @@ export default function Series() {
                 <Card.Body>
                   <InputGroup className="mb-3">
                     <Form.Control
-                      onSubmit={filteredSeries}
+                      // onSubmit={filteredSeries }
                       type="text"
                       placeholder={t('series.searchSeries')}
                       value={searchTerm}
@@ -120,7 +130,7 @@ export default function Series() {
 
               <Row>
                 {filteredSeries.length > 0 ? (
-                  filteredSeries.map((series) => (
+                  filteredSeries.map((series:Series) => (
                     <Col
                       md={4}
                       key={series.id}

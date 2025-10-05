@@ -20,7 +20,7 @@ export default function RegisterForm() {
   const API_BASE_URL =
     process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
 
-  const handleInputChange = (field, value) => {
+  const handleInputChange = (field :string, value:string) => {
     setFormData((prev) => ({
       ...prev,
       [field]: value,
@@ -55,7 +55,7 @@ export default function RegisterForm() {
     return Math.random().toString(36).substring(2) + Date.now().toString(36);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event:FixMeLater) => {
     event.preventDefault();
     setError('');
     setSuccess('');

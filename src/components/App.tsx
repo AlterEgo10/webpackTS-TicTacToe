@@ -9,9 +9,9 @@ import {
   createBrowserRouter,
 } from 'react-router-dom';
 //import { profilerOnRenderCallback } from '../helpers/profiler'
-// import { ThemeContext,ThemeContextValue,AppThemes } from '../helpers/ThemeContext';
-import { ThemeContext,AppThemes } from '../helpers/ThemeContext';
-//import ThemeLanguageSwitcher from './button/ThemeLanguageSwitcher';
+import { ThemeContext,ThemeContextValue,AppThemes } from '../helpers/ThemeContext';
+//import { ThemeContext,AppThemes } from '../helpers/ThemeContext';
+import ThemeLanguageSwitcher from './button/ThemeLanguageSwitcher';
 import MovieContainer from './pages/MovieContainer';
 //import Series, { seriesLoader } from './pages/Series';
 import Series from './pages/Series';
@@ -125,7 +125,10 @@ const ThemeContextValue: ThemeContextValue =  [theme,
   return (
     <ThemeContext.Provider
       value={
-       ThemeContextValue
+      [ theme, setTheme,
+        changeTheme,
+          changeThemeNext
+      ]
       }
     >
     
@@ -139,4 +142,6 @@ const ThemeContextValue: ThemeContextValue =  [theme,
     </ThemeContext.Provider>
   );
 }
+
+
 

@@ -7,24 +7,37 @@ import Spinner from 'react-bootstrap/Spinner';
 import MovieCard from '../MovieCard'
 import { Container, Row, Col, Form, Card, InputGroup, Button, } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next'; 
-
+import { AppDispatch } from 'src/store';
+import { RootState } from '../../store'
 // Исправление опечаток в названиях функций
 
-function changeLanguageNext() {
-  const index = appLanguage.indexOf(language) || 0;
-  setLanguage(index === 0 ? 'ru' : appLanguage[1]);
+// function changeLanguageNext() {
+//   const index = appLanguage.indexOf(language) || 0;
+//   setLanguage(index === 0 ? 'ru' : appLanguage[1]);
+// }
+
+// function changeThemeNext() {
+//   const index = appThemes.indexOf(theme) || 0;
+//   setTheme(index === 0 ? 'dark' : appThemes[1]);
+//}
+
+interface Movie {
+  id: number;
+  title: string
+  release_date:string
 }
 
-function changeThemeNext() {
-  const index = appThemes.indexOf(theme) || 0;
-  setTheme(index === 0 ? 'dark' : appThemes[1]);
-}
+//  export interface CardMovie {
+//   title: string
+//   release_date: string
+//   overview: string;
+// }
 
 export default function MovieContainer() {
   const { t } = useTranslation();
-  const { language } = useContext(ThemeContext);
-  const dispatch = useDispatch();
-  const { data, loading, error } = useSelector((state) => state.moviesSeries);
+  //const { language } = useContext(ThemeContext);
+  const dispatch = useDispatch<AppDispatch>();
+  const { data, loading, error } = useSelector((state:RootState) => state.moviesSeries);
   const [filteredMovies, setFilteredMovies] = useState(data);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -32,7 +45,7 @@ export default function MovieContainer() {
   const [isSearching, setIsSearching] = useState(false);
 
   // Обработчик изменения поискового запроса
-  const handleSearchChange = (e) => {
+  const handleSearchChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
     setSearchTerm(e.target.value);
     setIsSearching(true);
   };
@@ -41,12 +54,12 @@ export default function MovieContainer() {
   }, [dispatch]);
 
   // Локальная фильтрация
-  const filterMoviesLocally = (data, query) => {
+  const filterMoviesLocally = (data :FixMeLater, query:string) => {
     if (!query.trim()) {
       return data;
     }
 
-    return data.filter((movie) =>
+    return data.filter((movie:Movie) =>
       movie.title.toLowerCase().includes(query.toLowerCase())
     );
   };
@@ -56,7 +69,7 @@ export default function MovieContainer() {
       const locallyFiltered = filterMoviesLocally(data, searchTerm);
       setFilteredMovies(locallyFiltered);
     } else {
-      setFilteredMovies('');
+      setFilteredMovies([]);
     }
   }, [searchTerm, data]);
 
@@ -96,7 +109,7 @@ export default function MovieContainer() {
               xxl="2"
               style={{ padding: 0 }}
             >
-              <Sidebar />
+              <Sidebar isActive={false} />
             </Col>
             <Col
               sm="12"
@@ -126,7 +139,7 @@ export default function MovieContainer() {
 
               <Row>
                 {filteredMovies.length > 0 ? (
-                  filteredMovies.map((movie) => (
+                  filteredMovies.map((movie:Movie) => (
                     <Col
                       md={4}
                       key={movie.id}
@@ -149,7 +162,7 @@ export default function MovieContainer() {
                 )}
               </Row>
 
-              {data.map((movie) => (
+              {data.map((movie:Movie) => (
                 <MovieCard
                   key={movie.id}
                   movie={movie}
@@ -162,4 +175,3 @@ export default function MovieContainer() {
     </>
   );
 }
-

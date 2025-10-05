@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import useInput from '../../hooks/useInput';
@@ -55,7 +56,7 @@ export default function EvaluatForm() {
   const [description, setDescription] = useState('');
   const [grade, setGrade] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event:React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     alert(`Имя: ${title.value}\nОписание: ${description}\nОценка: ${grade}`);
     //setTitle('');
@@ -80,7 +81,7 @@ export default function EvaluatForm() {
               xl="2"
               style={{ padding: 0 }}
             >
-              <Sidebar />
+              <Sidebar isActive={false} />
             </Col>
             <Col
               sm="12"
@@ -138,7 +139,7 @@ export default function EvaluatForm() {
                 <Button
                   type="submit"
                   disabled={!title.value || !grade}
-                  variant="primary"
+                  // variant="primary"
                 >
                   {t('form.rate')}
                 </Button>
@@ -154,3 +155,5 @@ export default function EvaluatForm() {
     </div>
   );
 }
+
+

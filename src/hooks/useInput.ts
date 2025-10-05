@@ -6,16 +6,16 @@ export default function useInput(defaultValue = '',
   required = false,
 ) {
   const [value, setValue] = useState(defaultValue)
-  const [error, setError] = useState(null)
+  const [error, setError] = useState<string | null>(null);
   return {
     id: name,
     name,
     value,
     error,
-    onBlur: (event) => {
+    onBlur: (event:  React.FocusEvent<HTMLInputElement>) => {
       setError(!event.target.value && required ? 'Поле обязательно для заполнения': null
       )
     },
-    onChange:(event) => setValue(event.target.value),
-  }
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => setValue(event.target.value),
+  };
 }

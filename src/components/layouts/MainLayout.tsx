@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../Sidebar';
  import Tabs from '../Tabs/Tabs'
+import ThemeLanguageSwitcher from 'Components/button/ThemeLanguageSwitcher';
 // import Menu from '../Menu';
 // import OneBestMovie from '../OneBestMovie';
 
@@ -25,7 +26,7 @@ const { t } = useTranslation();
               xl="2"
               style={{ padding: 0 }}
             >
-              <Sidebar />
+              <Sidebar isActive={false} />
             </Col>
             <Col
               sm="12"

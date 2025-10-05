@@ -7,7 +7,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 //import { BrowserRouter } from 'react-router-dom';
 import store from './store'
 import { Provider } from 'react-redux'
-import Sidebar from './components/Sidebar.jsx';
+//import Sidebar from './components/Sidebar';
 //import 'bootstrap/dist/css/bootstrap.min.css'
 // Render your React component instead
 import { initReactI18next } from 'react-i18next';

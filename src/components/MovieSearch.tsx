@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable unicorn/prefer-optional-catch-binding */
+import React, { HTMLProps, useState } from 'react';
 import {
   Container,
   Row,
@@ -10,8 +11,18 @@ import {
 } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next'; 
 
-let API_KEY = process.env.API_KEY;
- console.log(API_KEY)
+const API_KEY = process.env.API_KEY;
+
+interface MovieSearchProps{
+  id:number
+  title: string
+   poster_path: string | null
+  original_title: string
+  release_date: string
+  overview: string
+  vote_average: number
+vote_count:number
+}
 
 const MovieSearch = () => {
    const { t } = useTranslation();
@@ -20,9 +31,14 @@ const MovieSearch = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const searchMovies = async (e) => {
-    e.preventDefault();
+//   const searchMovies = async (e: {
+//      preventDefault(): unknown; target: { value: React.SetStateAction<string>; };
+// }) => {
+//     e.preventDefault();
 
+  const searchMovies = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  
     if (!query) return;
 
     setLoading(true);
@@ -41,7 +57,7 @@ const MovieSearch = () => {
 
       const data = await response.json();
       setMovies(data.results);
-    } catch (err) {
+    } catch (err:FixMeLater) {
       setError(err.message);
       setMovies([]);
     } finally {
@@ -60,7 +76,7 @@ const MovieSearch = () => {
                 type="text"
                 placeholder={t('form.search')}
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e:React.SyntheticEvent<EventTarget>) => setQuery((e.target as HTMLInputElement).value)}
                 className="me-2"
                 required
               />
@@ -117,7 +133,7 @@ const MovieSearch = () => {
       )}
 
       <Row>
-        {movies.map((movie) => (
+        {movies.map((movie:MovieSearchProps) => (
           <Col
             key={movie.id}
             xs={12}
