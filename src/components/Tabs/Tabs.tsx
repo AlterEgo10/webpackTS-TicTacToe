@@ -36,20 +36,12 @@ export default function Tabs() {
    const [appData, setAppDataMovies] = useState([]);
   const [appDataSeries, setAppDataSeries] = useState([]);
 
-// const ThemeContextValue: ThemeContextValue =  [theme,
-//         setTheme,
-//         changeTheme,
-//         changeThemeNext]
-
   useEffect(() => {
     axios
            .get(
         `https://api.themoviedb.org/3/tv/popular?api_key=${API_KEY}&language=en&page=1`
       )
       .then((result) => {
-        // movies[0].value = result.data.name;
-        // movies[1].value = result.data.name;
-        // movies[2].value = result.data.name;
         setAppDataSeries(result.data.results);
       });
   }, []);
@@ -63,10 +55,6 @@ export default function Tabs() {
         `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en&page=1`
       )
       .then((result) => {
-        // movies[0].value = result.data.name;
-        // movies[1].value = result.data.name;
-        // movies[2].value = result.data.name;
-        //setAppDataMovies(movies);
         setAppDataMovies(result.data.results);
       });
   }, []);
@@ -94,7 +82,6 @@ export default function Tabs() {
           {appData.map((movie:MoviesProp, index) => {
             return (
               <div
-              //  className='theme-dark item-movie'
                 className={
                   AppThemes.Light === 'light'
                     ? 'container item-movie'
@@ -116,7 +103,6 @@ export default function Tabs() {
           {appDataSeries.map((item:SeriesProp, index) => {
             return (
               <div
-                // className='theme-dark item-movie'
                 className={
                   AppThemes.Light === 'light'
                     ? 'container item-movie'

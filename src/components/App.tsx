@@ -31,7 +31,6 @@ import Settings from './Settings';
 const appThemes = [AppThemes.Light, AppThemes.Dark];
 
 // eslint-disable-next-line unicorn/prefer-set-has
-// const appLanguage = ['ru', 'en-US'];
 
 const router = createHashRouter([
   {
@@ -48,7 +47,6 @@ const router = createHashRouter([
   {
     path: 'films',
     element: <MovieContainer />,
-    //errorElement: <ErrorBoundary />,
   },
   {
     path: '/series',
@@ -113,15 +111,6 @@ export default function App() {
     setTheme(index === 0 ? appThemes[1] : appThemes[0])
   }
 
-const ThemeContextValue: ThemeContextValue =  [theme,
-        setTheme,
-        changeTheme,
-        changeThemeNext]
-        // language,
-        // setLanguage,
-        // changeLanguage,
-        // changeLanguageNext,
-
   return (
     <ThemeContext.Provider
       value={
@@ -142,6 +131,9 @@ const ThemeContextValue: ThemeContextValue =  [theme,
     </ThemeContext.Provider>
   );
 }
+
+
+
 
 
 

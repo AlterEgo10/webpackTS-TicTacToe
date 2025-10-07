@@ -22,14 +22,6 @@ const ThemeLanguageSwitcher = ({ title }) => {
       <h1>{title}</h1>
 
       <div className="switcher-controls">
-        {/* <button
-          className={`switcher-button language-button ${language === 'en-US' ? 'active' : ''}`}
-          onClick={() => changeLanguageNext('en-US')}
-          aria-label="Сменить язык на английский"
-        >
-          Язык: {language}
-        </button> */}
-
         <Button
           className={`switcher-button theme-button ${theme}`}
           onClick={changeThemeNext}
@@ -50,9 +42,5 @@ const ThemeLanguageSwitcher = ({ title }) => {
     </div>
   );
 };
-
-// ThemeLanguageSwitcher.propTypes = {
-//   title: PropTypes.string.isRequired,
-// };
 
 export default ThemeLanguageSwitcher;

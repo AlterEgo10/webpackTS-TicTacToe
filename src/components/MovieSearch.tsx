@@ -31,11 +31,6 @@ const MovieSearch = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-//   const searchMovies = async (e: {
-//      preventDefault(): unknown; target: { value: React.SetStateAction<string>; };
-// }) => {
-//     e.preventDefault();
-
   const searchMovies = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   

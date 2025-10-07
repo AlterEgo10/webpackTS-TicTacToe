@@ -27,11 +27,6 @@ interface Movie {
   release_date:string
 }
 
-//  export interface CardMovie {
-//   title: string
-//   release_date: string
-//   overview: string;
-// }
 
 export default function MovieContainer() {
   const { t } = useTranslation();
@@ -93,9 +88,6 @@ export default function MovieContainer() {
 
   return (
     <>
-      {/* <div>
-        <h2>{language === 'en-US' ? 'Movies' : 'Фильмы'}</h2>
-      </div> */}
       <main>
         <Container
           fluid
@@ -118,7 +110,6 @@ export default function MovieContainer() {
               xxl="10"
             >
               <h1 className="text-center mb-4">{t('movies.search')}</h1>
-
               <Row className="justify-content-center mb-4">
                 <Col md={8}>
                   <InputGroup>

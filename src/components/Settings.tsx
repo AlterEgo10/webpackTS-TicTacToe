@@ -52,7 +52,7 @@ const { t, i18n} = useTranslation();
               >
                 Русский
               </Button>
-                 <ThemeLanguageSwitcher title={undefined}/>
+                 <ThemeLanguageSwitcher title={"dark"}/>
             </div>
           </Col>
         </Row>
