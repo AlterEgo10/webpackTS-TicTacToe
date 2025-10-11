@@ -1,4 +1,5 @@
 dist
+api
 help
 webpack.config.js
 node_modules

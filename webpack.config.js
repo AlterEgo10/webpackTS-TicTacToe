@@ -120,8 +120,9 @@ module.exports = {
       // process: 'process/browser', // если потребуется
     }),
     new Dotenv({
+      systemvars:true,
       path: './.env',
-      safe: true,
+      //safe: true,
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'template.html'),
