@@ -1,0 +1,768 @@
+{
+  "users": [
+    {
+      "name": "John Doe",
+      "email": "john@domain.local",
+      "password": "$2b$10$FKl2QL1.0iJ3PPQzAaCI/.buTWsft66V7dkQTuBzTs/mlAlxx2GNO",
+      "token": "navtnajosodklffflkg",
+      "id": "0388"
+    },
+    {
+      "id": "medbd9qdgxet4jthzin",
+      "name": "fog",
+      "email": "test@domain.local",
+      "password": "$2b$10$LyE1pJv1V8hyNOMQgM0Y.ur3BpKYjtDXgD0V2Vu.TzlV/DwO7F0W2",
+      "token": "gnl02ddpiugmedbd9qd"
+    }
+  ],
+  "logs": [
+    {
+      "id": "d610",
+      "message": "could not find react-redux context value; please ensure the component is wrapped in a <Provider>",
+      "stack": {
+        "componentStack": "\n    at MoviesSeries (http://localhost:3000/main328d30753a7b5b54de16.js:853:74)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/main328d30753a7b5b54de16.js:470:5)\n    at RenderedRoute (http://localhost:3000/main328d30753a7b5b54de16.js:49972:26)\n    at RenderErrorBoundary (http://localhost:3000/main328d30753a7b5b54de16.js:49931:5)\n    at DataRoutes (http://localhost:3000/main328d30753a7b5b54de16.js:50523:3)\n    at Router (http://localhost:3000/main328d30753a7b5b54de16.js:50608:13)\n    at RouterProvider (http://localhost:3000/main328d30753a7b5b54de16.js:50353:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main328d30753a7b5b54de16.js:383:66)\n    at ErrorBoundary (http://localhost:3000/main328d30753a7b5b54de16.js:470:5)"
+      },
+      "date": "2025-05-22T11:43:04.738Z"
+    },
+    {
+      "id": "a93c",
+      "message": "logo is not defined",
+      "stack": {
+        "componentStack": "\nSidebar@http://localhost:3000/main96f6e2bec0ba2900541d.js:2669:9\nErrorBoundary@http://localhost:3000/main96f6e2bec0ba2900541d.js:2107:20"
+      },
+      "date": "2025-05-28T11:37:05.116Z"
+    },
+    {
+      "id": "0af4",
+      "message": "The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + 'em'}} when using JSX.",
+      "stack": {
+        "componentStack": "\nnav@unknown:0:0\n./node_modules/react-bootstrap/esm/Navbar.js/Navbar<@http://localhost:3000/mainc50e4f88cbdf651ce061.js:18388:70\nSidebar@unknown:0:0\nErrorBoundary@http://localhost:3000/mainc50e4f88cbdf651ce061.js:2107:20"
+      },
+      "date": "2025-05-28T11:40:51.085Z"
+    },
+    {
+      "id": "a238",
+      "message": "wi is not defined",
+      "stack": {
+        "componentStack": "\nSidebar@http://localhost:3000/mainbbc7a8450a62f9760ff0.js:2667:7\nErrorBoundary@http://localhost:3000/mainbbc7a8450a62f9760ff0.js:2107:20"
+      },
+      "date": "2025-05-28T11:41:03.641Z"
+    },
+    {
+      "id": "70c3",
+      "message": "width is not defined",
+      "stack": {
+        "componentStack": "\nSidebar@http://localhost:3000/main3d87a19d768265b1368e.js:2667:7\nErrorBoundary@http://localhost:3000/main3d87a19d768265b1368e.js:2107:20"
+      },
+      "date": "2025-05-28T11:41:05.770Z"
+    },
+    {
+      "id": "ef10",
+      "message": "he is not defined",
+      "stack": {
+        "componentStack": "\nSidebar@http://localhost:3000/main08abadf77bf621f7cb05.js:2668:7\nErrorBoundary@http://localhost:3000/main08abadf77bf621f7cb05.js:2107:20"
+      },
+      "date": "2025-05-28T11:41:33.659Z"
+    },
+    {
+      "id": "d990",
+      "message": "hei is not defined",
+      "stack": {
+        "componentStack": "\nSidebar@http://localhost:3000/main66ce415d68578aea4488.js:2668:7\nErrorBoundary@http://localhost:3000/main66ce415d68578aea4488.js:2107:20"
+      },
+      "date": "2025-05-28T11:41:35.637Z"
+    },
+    {
+      "id": "9759",
+      "message": "height is not defined",
+      "stack": {
+        "componentStack": "\nSidebar@http://localhost:3000/maina0a53f25da840951bc7c.js:2668:7\nErrorBoundary@http://localhost:3000/maina0a53f25da840951bc7c.js:2107:20"
+      },
+      "date": "2025-05-28T11:41:37.400Z"
+    },
+    {
+      "id": "fdec",
+      "message": "wid is not defined",
+      "stack": {
+        "componentStack": "\nSidebar@http://localhost:3000/main978f6da3b160efb01c5b.js:7427:9\nErrorBoundary@http://localhost:3000/main978f6da3b160efb01c5b.js:6828:20"
+      },
+      "date": "2025-05-28T20:18:00.046Z"
+    },
+    {
+      "id": "3efb",
+      "message": "color is not defined",
+      "stack": {
+        "componentStack": "\nSidebar@http://localhost:3000/mainc39f6819c261ed7d8de4.js:7428:9\nErrorBoundary@http://localhost:3000/mainc39f6819c261ed7d8de4.js:6828:20"
+      },
+      "date": "2025-05-28T20:18:35.400Z"
+    },
+    {
+      "id": "d430",
+      "message": "O is not defined",
+      "stack": {
+        "componentStack": "\nMainLayout@http://localhost:3000/main434a63679ba4eaf14906.js:7505:91\nErrorBoundary@http://localhost:3000/main434a63679ba4eaf14906.js:6828:20\nRenderedRoute@http://localhost:3000/main434a63679ba4eaf14906.js:111087:23\nRenderErrorBoundary@http://localhost:3000/main434a63679ba4eaf14906.js:111046:5\nDataRoutes@http://localhost:3000/main434a63679ba4eaf14906.js:111637:20\nRouter@http://localhost:3000/main434a63679ba4eaf14906.js:111722:16\nRouterProvider@http://localhost:3000/main434a63679ba4eaf14906.js:111467:24\nRouterProvider2@unknown:0:0\ndiv@unknown:0:0\nApp@http://localhost:3000/main434a63679ba4eaf14906.js:6741:66\nProvider@http://localhost:3000/main434a63679ba4eaf14906.js:105691:53\nErrorBoundary@http://localhost:3000/main434a63679ba4eaf14906.js:6828:20"
+      },
+      "date": "2025-06-04T11:44:25.706Z"
+    },
+    {
+      "id": "1ca9",
+      "message": "The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + 'em'}} when using JSX.",
+      "stack": {
+        "componentStack": "\n    at div (<anonymous>)\n    at Col (http://localhost:3000/mainf8a1212da6dd15e308fa.js:22667:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/mainf8a1212da6dd15e308fa.js:24545:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/mainf8a1212da6dd15e308fa.js:22823:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/mainf8a1212da6dd15e308fa.js:6828:5)\n    at RenderedRoute (http://localhost:3000/mainf8a1212da6dd15e308fa.js:111090:26)\n    at RenderErrorBoundary (http://localhost:3000/mainf8a1212da6dd15e308fa.js:111049:5)\n    at DataRoutes (http://localhost:3000/mainf8a1212da6dd15e308fa.js:111641:3)\n    at Router (http://localhost:3000/mainf8a1212da6dd15e308fa.js:111726:13)\n    at RouterProvider (http://localhost:3000/mainf8a1212da6dd15e308fa.js:111471:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/mainf8a1212da6dd15e308fa.js:6741:66)\n    at Provider (http://localhost:3000/mainf8a1212da6dd15e308fa.js:105694:11)\n    at ErrorBoundary (http://localhost:3000/mainf8a1212da6dd15e308fa.js:6828:5)"
+      },
+      "date": "2025-06-04T11:52:42.791Z"
+    },
+    {
+      "id": "d73b",
+      "message": "pa is not defined",
+      "stack": {
+        "componentStack": "\n    at MainLayout (http://localhost:3000/main7b3d2b5e4a66065cc4df.js:7504:20)\n    at ErrorBoundary (http://localhost:3000/main7b3d2b5e4a66065cc4df.js:6828:5)\n    at RenderedRoute (http://localhost:3000/main7b3d2b5e4a66065cc4df.js:111090:26)\n    at RenderErrorBoundary (http://localhost:3000/main7b3d2b5e4a66065cc4df.js:111049:5)\n    at DataRoutes (http://localhost:3000/main7b3d2b5e4a66065cc4df.js:111641:3)\n    at Router (http://localhost:3000/main7b3d2b5e4a66065cc4df.js:111726:13)\n    at RouterProvider (http://localhost:3000/main7b3d2b5e4a66065cc4df.js:111471:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main7b3d2b5e4a66065cc4df.js:6741:66)\n    at Provider (http://localhost:3000/main7b3d2b5e4a66065cc4df.js:105694:11)\n    at ErrorBoundary (http://localhost:3000/main7b3d2b5e4a66065cc4df.js:6828:5)"
+      },
+      "date": "2025-06-04T11:52:50.360Z"
+    },
+    {
+      "id": "0b92",
+      "message": "paddi is not defined",
+      "stack": {
+        "componentStack": "\n    at MainLayout (http://localhost:3000/main74831cf140b6ec2e9e4d.js:7504:20)\n    at ErrorBoundary (http://localhost:3000/main74831cf140b6ec2e9e4d.js:6828:5)\n    at RenderedRoute (http://localhost:3000/main74831cf140b6ec2e9e4d.js:111090:26)\n    at RenderErrorBoundary (http://localhost:3000/main74831cf140b6ec2e9e4d.js:111049:5)\n    at DataRoutes (http://localhost:3000/main74831cf140b6ec2e9e4d.js:111641:3)\n    at Router (http://localhost:3000/main74831cf140b6ec2e9e4d.js:111726:13)\n    at RouterProvider (http://localhost:3000/main74831cf140b6ec2e9e4d.js:111471:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main74831cf140b6ec2e9e4d.js:6741:66)\n    at Provider (http://localhost:3000/main74831cf140b6ec2e9e4d.js:105694:11)\n    at ErrorBoundary (http://localhost:3000/main74831cf140b6ec2e9e4d.js:6828:5)"
+      },
+      "date": "2025-06-04T11:52:52.373Z"
+    },
+    {
+      "id": "c992",
+      "message": "padding is not defined",
+      "stack": {
+        "componentStack": "\n    at MainLayout (http://localhost:3000/main4234c53e55f3fc7688d3.js:7504:20)\n    at ErrorBoundary (http://localhost:3000/main4234c53e55f3fc7688d3.js:6828:5)\n    at RenderedRoute (http://localhost:3000/main4234c53e55f3fc7688d3.js:111090:26)\n    at RenderErrorBoundary (http://localhost:3000/main4234c53e55f3fc7688d3.js:111049:5)\n    at DataRoutes (http://localhost:3000/main4234c53e55f3fc7688d3.js:111641:3)\n    at Router (http://localhost:3000/main4234c53e55f3fc7688d3.js:111726:13)\n    at RouterProvider (http://localhost:3000/main4234c53e55f3fc7688d3.js:111471:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main4234c53e55f3fc7688d3.js:6741:66)\n    at Provider (http://localhost:3000/main4234c53e55f3fc7688d3.js:105694:11)\n    at ErrorBoundary (http://localhost:3000/main4234c53e55f3fc7688d3.js:6828:5)"
+      },
+      "date": "2025-06-04T11:52:58.571Z"
+    },
+    {
+      "id": "4598",
+      "message": "paddingLeft is not defined",
+      "stack": {
+        "componentStack": "\n    at MainLayout (http://localhost:3000/mainf9ceca3b16bc02629554.js:7504:20)\n    at ErrorBoundary (http://localhost:3000/mainf9ceca3b16bc02629554.js:6828:5)\n    at RenderedRoute (http://localhost:3000/mainf9ceca3b16bc02629554.js:111090:26)\n    at RenderErrorBoundary (http://localhost:3000/mainf9ceca3b16bc02629554.js:111049:5)\n    at DataRoutes (http://localhost:3000/mainf9ceca3b16bc02629554.js:111641:3)\n    at Router (http://localhost:3000/mainf9ceca3b16bc02629554.js:111726:13)\n    at RouterProvider (http://localhost:3000/mainf9ceca3b16bc02629554.js:111471:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/mainf9ceca3b16bc02629554.js:6741:66)\n    at Provider (http://localhost:3000/mainf9ceca3b16bc02629554.js:105694:11)\n    at ErrorBoundary (http://localhost:3000/mainf9ceca3b16bc02629554.js:6828:5)"
+      },
+      "date": "2025-06-04T11:53:02.728Z"
+    },
+    {
+      "id": "b124",
+      "message": "Tabs is not defined",
+      "stack": {
+        "componentStack": "\nMainLayout@http://localhost:3000/main85cfdbe16ce8d5a02105.js:7510:92\nErrorBoundary@http://localhost:3000/main85cfdbe16ce8d5a02105.js:6828:20\nRenderedRoute@http://localhost:3000/main85cfdbe16ce8d5a02105.js:111092:23\nRenderErrorBoundary@http://localhost:3000/main85cfdbe16ce8d5a02105.js:111051:5\nDataRoutes@http://localhost:3000/main85cfdbe16ce8d5a02105.js:111642:20\nRouter@http://localhost:3000/main85cfdbe16ce8d5a02105.js:111727:16\nRouterProvider@http://localhost:3000/main85cfdbe16ce8d5a02105.js:111472:24\nRouterProvider2@unknown:0:0\ndiv@unknown:0:0\nApp@http://localhost:3000/main85cfdbe16ce8d5a02105.js:6741:66\nProvider@http://localhost:3000/main85cfdbe16ce8d5a02105.js:105696:53\nErrorBoundary@http://localhost:3000/main85cfdbe16ce8d5a02105.js:6828:20"
+      },
+      "date": "2025-06-04T11:58:16.778Z"
+    },
+    {
+      "id": "3ba0",
+      "message": "The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + 'em'}} when using JSX.",
+      "stack": {
+        "componentStack": "\n    at footer (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/main6a6893fde07b4ce62ef7.js:6828:5)\n    at RenderedRoute (http://localhost:3000/main6a6893fde07b4ce62ef7.js:111507:26)\n    at RenderErrorBoundary (http://localhost:3000/main6a6893fde07b4ce62ef7.js:111466:5)\n    at DataRoutes (http://localhost:3000/main6a6893fde07b4ce62ef7.js:112058:3)\n    at Router (http://localhost:3000/main6a6893fde07b4ce62ef7.js:112143:13)\n    at RouterProvider (http://localhost:3000/main6a6893fde07b4ce62ef7.js:111888:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main6a6893fde07b4ce62ef7.js:6741:66)\n    at Provider (http://localhost:3000/main6a6893fde07b4ce62ef7.js:106111:11)\n    at ErrorBoundary (http://localhost:3000/main6a6893fde07b4ce62ef7.js:6828:5)"
+      },
+      "date": "2025-06-04T12:32:15.098Z"
+    },
+    {
+      "id": "b824",
+      "message": "The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + 'em'}} when using JSX.",
+      "stack": {
+        "componentStack": "\nfooter@unknown:0:0\ndiv@unknown:0:0\nMainLayout@unknown:0:0\nErrorBoundary@http://localhost:3000/main6a6893fde07b4ce62ef7.js:6828:20\nRenderedRoute@http://localhost:3000/main6a6893fde07b4ce62ef7.js:111507:23\nRenderErrorBoundary@http://localhost:3000/main6a6893fde07b4ce62ef7.js:111466:5\nDataRoutes@http://localhost:3000/main6a6893fde07b4ce62ef7.js:112057:20\nRouter@http://localhost:3000/main6a6893fde07b4ce62ef7.js:112142:16\nRouterProvider@http://localhost:3000/main6a6893fde07b4ce62ef7.js:111887:24\nRouterProvider2@unknown:0:0\ndiv@unknown:0:0\nApp@http://localhost:3000/main6a6893fde07b4ce62ef7.js:6741:66\nProvider@http://localhost:3000/main6a6893fde07b4ce62ef7.js:106111:53\nErrorBoundary@http://localhost:3000/main6a6893fde07b4ce62ef7.js:6828:20"
+      },
+      "date": "2025-06-04T12:32:15.483Z"
+    },
+    {
+      "id": "2664",
+      "message": "bac is not defined",
+      "stack": {
+        "componentStack": "\n    at MainLayout (http://localhost:3000/main23247857d6b2f2fe5075.js:7658:14)\n    at ErrorBoundary (http://localhost:3000/main23247857d6b2f2fe5075.js:6828:5)\n    at RenderedRoute (http://localhost:3000/main23247857d6b2f2fe5075.js:111509:26)\n    at RenderErrorBoundary (http://localhost:3000/main23247857d6b2f2fe5075.js:111468:5)\n    at DataRoutes (http://localhost:3000/main23247857d6b2f2fe5075.js:112060:3)\n    at Router (http://localhost:3000/main23247857d6b2f2fe5075.js:112145:13)\n    at RouterProvider (http://localhost:3000/main23247857d6b2f2fe5075.js:111890:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main23247857d6b2f2fe5075.js:6741:66)\n    at Provider (http://localhost:3000/main23247857d6b2f2fe5075.js:106113:11)\n    at ErrorBoundary (http://localhost:3000/main23247857d6b2f2fe5075.js:6828:5)"
+      },
+      "date": "2025-06-04T12:32:24.123Z"
+    },
+    {
+      "id": "5013",
+      "message": "back is not defined",
+      "stack": {
+        "componentStack": "\n    at MainLayout (http://localhost:3000/main2613662720a609a9fc2a.js:7658:15)\n    at ErrorBoundary (http://localhost:3000/main2613662720a609a9fc2a.js:6828:5)\n    at RenderedRoute (http://localhost:3000/main2613662720a609a9fc2a.js:111509:26)\n    at RenderErrorBoundary (http://localhost:3000/main2613662720a609a9fc2a.js:111468:5)\n    at DataRoutes (http://localhost:3000/main2613662720a609a9fc2a.js:112060:3)\n    at Router (http://localhost:3000/main2613662720a609a9fc2a.js:112145:13)\n    at RouterProvider (http://localhost:3000/main2613662720a609a9fc2a.js:111890:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main2613662720a609a9fc2a.js:6741:66)\n    at Provider (http://localhost:3000/main2613662720a609a9fc2a.js:106113:11)\n    at ErrorBoundary (http://localhost:3000/main2613662720a609a9fc2a.js:6828:5)"
+      },
+      "date": "2025-06-04T12:32:27.671Z"
+    },
+    {
+      "id": "eedf",
+      "message": "background is not defined",
+      "stack": {
+        "componentStack": "\n    at MainLayout (http://localhost:3000/main11e3a12d522cfb4feba7.js:7658:21)\n    at ErrorBoundary (http://localhost:3000/main11e3a12d522cfb4feba7.js:6828:5)\n    at RenderedRoute (http://localhost:3000/main11e3a12d522cfb4feba7.js:111509:26)\n    at RenderErrorBoundary (http://localhost:3000/main11e3a12d522cfb4feba7.js:111468:5)\n    at DataRoutes (http://localhost:3000/main11e3a12d522cfb4feba7.js:112060:3)\n    at Router (http://localhost:3000/main11e3a12d522cfb4feba7.js:112145:13)\n    at RouterProvider (http://localhost:3000/main11e3a12d522cfb4feba7.js:111890:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main11e3a12d522cfb4feba7.js:6741:66)\n    at Provider (http://localhost:3000/main11e3a12d522cfb4feba7.js:106113:11)\n    at ErrorBoundary (http://localhost:3000/main11e3a12d522cfb4feba7.js:6828:5)"
+      },
+      "date": "2025-06-04T12:32:35.650Z"
+    },
+    {
+      "id": "5a8a",
+      "message": "gre is not defined",
+      "stack": {
+        "componentStack": "\n    at MainLayout (http://localhost:3000/mainde3ba4b0e7fb00f366d7.js:7658:26)\n    at ErrorBoundary (http://localhost:3000/mainde3ba4b0e7fb00f366d7.js:6828:5)\n    at RenderedRoute (http://localhost:3000/mainde3ba4b0e7fb00f366d7.js:111509:26)\n    at RenderErrorBoundary (http://localhost:3000/mainde3ba4b0e7fb00f366d7.js:111468:5)\n    at DataRoutes (http://localhost:3000/mainde3ba4b0e7fb00f366d7.js:112060:3)\n    at Router (http://localhost:3000/mainde3ba4b0e7fb00f366d7.js:112145:13)\n    at RouterProvider (http://localhost:3000/mainde3ba4b0e7fb00f366d7.js:111890:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/mainde3ba4b0e7fb00f366d7.js:6741:66)\n    at Provider (http://localhost:3000/mainde3ba4b0e7fb00f366d7.js:106113:11)\n    at ErrorBoundary (http://localhost:3000/mainde3ba4b0e7fb00f366d7.js:6828:5)"
+      },
+      "date": "2025-06-04T12:32:51.728Z"
+    },
+    {
+      "id": "b040",
+      "message": "grey is not defined",
+      "stack": {
+        "componentStack": "\n    at MainLayout (http://localhost:3000/maind60db9c1fdfaee34d9a7.js:7658:26)\n    at ErrorBoundary (http://localhost:3000/maind60db9c1fdfaee34d9a7.js:6828:5)\n    at RenderedRoute (http://localhost:3000/maind60db9c1fdfaee34d9a7.js:111509:26)\n    at RenderErrorBoundary (http://localhost:3000/maind60db9c1fdfaee34d9a7.js:111468:5)\n    at DataRoutes (http://localhost:3000/maind60db9c1fdfaee34d9a7.js:112060:3)\n    at Router (http://localhost:3000/maind60db9c1fdfaee34d9a7.js:112145:13)\n    at RouterProvider (http://localhost:3000/maind60db9c1fdfaee34d9a7.js:111890:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/maind60db9c1fdfaee34d9a7.js:6741:66)\n    at Provider (http://localhost:3000/maind60db9c1fdfaee34d9a7.js:106113:11)\n    at ErrorBoundary (http://localhost:3000/maind60db9c1fdfaee34d9a7.js:6828:5)"
+      },
+      "date": "2025-06-04T12:32:53.790Z"
+    },
+    {
+      "id": "457c",
+      "message": "use is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/mainb7a1dee77e87788feaf0.js:7367:18)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/mainb7a1dee77e87788feaf0.js:23067:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/mainb7a1dee77e87788feaf0.js:24945:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/mainb7a1dee77e87788feaf0.js:23223:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/mainb7a1dee77e87788feaf0.js:6829:5)\n    at RenderedRoute (http://localhost:3000/mainb7a1dee77e87788feaf0.js:114428:26)\n    at RenderErrorBoundary (http://localhost:3000/mainb7a1dee77e87788feaf0.js:114387:5)\n    at DataRoutes (http://localhost:3000/mainb7a1dee77e87788feaf0.js:114979:3)\n    at Router (http://localhost:3000/mainb7a1dee77e87788feaf0.js:115064:13)\n    at RouterProvider (http://localhost:3000/mainb7a1dee77e87788feaf0.js:114809:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/mainb7a1dee77e87788feaf0.js:6742:66)\n    at Provider (http://localhost:3000/mainb7a1dee77e87788feaf0.js:109032:11)\n    at ErrorBoundary (http://localhost:3000/mainb7a1dee77e87788feaf0.js:6829:5)"
+      },
+      "date": "2025-06-07T20:06:23.647Z"
+    },
+    {
+      "id": "e1ad",
+      "message": "Invalid or missing MediaQuery!",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main93fbfadb01bafb3868bb.js:7368:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main93fbfadb01bafb3868bb.js:23339:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main93fbfadb01bafb3868bb.js:25217:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main93fbfadb01bafb3868bb.js:23495:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/main93fbfadb01bafb3868bb.js:6829:5)\n    at RenderedRoute (http://localhost:3000/main93fbfadb01bafb3868bb.js:114931:26)\n    at RenderErrorBoundary (http://localhost:3000/main93fbfadb01bafb3868bb.js:114890:5)\n    at DataRoutes (http://localhost:3000/main93fbfadb01bafb3868bb.js:115482:3)\n    at Router (http://localhost:3000/main93fbfadb01bafb3868bb.js:115567:13)\n    at RouterProvider (http://localhost:3000/main93fbfadb01bafb3868bb.js:115312:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main93fbfadb01bafb3868bb.js:6742:66)\n    at Provider (http://localhost:3000/main93fbfadb01bafb3868bb.js:109535:11)\n    at ErrorBoundary (http://localhost:3000/main93fbfadb01bafb3868bb.js:6829:5)"
+      },
+      "date": "2025-06-07T20:06:31.202Z"
+    },
+    {
+      "id": "3589",
+      "message": "query is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main8b1e509831d00cfeae6c.js:7369:12)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main8b1e509831d00cfeae6c.js:23341:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main8b1e509831d00cfeae6c.js:25219:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main8b1e509831d00cfeae6c.js:23497:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/main8b1e509831d00cfeae6c.js:6829:5)\n    at RenderedRoute (http://localhost:3000/main8b1e509831d00cfeae6c.js:114933:26)\n    at RenderErrorBoundary (http://localhost:3000/main8b1e509831d00cfeae6c.js:114892:5)\n    at DataRoutes (http://localhost:3000/main8b1e509831d00cfeae6c.js:115484:3)\n    at Router (http://localhost:3000/main8b1e509831d00cfeae6c.js:115569:13)\n    at RouterProvider (http://localhost:3000/main8b1e509831d00cfeae6c.js:115314:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main8b1e509831d00cfeae6c.js:6742:66)\n    at Provider (http://localhost:3000/main8b1e509831d00cfeae6c.js:109537:11)\n    at ErrorBoundary (http://localhost:3000/main8b1e509831d00cfeae6c.js:6829:5)"
+      },
+      "date": "2025-06-07T20:06:36.146Z"
+    },
+    {
+      "id": "3a30",
+      "message": "NavLink is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/mainf0a2026384bda5d5dc48.js:6979:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/mainf0a2026384bda5d5dc48.js:23371:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/mainf0a2026384bda5d5dc48.js:25249:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/mainf0a2026384bda5d5dc48.js:23527:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/mainf0a2026384bda5d5dc48.js:6828:5)\n    at RenderedRoute (http://localhost:3000/mainf0a2026384bda5d5dc48.js:115009:26)\n    at RenderErrorBoundary (http://localhost:3000/mainf0a2026384bda5d5dc48.js:114968:5)\n    at DataRoutes (http://localhost:3000/mainf0a2026384bda5d5dc48.js:115560:3)\n    at Router (http://localhost:3000/mainf0a2026384bda5d5dc48.js:115645:13)\n    at RouterProvider (http://localhost:3000/mainf0a2026384bda5d5dc48.js:115390:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/mainf0a2026384bda5d5dc48.js:6741:66)\n    at Provider (http://localhost:3000/mainf0a2026384bda5d5dc48.js:109613:11)\n    at ErrorBoundary (http://localhost:3000/mainf0a2026384bda5d5dc48.js:6828:5)"
+      },
+      "date": "2025-06-09T11:15:37.016Z"
+    },
+    {
+      "id": "1142",
+      "message": "Link is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main72db6de05e47dd6ef944.js:6979:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main72db6de05e47dd6ef944.js:23371:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main72db6de05e47dd6ef944.js:25249:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main72db6de05e47dd6ef944.js:23527:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/main72db6de05e47dd6ef944.js:6828:5)\n    at RenderedRoute (http://localhost:3000/main72db6de05e47dd6ef944.js:115009:26)\n    at RenderErrorBoundary (http://localhost:3000/main72db6de05e47dd6ef944.js:114968:5)\n    at DataRoutes (http://localhost:3000/main72db6de05e47dd6ef944.js:115560:3)\n    at Router (http://localhost:3000/main72db6de05e47dd6ef944.js:115645:13)\n    at RouterProvider (http://localhost:3000/main72db6de05e47dd6ef944.js:115390:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main72db6de05e47dd6ef944.js:6741:66)\n    at Provider (http://localhost:3000/main72db6de05e47dd6ef944.js:109613:11)\n    at ErrorBoundary (http://localhost:3000/main72db6de05e47dd6ef944.js:6828:5)"
+      },
+      "date": "2025-06-09T11:17:33.430Z"
+    },
+    {
+      "id": "0620",
+      "message": "Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.",
+      "stack": {
+        "componentStack": "\n    at PrivateRoute (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/main15191b6256d334306dfb.js:127578:5)\n    at RenderedRoute (http://localhost:3000/main15191b6256d334306dfb.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main15191b6256d334306dfb.js:111389:5)\n    at DataRoutes (http://localhost:3000/main15191b6256d334306dfb.js:111978:3)\n    at Router (http://localhost:3000/main15191b6256d334306dfb.js:112063:13)\n    at RouterProvider (http://localhost:3000/main15191b6256d334306dfb.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main15191b6256d334306dfb.js:127491:66)\n    at Provider (http://localhost:3000/main15191b6256d334306dfb.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main15191b6256d334306dfb.js:127578:5)"
+      },
+      "date": "2025-08-01T11:51:23.540Z"
+    },
+    {
+      "id": "ca6d",
+      "message": "Objects are not valid as a React child (found: object with keys {children}). If you meant to render a collection of children, use an array instead.",
+      "stack": {
+        "componentStack": "\n    at PrivateRoute (<anonymous>)\n    at ErrorBoundary (http://localhost:3000/main087c16102e92b8776d74.js:127580:5)\n    at RenderedRoute (http://localhost:3000/main087c16102e92b8776d74.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main087c16102e92b8776d74.js:111389:5)\n    at DataRoutes (http://localhost:3000/main087c16102e92b8776d74.js:111978:3)\n    at Router (http://localhost:3000/main087c16102e92b8776d74.js:112063:13)\n    at RouterProvider (http://localhost:3000/main087c16102e92b8776d74.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main087c16102e92b8776d74.js:127493:66)\n    at Provider (http://localhost:3000/main087c16102e92b8776d74.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main087c16102e92b8776d74.js:127580:5)"
+      },
+      "date": "2025-08-01T11:51:48.902Z"
+    },
+    {
+      "id": "58e8",
+      "message": "children is not defined",
+      "stack": {
+        "componentStack": "\n    at PrivateRoute (http://localhost:3000/main40f626944907ae186862.js:127937:5)\n    at ErrorBoundary (http://localhost:3000/main40f626944907ae186862.js:127588:5)\n    at RenderedRoute (http://localhost:3000/main40f626944907ae186862.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main40f626944907ae186862.js:111389:5)\n    at DataRoutes (http://localhost:3000/main40f626944907ae186862.js:111978:3)\n    at Router (http://localhost:3000/main40f626944907ae186862.js:112063:13)\n    at RouterProvider (http://localhost:3000/main40f626944907ae186862.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main40f626944907ae186862.js:127501:66)\n    at Provider (http://localhost:3000/main40f626944907ae186862.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main40f626944907ae186862.js:127588:5)"
+      },
+      "date": "2025-08-01T13:42:25.011Z"
+    },
+    {
+      "id": "4796",
+      "message": "Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.",
+      "stack": {
+        "componentStack": "\n    at ErrorBoundary (http://localhost:3000/main0c354e11fcc678cdb9c4.js:127594:5)\n    at RenderedRoute (http://localhost:3000/main0c354e11fcc678cdb9c4.js:111430:26)\n    at Outlet (http://localhost:3000/main0c354e11fcc678cdb9c4.js:112054:26)\n    at div (<anonymous>)\n    at main (<anonymous>)\n    at AuthLayout (<anonymous>)\n    at RenderedRoute (http://localhost:3000/main0c354e11fcc678cdb9c4.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main0c354e11fcc678cdb9c4.js:111389:5)\n    at DataRoutes (http://localhost:3000/main0c354e11fcc678cdb9c4.js:111978:3)\n    at Router (http://localhost:3000/main0c354e11fcc678cdb9c4.js:112063:13)\n    at RouterProvider (http://localhost:3000/main0c354e11fcc678cdb9c4.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main0c354e11fcc678cdb9c4.js:127507:66)\n    at Provider (http://localhost:3000/main0c354e11fcc678cdb9c4.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main0c354e11fcc678cdb9c4.js:127594:5)"
+      },
+      "date": "2025-08-08T19:40:38.777Z"
+    },
+    {
+      "id": "a929",
+      "message": "useEffect is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main32a81dd1a9891c1ec1a3.js:128005:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main32a81dd1a9891c1ec1a3.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main32a81dd1a9891c1ec1a3.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main32a81dd1a9891c1ec1a3.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/main32a81dd1a9891c1ec1a3.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/main32a81dd1a9891c1ec1a3.js:127593:5)\n    at RenderedRoute (http://localhost:3000/main32a81dd1a9891c1ec1a3.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main32a81dd1a9891c1ec1a3.js:111389:5)\n    at DataRoutes (http://localhost:3000/main32a81dd1a9891c1ec1a3.js:111978:3)\n    at Router (http://localhost:3000/main32a81dd1a9891c1ec1a3.js:112063:13)\n    at RouterProvider (http://localhost:3000/main32a81dd1a9891c1ec1a3.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main32a81dd1a9891c1ec1a3.js:127506:66)\n    at Provider (http://localhost:3000/main32a81dd1a9891c1ec1a3.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main32a81dd1a9891c1ec1a3.js:127593:5)"
+      },
+      "date": "2025-08-15T11:55:00.000Z"
+    },
+    {
+      "id": "b333",
+      "message": "fetch.get is not a function",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main702cc94b590bc3f35d13.js:128006:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main702cc94b590bc3f35d13.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main702cc94b590bc3f35d13.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main702cc94b590bc3f35d13.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/main702cc94b590bc3f35d13.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/main702cc94b590bc3f35d13.js:127593:5)\n    at RenderedRoute (http://localhost:3000/main702cc94b590bc3f35d13.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main702cc94b590bc3f35d13.js:111389:5)\n    at DataRoutes (http://localhost:3000/main702cc94b590bc3f35d13.js:111978:3)\n    at Router (http://localhost:3000/main702cc94b590bc3f35d13.js:112063:13)\n    at RouterProvider (http://localhost:3000/main702cc94b590bc3f35d13.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main702cc94b590bc3f35d13.js:127506:66)\n    at Provider (http://localhost:3000/main702cc94b590bc3f35d13.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main702cc94b590bc3f35d13.js:127593:5)"
+      },
+      "date": "2025-08-15T11:55:44.380Z"
+    },
+    {
+      "id": "eee9",
+      "message": "API_BASE_URL is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main9f88d653a02f6001537b.js:128008:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main9f88d653a02f6001537b.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main9f88d653a02f6001537b.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main9f88d653a02f6001537b.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/main9f88d653a02f6001537b.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/main9f88d653a02f6001537b.js:127593:5)\n    at RenderedRoute (http://localhost:3000/main9f88d653a02f6001537b.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main9f88d653a02f6001537b.js:111389:5)\n    at DataRoutes (http://localhost:3000/main9f88d653a02f6001537b.js:111978:3)\n    at Router (http://localhost:3000/main9f88d653a02f6001537b.js:112063:13)\n    at RouterProvider (http://localhost:3000/main9f88d653a02f6001537b.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main9f88d653a02f6001537b.js:127506:66)\n    at Provider (http://localhost:3000/main9f88d653a02f6001537b.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main9f88d653a02f6001537b.js:127593:5)"
+      },
+      "date": "2025-08-15T11:58:12.301Z"
+    },
+    {
+      "id": "cf99",
+      "message": "Cannot read properties of undefined (reading '0')",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/maina6bcb45f0d860fa38a2d.js:128010:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/maina6bcb45f0d860fa38a2d.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/maina6bcb45f0d860fa38a2d.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/maina6bcb45f0d860fa38a2d.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/maina6bcb45f0d860fa38a2d.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/maina6bcb45f0d860fa38a2d.js:127593:5)\n    at RenderedRoute (http://localhost:3000/maina6bcb45f0d860fa38a2d.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/maina6bcb45f0d860fa38a2d.js:111389:5)\n    at DataRoutes (http://localhost:3000/maina6bcb45f0d860fa38a2d.js:111978:3)\n    at Router (http://localhost:3000/maina6bcb45f0d860fa38a2d.js:112063:13)\n    at RouterProvider (http://localhost:3000/maina6bcb45f0d860fa38a2d.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/maina6bcb45f0d860fa38a2d.js:127506:66)\n    at Provider (http://localhost:3000/maina6bcb45f0d860fa38a2d.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/maina6bcb45f0d860fa38a2d.js:127593:5)"
+      },
+      "date": "2025-08-15T12:22:47.007Z"
+    },
+    {
+      "id": "0b6f",
+      "message": "users is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main3f397290e04cf01765c9.js:128009:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main3f397290e04cf01765c9.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main3f397290e04cf01765c9.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main3f397290e04cf01765c9.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/main3f397290e04cf01765c9.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/main3f397290e04cf01765c9.js:127593:5)\n    at RenderedRoute (http://localhost:3000/main3f397290e04cf01765c9.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main3f397290e04cf01765c9.js:111389:5)\n    at DataRoutes (http://localhost:3000/main3f397290e04cf01765c9.js:111978:3)\n    at Router (http://localhost:3000/main3f397290e04cf01765c9.js:112063:13)\n    at RouterProvider (http://localhost:3000/main3f397290e04cf01765c9.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main3f397290e04cf01765c9.js:127506:66)\n    at Provider (http://localhost:3000/main3f397290e04cf01765c9.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main3f397290e04cf01765c9.js:127593:5)"
+      },
+      "date": "2025-08-15T12:23:05.688Z"
+    },
+    {
+      "id": "923f",
+      "message": "Failed to execute 'setItem' on 'Storage': 2 arguments required, but only 1 present.",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/mainc98c8d46cbf17581822e.js:128009:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/mainc98c8d46cbf17581822e.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/mainc98c8d46cbf17581822e.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/mainc98c8d46cbf17581822e.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/mainc98c8d46cbf17581822e.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/mainc98c8d46cbf17581822e.js:127593:5)\n    at RenderedRoute (http://localhost:3000/mainc98c8d46cbf17581822e.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/mainc98c8d46cbf17581822e.js:111389:5)\n    at DataRoutes (http://localhost:3000/mainc98c8d46cbf17581822e.js:111978:3)\n    at Router (http://localhost:3000/mainc98c8d46cbf17581822e.js:112063:13)\n    at RouterProvider (http://localhost:3000/mainc98c8d46cbf17581822e.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/mainc98c8d46cbf17581822e.js:127506:66)\n    at Provider (http://localhost:3000/mainc98c8d46cbf17581822e.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/mainc98c8d46cbf17581822e.js:127593:5)"
+      },
+      "date": "2025-08-15T12:45:11.963Z"
+    },
+    {
+      "id": "4ed1",
+      "message": "localStorage.setItemBool is not a function",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main8610fc1c22072c1ed02b.js:128009:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main8610fc1c22072c1ed02b.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main8610fc1c22072c1ed02b.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main8610fc1c22072c1ed02b.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/main8610fc1c22072c1ed02b.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/main8610fc1c22072c1ed02b.js:127593:5)\n    at RenderedRoute (http://localhost:3000/main8610fc1c22072c1ed02b.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main8610fc1c22072c1ed02b.js:111389:5)\n    at DataRoutes (http://localhost:3000/main8610fc1c22072c1ed02b.js:111978:3)\n    at Router (http://localhost:3000/main8610fc1c22072c1ed02b.js:112063:13)\n    at RouterProvider (http://localhost:3000/main8610fc1c22072c1ed02b.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main8610fc1c22072c1ed02b.js:127506:66)\n    at Provider (http://localhost:3000/main8610fc1c22072c1ed02b.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main8610fc1c22072c1ed02b.js:127593:5)"
+      },
+      "date": "2025-08-15T12:47:04.923Z"
+    },
+    {
+      "id": "933b",
+      "message": "localStorage.setItemBoolean is not a function",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/mainb325e4f5bc1f6ed7f7be.js:128009:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/mainb325e4f5bc1f6ed7f7be.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/mainb325e4f5bc1f6ed7f7be.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/mainb325e4f5bc1f6ed7f7be.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/mainb325e4f5bc1f6ed7f7be.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/mainb325e4f5bc1f6ed7f7be.js:127593:5)\n    at RenderedRoute (http://localhost:3000/mainb325e4f5bc1f6ed7f7be.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/mainb325e4f5bc1f6ed7f7be.js:111389:5)\n    at DataRoutes (http://localhost:3000/mainb325e4f5bc1f6ed7f7be.js:111978:3)\n    at Router (http://localhost:3000/mainb325e4f5bc1f6ed7f7be.js:112063:13)\n    at RouterProvider (http://localhost:3000/mainb325e4f5bc1f6ed7f7be.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/mainb325e4f5bc1f6ed7f7be.js:127506:66)\n    at Provider (http://localhost:3000/mainb325e4f5bc1f6ed7f7be.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/mainb325e4f5bc1f6ed7f7be.js:127593:5)"
+      },
+      "date": "2025-08-15T12:47:07.891Z"
+    },
+    {
+      "id": "5f1b",
+      "message": "test is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main91ee7a435a9ec4b1d7f7.js:128009:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main91ee7a435a9ec4b1d7f7.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main91ee7a435a9ec4b1d7f7.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main91ee7a435a9ec4b1d7f7.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/main91ee7a435a9ec4b1d7f7.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/main91ee7a435a9ec4b1d7f7.js:127593:5)\n    at RenderedRoute (http://localhost:3000/main91ee7a435a9ec4b1d7f7.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main91ee7a435a9ec4b1d7f7.js:111389:5)\n    at DataRoutes (http://localhost:3000/main91ee7a435a9ec4b1d7f7.js:111978:3)\n    at Router (http://localhost:3000/main91ee7a435a9ec4b1d7f7.js:112063:13)\n    at RouterProvider (http://localhost:3000/main91ee7a435a9ec4b1d7f7.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main91ee7a435a9ec4b1d7f7.js:127506:66)\n    at Provider (http://localhost:3000/main91ee7a435a9ec4b1d7f7.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main91ee7a435a9ec4b1d7f7.js:127593:5)"
+      },
+      "date": "2025-08-15T12:50:14.417Z"
+    },
+    {
+      "id": "8cf7",
+      "message": "navigate is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main9a717bf13383cda302b8.js:128010:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main9a717bf13383cda302b8.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main9a717bf13383cda302b8.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main9a717bf13383cda302b8.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/main9a717bf13383cda302b8.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/main9a717bf13383cda302b8.js:127593:5)\n    at RenderedRoute (http://localhost:3000/main9a717bf13383cda302b8.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main9a717bf13383cda302b8.js:111389:5)\n    at DataRoutes (http://localhost:3000/main9a717bf13383cda302b8.js:111978:3)\n    at Router (http://localhost:3000/main9a717bf13383cda302b8.js:112063:13)\n    at RouterProvider (http://localhost:3000/main9a717bf13383cda302b8.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main9a717bf13383cda302b8.js:127506:66)\n    at Provider (http://localhost:3000/main9a717bf13383cda302b8.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main9a717bf13383cda302b8.js:127593:5)"
+      },
+      "date": "2025-08-15T13:01:36.386Z"
+    },
+    {
+      "id": "3c95",
+      "message": "email is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/mainf4c35a452b39461ed2b6.js:128012:81)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/mainf4c35a452b39461ed2b6.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/mainf4c35a452b39461ed2b6.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/mainf4c35a452b39461ed2b6.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/mainf4c35a452b39461ed2b6.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/mainf4c35a452b39461ed2b6.js:127593:5)\n    at RenderedRoute (http://localhost:3000/mainf4c35a452b39461ed2b6.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/mainf4c35a452b39461ed2b6.js:111389:5)\n    at DataRoutes (http://localhost:3000/mainf4c35a452b39461ed2b6.js:111978:3)\n    at Router (http://localhost:3000/mainf4c35a452b39461ed2b6.js:112063:13)\n    at RouterProvider (http://localhost:3000/mainf4c35a452b39461ed2b6.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/mainf4c35a452b39461ed2b6.js:127506:66)\n    at Provider (http://localhost:3000/mainf4c35a452b39461ed2b6.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/mainf4c35a452b39461ed2b6.js:127593:5)"
+      },
+      "date": "2025-08-15T20:13:54.666Z"
+    },
+    {
+      "id": "4cc3",
+      "message": "v is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main1e52511ff70ce1ebe6ab.js:128015:3)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main1e52511ff70ce1ebe6ab.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main1e52511ff70ce1ebe6ab.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main1e52511ff70ce1ebe6ab.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/main1e52511ff70ce1ebe6ab.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/main1e52511ff70ce1ebe6ab.js:127593:5)\n    at RenderedRoute (http://localhost:3000/main1e52511ff70ce1ebe6ab.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main1e52511ff70ce1ebe6ab.js:111389:5)\n    at DataRoutes (http://localhost:3000/main1e52511ff70ce1ebe6ab.js:111978:3)\n    at Router (http://localhost:3000/main1e52511ff70ce1ebe6ab.js:112063:13)\n    at RouterProvider (http://localhost:3000/main1e52511ff70ce1ebe6ab.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main1e52511ff70ce1ebe6ab.js:127506:66)\n    at Provider (http://localhost:3000/main1e52511ff70ce1ebe6ab.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main1e52511ff70ce1ebe6ab.js:127593:5)"
+      },
+      "date": "2025-08-15T20:34:12.198Z"
+    },
+    {
+      "id": "180a",
+      "message": "nameRe is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/mainfbae270059c8d77e35f6.js:128021:66)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/mainfbae270059c8d77e35f6.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/mainfbae270059c8d77e35f6.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/mainfbae270059c8d77e35f6.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/mainfbae270059c8d77e35f6.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/mainfbae270059c8d77e35f6.js:127593:5)\n    at RenderedRoute (http://localhost:3000/mainfbae270059c8d77e35f6.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/mainfbae270059c8d77e35f6.js:111389:5)\n    at DataRoutes (http://localhost:3000/mainfbae270059c8d77e35f6.js:111978:3)\n    at Router (http://localhost:3000/mainfbae270059c8d77e35f6.js:112063:13)\n    at RouterProvider (http://localhost:3000/mainfbae270059c8d77e35f6.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/mainfbae270059c8d77e35f6.js:127506:66)\n    at Provider (http://localhost:3000/mainfbae270059c8d77e35f6.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/mainfbae270059c8d77e35f6.js:127593:5)"
+      },
+      "date": "2025-08-15T20:35:58.986Z"
+    },
+    {
+      "id": "c1ae",
+      "message": "Гость is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main7cbe996480833b0ed645.js:128021:66)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main7cbe996480833b0ed645.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main7cbe996480833b0ed645.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main7cbe996480833b0ed645.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/main7cbe996480833b0ed645.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/main7cbe996480833b0ed645.js:127593:5)\n    at RenderedRoute (http://localhost:3000/main7cbe996480833b0ed645.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main7cbe996480833b0ed645.js:111389:5)\n    at DataRoutes (http://localhost:3000/main7cbe996480833b0ed645.js:111978:3)\n    at Router (http://localhost:3000/main7cbe996480833b0ed645.js:112063:13)\n    at RouterProvider (http://localhost:3000/main7cbe996480833b0ed645.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main7cbe996480833b0ed645.js:127506:66)\n    at Provider (http://localhost:3000/main7cbe996480833b0ed645.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main7cbe996480833b0ed645.js:127593:5)"
+      },
+      "date": "2025-08-15T20:38:18.961Z"
+    },
+    {
+      "id": "0f16",
+      "message": "na is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main0eab20621d2eb879a5e0.js:128021:66)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main0eab20621d2eb879a5e0.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main0eab20621d2eb879a5e0.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main0eab20621d2eb879a5e0.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/main0eab20621d2eb879a5e0.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/main0eab20621d2eb879a5e0.js:127593:5)\n    at RenderedRoute (http://localhost:3000/main0eab20621d2eb879a5e0.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main0eab20621d2eb879a5e0.js:111389:5)\n    at DataRoutes (http://localhost:3000/main0eab20621d2eb879a5e0.js:111978:3)\n    at Router (http://localhost:3000/main0eab20621d2eb879a5e0.js:112063:13)\n    at RouterProvider (http://localhost:3000/main0eab20621d2eb879a5e0.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main0eab20621d2eb879a5e0.js:127506:66)\n    at Provider (http://localhost:3000/main0eab20621d2eb879a5e0.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main0eab20621d2eb879a5e0.js:127593:5)"
+      },
+      "date": "2025-08-15T21:09:41.399Z"
+    },
+    {
+      "id": "74db",
+      "message": "nameReq is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main13754d4ad12fc081fc7d.js:128021:66)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main13754d4ad12fc081fc7d.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main13754d4ad12fc081fc7d.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main13754d4ad12fc081fc7d.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/main13754d4ad12fc081fc7d.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/main13754d4ad12fc081fc7d.js:127593:5)\n    at RenderedRoute (http://localhost:3000/main13754d4ad12fc081fc7d.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main13754d4ad12fc081fc7d.js:111389:5)\n    at DataRoutes (http://localhost:3000/main13754d4ad12fc081fc7d.js:111978:3)\n    at Router (http://localhost:3000/main13754d4ad12fc081fc7d.js:112063:13)\n    at RouterProvider (http://localhost:3000/main13754d4ad12fc081fc7d.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main13754d4ad12fc081fc7d.js:127506:66)\n    at Provider (http://localhost:3000/main13754d4ad12fc081fc7d.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main13754d4ad12fc081fc7d.js:127593:5)"
+      },
+      "date": "2025-08-15T21:09:57.106Z"
+    },
+    {
+      "id": "0198",
+      "message": "гыукы is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main0b0cf2dca8fa1f50213d.js:128021:66)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main0b0cf2dca8fa1f50213d.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main0b0cf2dca8fa1f50213d.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main0b0cf2dca8fa1f50213d.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/main0b0cf2dca8fa1f50213d.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/main0b0cf2dca8fa1f50213d.js:127593:5)\n    at RenderedRoute (http://localhost:3000/main0b0cf2dca8fa1f50213d.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main0b0cf2dca8fa1f50213d.js:111389:5)\n    at DataRoutes (http://localhost:3000/main0b0cf2dca8fa1f50213d.js:111978:3)\n    at Router (http://localhost:3000/main0b0cf2dca8fa1f50213d.js:112063:13)\n    at RouterProvider (http://localhost:3000/main0b0cf2dca8fa1f50213d.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main0b0cf2dca8fa1f50213d.js:127506:66)\n    at Provider (http://localhost:3000/main0b0cf2dca8fa1f50213d.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main0b0cf2dca8fa1f50213d.js:127593:5)"
+      },
+      "date": "2025-08-15T21:34:15.020Z"
+    },
+    {
+      "id": "f92b",
+      "message": "u is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main07e4a62581622604c89a.js:128021:66)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main07e4a62581622604c89a.js:35175:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main07e4a62581622604c89a.js:38146:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main07e4a62581622604c89a.js:35331:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (<anonymous>)\n    at PrivateRoute (http://localhost:3000/main07e4a62581622604c89a.js:127940:23)\n    at ErrorBoundary (http://localhost:3000/main07e4a62581622604c89a.js:127593:5)\n    at RenderedRoute (http://localhost:3000/main07e4a62581622604c89a.js:111430:26)\n    at RenderErrorBoundary (http://localhost:3000/main07e4a62581622604c89a.js:111389:5)\n    at DataRoutes (http://localhost:3000/main07e4a62581622604c89a.js:111978:3)\n    at Router (http://localhost:3000/main07e4a62581622604c89a.js:112063:13)\n    at RouterProvider (http://localhost:3000/main07e4a62581622604c89a.js:111808:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main07e4a62581622604c89a.js:127506:66)\n    at Provider (http://localhost:3000/main07e4a62581622604c89a.js:105777:11)\n    at ErrorBoundary (http://localhost:3000/main07e4a62581622604c89a.js:127593:5)"
+      },
+      "date": "2025-08-15T21:34:24.790Z"
+    },
+    {
+      "id": "8174",
+      "message": "useTransition is not defined",
+      "stack": {
+        "componentStack": "\n    at MainLayout (http://localhost:3000/mainfc6b93049bbcc0ee29d4.js:131966:24)\n    at PrivateRoute (http://localhost:3000/mainfc6b93049bbcc0ee29d4.js:131231:23)\n    at ErrorBoundary (http://localhost:3000/mainfc6b93049bbcc0ee29d4.js:130884:5)\n    at RenderedRoute (http://localhost:3000/mainfc6b93049bbcc0ee29d4.js:114690:26)\n    at RenderErrorBoundary (http://localhost:3000/mainfc6b93049bbcc0ee29d4.js:114649:5)\n    at DataRoutes (http://localhost:3000/mainfc6b93049bbcc0ee29d4.js:115238:3)\n    at Router (http://localhost:3000/mainfc6b93049bbcc0ee29d4.js:115323:13)\n    at RouterProvider (http://localhost:3000/mainfc6b93049bbcc0ee29d4.js:115068:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/mainfc6b93049bbcc0ee29d4.js:130797:66)\n    at Provider (http://localhost:3000/mainfc6b93049bbcc0ee29d4.js:109037:11)\n    at ErrorBoundary (http://localhost:3000/mainfc6b93049bbcc0ee29d4.js:130884:5)"
+      },
+      "date": "2025-08-18T19:50:10.308Z"
+    },
+    {
+      "id": "a73a",
+      "message": "useTranslation is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/maina3621ae51248e8e40f1a.js:131312:25)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/maina3621ae51248e8e40f1a.js:37387:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/maina3621ae51248e8e40f1a.js:40358:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/maina3621ae51248e8e40f1a.js:37543:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (http://localhost:3000/maina3621ae51248e8e40f1a.js:131972:86)\n    at PrivateRoute (http://localhost:3000/maina3621ae51248e8e40f1a.js:131231:23)\n    at ErrorBoundary (http://localhost:3000/maina3621ae51248e8e40f1a.js:130884:5)\n    at RenderedRoute (http://localhost:3000/maina3621ae51248e8e40f1a.js:114690:26)\n    at RenderErrorBoundary (http://localhost:3000/maina3621ae51248e8e40f1a.js:114649:5)\n    at DataRoutes (http://localhost:3000/maina3621ae51248e8e40f1a.js:115238:3)\n    at Router (http://localhost:3000/maina3621ae51248e8e40f1a.js:115323:13)\n    at RouterProvider (http://localhost:3000/maina3621ae51248e8e40f1a.js:115068:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/maina3621ae51248e8e40f1a.js:130797:66)\n    at Provider (http://localhost:3000/maina3621ae51248e8e40f1a.js:109037:11)\n    at ErrorBoundary (http://localhost:3000/maina3621ae51248e8e40f1a.js:130884:5)"
+      },
+      "date": "2025-08-18T20:37:51.008Z"
+    },
+    {
+      "id": "45d2",
+      "message": "Меню is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main3dd56e6a3d10a0764871.js:131314:86)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main3dd56e6a3d10a0764871.js:37387:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main3dd56e6a3d10a0764871.js:40358:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main3dd56e6a3d10a0764871.js:37543:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (http://localhost:3000/main3dd56e6a3d10a0764871.js:131974:86)\n    at PrivateRoute (http://localhost:3000/main3dd56e6a3d10a0764871.js:131231:23)\n    at ErrorBoundary (http://localhost:3000/main3dd56e6a3d10a0764871.js:130884:5)\n    at RenderedRoute (http://localhost:3000/main3dd56e6a3d10a0764871.js:114690:26)\n    at RenderErrorBoundary (http://localhost:3000/main3dd56e6a3d10a0764871.js:114649:5)\n    at DataRoutes (http://localhost:3000/main3dd56e6a3d10a0764871.js:115238:3)\n    at Router (http://localhost:3000/main3dd56e6a3d10a0764871.js:115323:13)\n    at RouterProvider (http://localhost:3000/main3dd56e6a3d10a0764871.js:115068:3)\n    at RouterProvider2 (<anonymous>)\n    at div (<anonymous>)\n    at App (http://localhost:3000/main3dd56e6a3d10a0764871.js:130797:66)\n    at Provider (http://localhost:3000/main3dd56e6a3d10a0764871.js:109037:11)\n    at ErrorBoundary (http://localhost:3000/main3dd56e6a3d10a0764871.js:130884:5)"
+      },
+      "date": "2025-08-19T07:13:49.678Z"
+    },
+    {
+      "id": "acf0",
+      "message": "profilerOnRenderCallback is not defined",
+      "stack": {
+        "componentStack": "\n    at App (http://localhost:3000/main5542af1b29189804c717.js:118154:66)\n    at Provider (http://localhost:3000/main5542af1b29189804c717.js:96390:11)\n    at ErrorBoundary (http://localhost:3000/main5542af1b29189804c717.js:118245:5)"
+      },
+      "date": "2025-08-24T15:37:41.460Z"
+    },
+    {
+      "id": "276d",
+      "message": "isActive is not defined",
+      "stack": {
+        "componentStack": "\n    at Sidebar (http://localhost:3000/main4848d88c27d938f893f8.js:118535:74)\n    at div (<anonymous>)\n    at Col (http://localhost:3000/main4848d88c27d938f893f8.js:37827:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3000/main4848d88c27d938f893f8.js:40798:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3000/main4848d88c27d938f893f8.js:37983:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (http://localhost:3000/main4848d88c27d938f893f8.js:118817:74)\n    at PrivateRoute (http://localhost:3000/main4848d88c27d938f893f8.js:118388:23)\n    at ErrorBoundary (http://localhost:3000/main4848d88c27d938f893f8.js:118183:28)\n    at RenderedRoute (http://localhost:3000/main4848d88c27d938f893f8.js:102013:26)\n    at RenderErrorBoundary (http://localhost:3000/main4848d88c27d938f893f8.js:101972:5)\n    at DataRoutes (http://localhost:3000/main4848d88c27d938f893f8.js:102561:3)\n    at Router (http://localhost:3000/main4848d88c27d938f893f8.js:102646:13)\n    at RouterProvider (http://localhost:3000/main4848d88c27d938f893f8.js:102391:3)\n    at RouterProvider2 (<anonymous>)\n    at App (http://localhost:3000/main4848d88c27d938f893f8.js:118121:61)\n    at Provider (http://localhost:3000/main4848d88c27d938f893f8.js:96360:11)\n    at ErrorBoundary (http://localhost:3000/main4848d88c27d938f893f8.js:118183:28)"
+      },
+      "date": "2025-10-02T17:15:01.265Z"
+    },
+    {
+      "id": "a8df",
+      "message": "Cannot read properties of undefined (reading 'map')",
+      "stack": {
+        "componentStack": "\n    at Tabs (http://localhost:3002/main75f02617f7fa1281a71d.js:118655:74)\n    at div (<anonymous>)\n    at Col (http://localhost:3002/main75f02617f7fa1281a71d.js:37857:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3002/main75f02617f7fa1281a71d.js:40828:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3002/main75f02617f7fa1281a71d.js:38013:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (http://localhost:3002/main75f02617f7fa1281a71d.js:119038:74)\n    at PrivateRoute (http://localhost:3002/main75f02617f7fa1281a71d.js:118419:23)\n    at ErrorBoundary (http://localhost:3002/main75f02617f7fa1281a71d.js:118214:28)\n    at RenderedRoute (http://localhost:3002/main75f02617f7fa1281a71d.js:102043:26)\n    at RenderErrorBoundary (http://localhost:3002/main75f02617f7fa1281a71d.js:102002:5)\n    at DataRoutes (http://localhost:3002/main75f02617f7fa1281a71d.js:102591:3)\n    at Router (http://localhost:3002/main75f02617f7fa1281a71d.js:102676:13)\n    at RouterProvider (http://localhost:3002/main75f02617f7fa1281a71d.js:102421:3)\n    at RouterProvider2 (<anonymous>)\n    at App (http://localhost:3002/main75f02617f7fa1281a71d.js:118149:61)\n    at Provider (http://localhost:3002/main75f02617f7fa1281a71d.js:96390:11)\n    at ErrorBoundary (http://localhost:3002/main75f02617f7fa1281a71d.js:118214:28)"
+      },
+      "date": "2025-10-06T09:29:32.389Z"
+    },
+    {
+      "id": "4f93",
+      "message": "appDataSeries.map is not a function",
+      "stack": {
+        "componentStack": "\n    at Tabs (http://localhost:3002/mainb11d6dc0bc66365718f0.js:118655:74)\n    at div (<anonymous>)\n    at Col (http://localhost:3002/mainb11d6dc0bc66365718f0.js:37857:8)\n    at div (<anonymous>)\n    at Row (http://localhost:3002/mainb11d6dc0bc66365718f0.js:40828:3)\n    at div (<anonymous>)\n    at Container (http://localhost:3002/mainb11d6dc0bc66365718f0.js:38013:3)\n    at main (<anonymous>)\n    at div (<anonymous>)\n    at MainLayout (http://localhost:3002/mainb11d6dc0bc66365718f0.js:119039:74)\n    at PrivateRoute (http://localhost:3002/mainb11d6dc0bc66365718f0.js:118419:23)\n    at ErrorBoundary (http://localhost:3002/mainb11d6dc0bc66365718f0.js:118214:28)\n    at RenderedRoute (http://localhost:3002/mainb11d6dc0bc66365718f0.js:102043:26)\n    at RenderErrorBoundary (http://localhost:3002/mainb11d6dc0bc66365718f0.js:102002:5)\n    at DataRoutes (http://localhost:3002/mainb11d6dc0bc66365718f0.js:102591:3)\n    at Router (http://localhost:3002/mainb11d6dc0bc66365718f0.js:102676:13)\n    at RouterProvider (http://localhost:3002/mainb11d6dc0bc66365718f0.js:102421:3)\n    at RouterProvider2 (<anonymous>)\n    at App (http://localhost:3002/mainb11d6dc0bc66365718f0.js:118149:61)\n    at Provider (http://localhost:3002/mainb11d6dc0bc66365718f0.js:96390:11)\n    at ErrorBoundary (http://localhost:3002/mainb11d6dc0bc66365718f0.js:118214:28)"
+      },
+      "date": "2025-10-06T09:32:14.096Z"
+    }
+  ],
+  "movies": [
+    {
+      "id": "2f40"
+    },
+    {
+      "id": "d947"
+    },
+    {
+      "id": "37c7"
+    },
+    {
+      "id": "a87d",
+      "type": "moviesSeries/fetchDataSuccess"
+    },
+    {
+      "id": "4cdd",
+      "type": "moviesSeries/fetchDataSuccess"
+    },
+    {
+      "id": "0d9b",
+      "type": "moviesSeries/fetchDataSuccess"
+    },
+    {
+      "id": "b754",
+      "type": "moviesSeries/fetchDataSuccess"
+    },
+    {
+      "id": "405d"
+    },
+    {
+      "id": "02f9"
+    },
+    {
+      "id": "afd8"
+    },
+    {
+      "id": "1825"
+    },
+    {
+      "id": "4ce1"
+    },
+    {
+      "id": "774c"
+    },
+    {
+      "id": "c2f1"
+    },
+    {
+      "id": "529b"
+    },
+    {
+      "id": "0c52"
+    },
+    {
+      "id": "896d"
+    },
+    {
+      "id": "7079"
+    },
+    {
+      "id": "f3d2"
+    },
+    {
+      "id": "b74a"
+    },
+    {
+      "id": "8ef5"
+    },
+    {
+      "id": "e48d"
+    },
+    {
+      "id": "e5bd"
+    },
+    {
+      "id": "2a1c"
+    },
+    {
+      "id": "bc5a"
+    },
+    {
+      "id": "26de"
+    },
+    {
+      "id": "fce3"
+    },
+    {
+      "id": "e7ba"
+    },
+    {
+      "id": "c159"
+    },
+    {
+      "id": "87da"
+    },
+    {
+      "id": "41cb"
+    },
+    {
+      "id": "7d27"
+    },
+    {
+      "id": "7d5f",
+      "type": []
+    },
+    {
+      "id": "c7d4",
+      "type": []
+    },
+    {
+      "id": "6fd1",
+      "type": []
+    },
+    {
+      "id": "53b4"
+    },
+    {
+      "id": "cd2b"
+    },
+    {
+      "id": "8903"
+    },
+    {
+      "id": "f53f"
+    },
+    {
+      "id": "abb0"
+    },
+    {
+      "id": "16c4"
+    },
+    {
+      "id": "a30d",
+      "type": []
+    },
+    {
+      "id": "c5bb",
+      "type": []
+    },
+    {
+      "id": "1db9",
+      "type": []
+    },
+    {
+      "id": "bba2",
+      "type": [
+        []
+      ]
+    },
+    {
+      "id": "f763",
+      "type": [
+        []
+      ]
+    },
+    {
+      "id": "8692",
+      "type": []
+    },
+    {
+      "id": "8623",
+      "type": []
+    },
+    {
+      "id": "0dc8",
+      "type": []
+    },
+    {
+      "id": "d0ed",
+      "title": []
+    },
+    {
+      "id": "af00",
+      "title": []
+    },
+    {
+      "id": "4cbc"
+    },
+    {
+      "id": "4a87"
+    },
+    {
+      "id": "e7b5"
+    },
+    {
+      "id": "691b"
+    },
+    {
+      "id": "4f16"
+    },
+    {
+      "id": "1f13"
+    },
+    {
+      "id": "8b49"
+    },
+    {
+      "id": "4b05"
+    },
+    {
+      "id": "7312"
+    },
+    {
+      "id": "37ef"
+    },
+    {
+      "id": "2ef6"
+    },
+    {
+      "id": "a03e"
+    },
+    {
+      "id": "1c53"
+    },
+    {
+      "id": "7593"
+    },
+    {
+      "id": "35df"
+    },
+    {
+      "id": "4fb6"
+    },
+    {
+      "id": "ed58"
+    },
+    {
+      "id": "3f26"
+    },
+    {
+      "id": "9b38"
+    },
+    {
+      "id": "71f3"
+    },
+    {
+      "id": "9806"
+    },
+    {
+      "id": "26d7"
+    },
+    {
+      "id": "317d"
+    },
+    {
+      "id": "6df8"
+    },
+    {
+      "id": "ad96"
+    },
+    {
+      "id": "485d"
+    },
+    {
+      "id": "a6dd"
+    },
+    {
+      "id": "2ca4"
+    },
+    {
+      "id": "c54d"
+    },
+    {
+      "id": "6605"
+    },
+    {
+      "id": "dd6f"
+    },
+    {
+      "id": "cc10"
+    },
+    {
+      "id": "6663"
+    },
+    {
+      "id": "16d0"
+    },
+    {
+      "id": "a234"
+    },
+    {
+      "id": "0bb6"
+    }
+  ]
+}

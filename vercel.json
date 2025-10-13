@@ -1,0 +1,18 @@
+{
+  "function":{
+    "api/index.js":{
+      "memory": "1024",
+"includeFiles":"db.json"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+"destination": "/api/index.js"
+    },
+    {
+      "source":"/(.*)",
+      "destination":"/index.html"
+    }
+  ]
+}
